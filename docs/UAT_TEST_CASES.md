@@ -1,6 +1,6 @@
 # UAT Test Cases
 
-All cases are automated (`python -m pytest`, 45 tests) and run in CI on every change.
+All cases are automated (`python -m pytest`, 51 tests) and run in CI on every change.
 
 | ID | Requirement | Given / When / Then | Test |
 |---|---|---|---|
@@ -44,3 +44,9 @@ All cases are automated (`python -m pytest`, 45 tests) and run in CI on every ch
 | UT-37 | FR-10 | **Planted errors** in the new templates caught (v0629, v22976, v10288) | `test_planted_errors_in_new_templates_are_caught` (3 cases) |
 | UT-38 | FR-13 | **CR-002 regression:** 153 cells changed, exactly the agreed list | `test_cr002_only_the_agreed_cells_change` |
 | UT-39 | FR-13 | C 01.00 and C 47.00 r0190 unchanged by CR-002 | `test_cr002_capital_and_on_balance_leverage_untouched` |
+| UT-40 | FR-19 | Real data: 120 banks, 4 quarters | `test_real_data_scope` |
+| UT-41 | FR-19 | Every mapped Transparency item lands in a cell that exists in the EBA taxonomy | `test_every_mapped_item_is_a_real_corep_cell` |
+| UT-42 | FR-19 | An EBA rule is judged only when all its cells are published | `test_eba_rules_only_run_when_all_their_cells_are_published` |
+| UT-43 | FR-19 | The documented findings are reproduced (MuniFin ratio > 100%, Länsförsäkringar +€296.8m, 5 banks) | `test_known_findings` |
+| UT-44 | FR-19 | Capital = TREA × ratio holds for all 469 real bank-quarters | `test_ratio_rules_pass_for_every_bank_quarter` |
+| UT-45 | FR-19 | **Planted error** in real data (+€10m CET1) breaks v0218 and TE-01 | `test_planted_error_in_real_data_is_caught` |

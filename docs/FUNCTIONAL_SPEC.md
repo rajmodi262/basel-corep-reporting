@@ -50,6 +50,7 @@ validation rules, and deliver it in the EBA's xBRL-CSV format.
 | FR-16 | Include derivatives in the leverage exposure with the PFE multiplier set to 1; exclude derivative assets from r0190 | UT-32, REC-04 |
 | FR-17 | Compute CVA risk with the simplified approach, excluding exempt non-financial counterparties; justify eligibility with the monthly size test (C 34.01) | UT-33, UT-36 |
 | FR-18 | Compute FX risk on the whole balance sheet, applying the 2% de minimis | UT-34, UT-35 |
+| FR-19 | Run the EBA rules on real banks' published COREP figures (EBA Transparency Exercise), only where every cell is published, and explain every break | UT-40..UT-45, `docs/REAL_DATA.md` |
 
 ## 5. Outputs (`out/`)
 
