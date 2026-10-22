@@ -1,0 +1,54 @@
+check_id,basis,BREAK,pass
+TE-01,EBA v0172 (C 01.00 r0020),0,469
+TE-02,EBA v0172 (transitional rows 0220+0240+0520),0,469
+TE-03,EBA v0182 (C 01.00 r0530),0,469
+TE-04,EBA v0186 (C 01.00 r0750),0,469
+TE-05,EBA v09xx of-which logic (C 01.00 r0460 within r0450-r0472),0,469
+TE-06,Cross-template: C 47.00 r0320 = C 01.00 r0015,6,463
+TE-07,Cross-template: OV1 total = C 02.00 r0010,2,467
+TE-08,OV1 structure (pre-floor),0,232
+TE-09,OV1 structure (output floor),0,232
+v0218_m_0,EBA validation rule,0,469
+v0220_m_0,EBA validation rule,0,469
+v0222_m_0,EBA validation rule,0,469
+v1771_h_0,EBA validation rule,0,469
+v23176_s_25,EBA validation rule,0,237
+v23176_s_27,EBA validation rule,0,469
+v23178_s_11,EBA validation rule,0,469
+v23178_s_7,EBA validation rule,0,469
+v23178_s_9,EBA validation rule,0,469
+v23596_h_0,EBA validation rule,0,469
+v23705_s_12,EBA validation rule,0,469
+v23705_s_46,EBA validation rule,0,469
+v23705_s_70,EBA validation rule,0,469
+v23705_s_71,EBA validation rule,0,469
+v23705_s_8,EBA validation rule,0,469
+v23705_s_81,EBA validation rule,0,469
+v23705_s_97,EBA validation rule,0,469
+v23705_s_98,EBA validation rule,0,469
+v23955_h_0,EBA validation rule,0,469
+v3684_s_13,EBA validation rule,0,469
+v3684_s_20,EBA validation rule,0,469
+v3684_s_4,EBA validation rule,0,469
+v3684_s_5,EBA validation rule,0,469
+v3685_s_14,EBA validation rule,0,469
+v3685_s_15,EBA validation rule,0,469
+v3685_s_16,EBA validation rule,0,469
+v3685_s_18,EBA validation rule,0,469
+v3685_s_19,EBA validation rule,0,469
+v3685_s_21,EBA validation rule,0,469
+v3685_s_25,EBA validation rule,0,469
+v3685_s_26,EBA validation rule,0,469
+v3685_s_27,EBA validation rule,0,469
+v3685_s_28,EBA validation rule,0,469
+v3685_s_31,EBA validation rule,0,469
+v3685_s_32,EBA validation rule,0,469
+v3685_s_33,EBA validation rule,0,469
+v3685_s_34,EBA validation rule,0,469
+v3685_s_43,EBA validation rule,0,469
+v4459_m_0,EBA validation rule,0,237
+v4460_m_0,EBA validation rule,0,469
+v4747_m_0,EBA validation rule,0,469
+v4886_m_18,EBA validation rule,6,463
+v4886_m_20,EBA validation rule,6,463
+v4886_m_22,EBA validation rule,6,463

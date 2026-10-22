@@ -1,0 +1,65 @@
+item,te_ref,template,row,col,parts,label
+2520101,A,C_01.00,0010,0010,,Own funds
+2520102,A.1,C_01.00,0020,0010,,CET1 capital
+2520103,A.1.1,C_01.00,0030,0010,,Capital instruments and share premium
+2520104,A.1.2,C_01.00,0130,0010,,Retained earnings
+2520105,A.1.3,C_01.00,0180,0010,,Accumulated OCI
+2520106,A.1.4,C_01.00,0200,0010,,Other reserves
+2520107,A.1.5,C_01.00,0210,0010,,Funds for general banking risk
+2520108,A.1.6,C_01.00,0230,0010,,Minority interest in CET1
+2520109,A.1.7,C_01.00,0250,0010,,Prudential filters
+2520110,A.1.8,,,,0300+0340,(-) Intangible assets incl. goodwill
+2520111,A.1.9,C_01.00,0370,0010,,(-) DTA on future profitability not from temporary differences
+2520112,A.1.10,C_01.00,0380,0010,,(-) IRB shortfall
+2520113,A.1.11,C_01.00,0390,0010,,(-) Defined benefit pension fund assets
+2520114,A.1.12,C_01.00,0430,0010,,(-) Reciprocal cross holdings
+2520115,A.1.13,C_01.00,0440,0010,,(-) Excess deduction from AT1
+2520116,A.1.14,,,,0450+0460+0470+0471+0472,(-) Items alternatively 1250% risk-weighted
+2520117,A.1.14.1,C_01.00,0460,0010,,of which securitisation positions
+2520118,A.1.15,C_01.00,0480,0010,,(-) Non-significant financial sector holdings
+2520119,A.1.16,C_01.00,0490,0010,,(-) DTA from temporary differences
+2520120,A.1.17,C_01.00,0500,0010,,(-) Significant financial sector holdings
+2520121,A.1.18,C_01.00,0510,0010,,(-) Amount exceeding 17.65% threshold
+2520151,A.1.18A,C_01.00,0513,0010,,(-) Insufficient NPE coverage
+2520152,A.1.18B,C_01.00,0514,0010,,(-) Minimum value commitment shortfalls
+2520153,A.1.18C,C_01.00,0515,0010,,(-) Other foreseeable tax charges
+2520122,A.1.19,C_01.00,0524,0010,,(-) Article 3 CRR deductions
+2520123,A.1.20,C_01.00,0529,0010,,Other CET1 elements
+2520124,A.1.21,,,,0220+0240+0520,Transitional adjustments
+2520125,A.1.21.1,C_01.00,0220,0010,,Grandfathered CET1 instruments
+2520126,A.1.21.2,C_01.00,0240,0010,,Additional minority interests
+2520127,A.1.21.3,C_01.00,0520,0010,,Other CET1 transitional adjustments
+2520128,A.2,C_01.00,0530,0010,,AT1 capital
+2520129,A.2.1,,,,0540+0670,AT1 instruments
+2520130,A.2.2,C_01.00,0720,0010,,(-) Excess deduction from T2
+2520131,A.2.3,,,,0690+0700+0710+0740+0744+0748,Other AT1 components
+2520132,A.2.4,,,,0660+0680+0730,AT1 transitional adjustments
+2520133,A.3,C_01.00,0015,0010,,Tier 1 capital
+2520134,A.4,C_01.00,0750,0010,,Tier 2 capital
+2520135,A.4.1,,,,0760+0890,T2 instruments
+2520136,A.4.2,,,,0910+0920+0930+0940+0950+0955+0970+0974+0978,Other T2 components
+2520137,A.4.3,,,,0880+0900+0960,T2 transitional adjustments
+2520138,B,C_02.00.a,0010,0010,,Total risk exposure amount
+2520140,C.1,C_03.00,0010,0010,,CET1 ratio
+2520141,C.2,C_03.00,0030,0010,,Tier 1 ratio
+2520142,C.3,C_03.00,0050,0010,,Total capital ratio
+2520901,LR A.1,C_47.00,0320,0010,,Tier 1 - transitional
+2520902,LR A.2,C_47.00,0310,0010,,Tier 1 - fully phased-in
+2520903,LR B.1,C_47.00,0300,0010,,Leverage exposure - transitional
+2520904,LR B.2,C_47.00,0290,0010,,Leverage exposure - fully phased-in
+2520905,LR C.1,C_47.00,0340,0010,,Leverage ratio - transitional
+2520906,LR C.2,C_47.00,0330,0010,,Leverage ratio - fully phased-in
+2520207,OV1 CVA,C_02.00.a,0640,0010,,CVA risk
+2520208,OV1 settlement,C_02.00.a,0490,0010,,Settlement risk
+2520209,OV1 securitisation,C_02.00.a,0470,0010,,Securitisation (banking book)
+2520210,OV1 market,C_02.00.a,0520,0010,,Market risk
+2520211,OV1 market SA,C_02.00.a,0530,0010,,Market risk - standardised
+2520214,OV1 large exposures,C_02.00.a,0680,0010,,Large exposures in the trading book
+2520215,OV1 operational,C_02.00.a,0590,0010,,Operational risk
+2520201,OV1 credit,,,,,Credit risk excl. CCR and securitisation
+2520206,OV1 CCR,,,,,Counterparty credit risk excl. CVA
+2520212,OV1 market IMA,,,,,Market risk - internal models
+2520219,OV1 other,,,,,Other risk exposure amounts
+2520220,OV1 total,,,,,Total risk exposure amount (OV1)
+2520221,OV1 pre-floor,,,,,Total risk exposure amount pre-floor
+2520222,OV1 floor,,,,,Output floor adjustment

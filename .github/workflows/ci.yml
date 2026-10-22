@@ -20,5 +20,7 @@ jobs:
           git diff --exit-code data/
       - name: Build, reconcile and validate the report (fails on any EBA rule failure)
         run: python -m corep.pipeline
+      - name: EBA rules on 120 real banks (CR-003)
+        run: python -m corep.transparency
       - name: Tests
         run: python -m pytest -q

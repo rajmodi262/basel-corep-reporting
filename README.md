@@ -32,11 +32,25 @@ written in the EBA 4.0 **xBRL-CSV** format. It covers 9 COREP templates:
 | Reconciliations, books → report | **32 / 32 tie** (sub-ledger ↔ GL by account, derivative fair values ↔ GL, balance sheet ↔ leverage, equity ↔ own funds, P&L ↔ business indicator, FX position ↔ sub-ledger) |
 | Data-quality rules | 13 rules; gaps found and handled conservatively (4 exposures without a type, 1 mortgage with a stale valuation) |
 | Change control | **CR-001** (buffer rate + collateral feed): 38 cells predicted, 38 changed, 0 unexpected. **CR-002** (derivatives, CCR, market risk, CVA): 153 cells predicted, 153 changed, 0 unexpected ([change records](docs/changes/)) |
-| Tests | 45, run in CI |
+| Tests | 51, run in CI |
 
 > **The bank is synthetic.** Real bank data is confidential, so `scripts/generate_bank.py` creates
 > the books of a fictional mid-sized EU bank (fixed seed). **The regulation, templates, datapoints
 > and validation rules are real**, taken from the CRR and the EBA's published 4.0 taxonomy.
+
+## Real banks: EBA rules on 120 banks' published COREP figures
+
+The same EBA rules also run on **real data**: the EBA's 2025 Transparency Exercise, with figures from
+the COREP submissions of **120 EU banks over 4 quarters** (469 bank-quarters). Each published item is
+placed in its COREP cell, and a rule runs only when every cell it uses is published.
+
+| | |
+|---|---|
+| Checks run (44 EBA rules + 9 cross-template checks) | **23,919** |
+| Pass / break | **23,893 / 26**, in 5 banks |
+| Findings | 2 public-sector lenders with capital ratios above 100% (genuine, flagged by EBA rule v4886); Tier 1 in the leverage template ≠ Tier 1 in own funds at 3 banks (up to €408m); one bank's RWA overview €464m below its TREA |
+
+Every break is explained in **[REAL_DATA.md](docs/REAL_DATA.md)**. Run: `python -m corep.transparency`.
 
 ---
 
@@ -74,7 +88,8 @@ written in the EBA 4.0 **xBRL-CSV** format. It covers 9 COREP templates:
 pip install -r requirements.txt
 python scripts/generate_bank.py   # (re)create the synthetic books
 python -m corep.pipeline          # build, reconcile, validate, write out/
-python -m pytest                  # 45 tests
+python -m corep.transparency      # EBA rules on 120 real banks (CR-003)
+python -m pytest                  # 51 tests
 ```
 
 ## Documents
@@ -83,7 +98,8 @@ python -m pytest                  # 45 tests
 - [Functional specification](docs/FUNCTIONAL_SPEC.md) — scope, requirements FR-01..FR-18, assumptions
 - [Data mapping specification](docs/DATA_MAPPING_SPEC.md) — every cell traced to its source
 - [Data gaps](docs/DATA_GAPS.md) — data-quality rules and fallbacks
-- [UAT test cases](docs/UAT_TEST_CASES.md) — 39 cases traced to requirements and tests
+- **[Real-bank checks](docs/REAL_DATA.md)** — EBA rules on 120 banks' published figures, every break explained
+- [UAT test cases](docs/UAT_TEST_CASES.md) — 45 cases traced to requirements and tests
 - Change records: [CR-001](docs/changes/CR-001.md) (buffer rate + collateral feed), [CR-002](docs/changes/CR-002.md) (derivatives, CCR, market risk, CVA)
 - [Taxonomy extract](taxonomy/README.md) — source and validation approach
 

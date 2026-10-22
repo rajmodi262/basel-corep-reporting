@@ -1,0 +1,10 @@
+check_id,basis,expression,description
+TE-01,EBA v0172 (C 01.00 r0020),{2520102} = {2520103}+{2520104}+{2520105}+{2520106}+{2520107}+{2520108}+{2520109}+{2520110}+{2520111}+{2520112}+{2520113}+{2520114}+{2520115}+{2520116}+{2520118}+{2520119}+{2520120}+{2520121}+{2520151}+{2520152}+{2520153}+{2520122}+{2520123}+{2520124},CET1 equals the sum of its published components and deductions
+TE-02,EBA v0172 (transitional rows 0220+0240+0520),{2520124} = {2520125}+{2520126}+{2520127},CET1 transitional adjustments equal their three parts
+TE-03,EBA v0182 (C 01.00 r0530),{2520128} = {2520129}+{2520130}+{2520131}+{2520132},AT1 equals instruments + deductions + other + transitional
+TE-04,EBA v0186 (C 01.00 r0750),{2520134} = {2520135}+{2520136}+{2520137},Tier 2 equals instruments + other + transitional
+TE-05,EBA v09xx of-which logic (C 01.00 r0460 within r0450-r0472),abs({2520117}) <= abs({2520116}),Securitisation deductions are part of the 1250% alternative deductions
+TE-06,Cross-template: C 47.00 r0320 = C 01.00 r0015,{2520901} = {2520133},Leverage-ratio Tier 1 (transitional) equals Tier 1 in own funds
+TE-07,Cross-template: OV1 total = C 02.00 r0010,{2520220} = {2520138},RWA overview total equals total risk exposure amount
+TE-08,OV1 structure (pre-floor),{2520221} = {2520201}+{2520206}+{2520207}+{2520208}+{2520209}+{2520210}+{2520214}+{2520215}+{2520219},Pre-floor TREA equals the sum of the risk types
+TE-09,OV1 structure (output floor),{2520220} = {2520221}+{2520222},TREA equals pre-floor TREA plus the output-floor adjustment

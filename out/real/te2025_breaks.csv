@@ -1,0 +1,27 @@
+lei,period,check_id,basis,expression,status,difference_eur_m,name,country
+XXXXXXXXXXXXXXXXXXXX,202503,TE-06,Cross-template: C 47.00 r0320 = C 01.00 r0015,Leverage-ratio Tier 1 (transitional) equals Tier 1 in own funds,BREAK,-408.308505,Bank with LEI withheld in the EBA data,OT
+XXXXXXXXXXXXXXXXXXXX,202412,TE-06,Cross-template: C 47.00 r0320 = C 01.00 r0015,Leverage-ratio Tier 1 (transitional) equals Tier 1 in own funds,BREAK,-345.384803,Bank with LEI withheld in the EBA data,OT
+XXXXXXXXXXXXXXXXXXXX,202409,TE-06,Cross-template: C 47.00 r0320 = C 01.00 r0015,Leverage-ratio Tier 1 (transitional) equals Tier 1 in own funds,BREAK,-333.613252,Bank with LEI withheld in the EBA data,OT
+XXXXXXXXXXXXXXXXXXXX,202506,TE-06,Cross-template: C 47.00 r0320 = C 01.00 r0015,Leverage-ratio Tier 1 (transitional) equals Tier 1 in own funds,BREAK,-301.741588,Bank with LEI withheld in the EBA data,OT
+549300C6TUMDXNOVXS82,202503,TE-06,Cross-template: C 47.00 r0320 = C 01.00 r0015,Leverage-ratio Tier 1 (transitional) equals Tier 1 in own funds,BREAK,296.837455,Länsförsäkringar Bank AB - gruppen,SE
+3M5E1GQGKL17HI6CPN30,202503,TE-06,Cross-template: C 47.00 r0320 = C 01.00 r0015,Leverage-ratio Tier 1 (transitional) equals Tier 1 in own funds,BREAK,0.899046,Jyske Bank A/S,DK
+XXXXXXXXXXXXXXXXXXXX,202503,TE-07,Cross-template: OV1 total = C 02.00 r0010,RWA overview total equals total risk exposure amount,BREAK,-463.685068,Bank with LEI withheld in the EBA data,OT
+XXXXXXXXXXXXXXXXXXXX,202506,TE-07,Cross-template: OV1 total = C 02.00 r0010,RWA overview total equals total risk exposure amount,BREAK,-0.74532,Bank with LEI withheld in the EBA data,OT
+529900HEKOENJHPNN480,202409,v4886_m_18,EBA validation rule,"{C_03.00,0050,0010,} < 1",BREAK,,Kuntarahoitus Oyj,FI
+529900HEKOENJHPNN480,202412,v4886_m_18,EBA validation rule,"{C_03.00,0050,0010,} < 1",BREAK,,Kuntarahoitus Oyj,FI
+EV2XZWMLLXF2QRX0CD47,202409,v4886_m_18,EBA validation rule,"{C_03.00,0050,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202412,v4886_m_18,EBA validation rule,"{C_03.00,0050,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202503,v4886_m_18,EBA validation rule,"{C_03.00,0050,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202506,v4886_m_18,EBA validation rule,"{C_03.00,0050,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+529900HEKOENJHPNN480,202409,v4886_m_20,EBA validation rule,"{C_03.00,0010,0010,} < 1",BREAK,,Kuntarahoitus Oyj,FI
+529900HEKOENJHPNN480,202412,v4886_m_20,EBA validation rule,"{C_03.00,0010,0010,} < 1",BREAK,,Kuntarahoitus Oyj,FI
+EV2XZWMLLXF2QRX0CD47,202409,v4886_m_20,EBA validation rule,"{C_03.00,0010,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202412,v4886_m_20,EBA validation rule,"{C_03.00,0010,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202503,v4886_m_20,EBA validation rule,"{C_03.00,0010,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202506,v4886_m_20,EBA validation rule,"{C_03.00,0010,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+529900HEKOENJHPNN480,202409,v4886_m_22,EBA validation rule,"{C_03.00,0030,0010,} < 1",BREAK,,Kuntarahoitus Oyj,FI
+529900HEKOENJHPNN480,202412,v4886_m_22,EBA validation rule,"{C_03.00,0030,0010,} < 1",BREAK,,Kuntarahoitus Oyj,FI
+EV2XZWMLLXF2QRX0CD47,202409,v4886_m_22,EBA validation rule,"{C_03.00,0030,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202412,v4886_m_22,EBA validation rule,"{C_03.00,0030,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202503,v4886_m_22,EBA validation rule,"{C_03.00,0030,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
+EV2XZWMLLXF2QRX0CD47,202506,v4886_m_22,EBA validation rule,"{C_03.00,0030,0010,} < 1",BREAK,,Kommuninvest - Grupp,SE
