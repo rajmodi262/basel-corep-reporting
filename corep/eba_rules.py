@@ -86,7 +86,8 @@ def to_python(expr: str) -> str:
 def evaluate(cells: dict[Cell, float], types: dict[Cell, str]) -> list[dict]:
     def interval(cell: Cell) -> Iv:
         x = cells[cell]
-        half = 0.00005 if types.get(cell) == "p" else 500.0
+        kind = types.get(cell)
+        half = 0.00005 if kind == "p" else 0.0 if kind == "i" else 500.0
         return Iv(x - half, x + half)
 
     results = []

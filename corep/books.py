@@ -24,7 +24,7 @@ def connect(data_dir=DATA) -> duckdb.DuckDBPyConnection:
     con = duckdb.connect(":memory:")
     text_cols = {"gl_account": str, "account": str, "cqs": str, "counterparty_type": str, "c02_row": str,
                  "c47_row": str, "c01_row": str, "default_flag": str, "has_property_value": str, "short_term": str,
-                 "reference": str}
+                 "reference": str, "currency_2": str}
     tables = {
         "exposures": data_dir / "exposures.csv",
         "off_balance": data_dir / "off_balance.csv",
@@ -32,6 +32,8 @@ def connect(data_dir=DATA) -> duckdb.DuckDBPyConnection:
         "pl_history": data_dir / "pl_history.csv",
         "capital_instruments": data_dir / "capital_instruments.csv",
         "property_valuations": data_dir / "property_valuations_2025Q4.csv",
+        "derivatives": data_dir / "derivatives.csv",
+        "total_assets_history": data_dir / "total_assets_history.csv",
         "dt_exposure_class": CONFIG / "dt_exposure_class.csv",
         "dt_risk_weight": CONFIG / "dt_risk_weight.csv",
         "dt_other_items": CONFIG / "dt_other_items.csv",

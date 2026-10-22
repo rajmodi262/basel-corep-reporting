@@ -18,7 +18,7 @@ the riskiness of what it owns**. Supervisors check this every quarter through st
 
 | Report | Means | What it shows | Here |
 |---|---|---|---|
-| **COREP** | Common Reporting | Capital, risk, leverage, liquidity, large exposures | C 01.00, C 02.00, C 03.00, C 47.00 |
+| **COREP** | Common Reporting | Capital, risk, leverage, liquidity, large exposures | C 01.00, C 02.00, C 03.00, C 22.00, C 25.01, C 34.01, C 34.03, C 47.00 |
 | **FINREP** | Financial Reporting | Balance sheet and P&L in a standard layout | (not in the EBA 4.0 release; the bank's ledger is the source here) |
 
 The **EBA** (European Banking Authority) defines the templates, each cell's meaning, and the
@@ -31,13 +31,14 @@ Every number in COREP starts from the accounts (`data/general_ledger.csv`):
 
 | Balance sheet (EUR m) | | | |
 |---|---|---|---|
-| Loans to customers and banks | 4,675 | Customer deposits | 4,578 |
+| Loans to customers and banks | 4,675 | Customer deposits | 4,567 |
 | Government bonds | 910 | Debt securities issued | 600 |
 | Cash and central bank | 435 | Subordinated (Tier 2) bonds | 250 |
-| Goodwill, software, intangibles | 85 | Other liabilities | 101 |
-| Deferred tax assets | 38 | **Equity** (shares, reserves, AT1, profit) | **764** |
+| Goodwill, software, intangibles | 85 | Derivatives, negative fair value | 21 |
+| Deferred tax assets | 38 | Other liabilities | 101 |
+| Derivatives, positive fair value | 10 | **Equity** (shares, reserves, AT1, profit) | **764** |
 | Other assets | 150 | | |
-| **Total assets** | **6,293** | **Total liabilities + equity** | **6,293** |
+| **Total assets** | **6,303** | **Total liabilities + equity** | **6,303** |
 
 The **P&L** for 2025: net interest income 148, net fees 57, other income 11, costs −142,
 impairments −5, tax −21 → **profit 48**. The board proposes a **20 dividend**.
@@ -101,15 +102,51 @@ Losses from failed processes, people, systems or external events. CRR3 sizes it 
 
 Why 12.5? Because 1 / 8% = 12.5. Multiplying a capital *requirement* by 12.5 turns it into an RWA-equivalent amount.
 
-**TREA = 3,320.7 credit + 309.7 operational = 3,630.4.** (No trading book, so no market risk; no derivatives, so no CVA.)
+### 4c. Counterparty credit risk — SA-CCR (Art 274-280a, C 34.03)
+
+A derivative is a loan whose size you don't know yet. If the bank's swap is worth +€5m and the bank
+on the other side defaults, the bank loses €5m. And by the time the swap matures, it could be worth much more.
+
+SA-CCR measures exposure per **netting set**, all trades with one counterparty that legally net:
+
+```
+exposure value = 1.4 x (RC + PFE)
+  RC  replacement cost   = what we lose today  = max(sum of market values, 0)
+  PFE potential future   = multiplier x add-on
+      add-on: interest rate 0.5% x effective notional (3 maturity buckets, partly offsetting)
+              FX            4%   x effective notional per currency pair
+      multiplier < 1 when the netting set is out of the money (it buys some comfort)
+```
+
+Demo Bank: 26 trades, €1.96bn notional, 6 netting sets → **exposure €47.1m → RWEA €27.9m**. These
+weights use the counterparty's normal SA risk weight: 20-30% for banks, 75-100% for corporates.
+
+Notice how small €47m is next to €1.96bn of notional. Swaps exchange interest, not the principal.
+
+### 4d. CVA risk (Art 381-386, C 25.01)
+
+Even if no counterparty defaults, the *accounting value* of a swap falls when the counterparty's
+credit spread widens: the credit valuation adjustment. Small derivative books (C 34.01: under 5%
+of assets and €100m, tested each month) may use the **simplified approach**: CVA capital = CCR
+capital (Art 385). Transactions with EU **non-financial** counterparties are **exempt** (Art 382(4)(a)),
+so only the 4 bank netting sets count → **CVA REA €5.3m**. The exempt corporate trades still appear
+in C 25.01's exemption rows, showing their marginal impact.
+
+### 4e. Market risk — foreign exchange (Art 351-354, C 22.00)
+
+FX risk applies to the **whole balance sheet**, not only a trading book. Demo Bank holds €110m of
+USD bonds and has sold €80m of USD forward, so it is **net long €30m USD**. Above the de-minimis
+of 2% of own funds (€17.0m), the charge is 8%: **€2.4m own funds, €30m REA**.
+
+**TREA = 3,320.7 credit + 27.9 counterparty + 30.0 market + 309.7 operational + 5.3 CVA = 3,693.6.**
 
 ## 5. Capital ratios and the requirement stack (C 03.00)
 
 | Ratio (Art 92) | Formula | Demo Bank | Pillar 1 minimum |
 |---|---|---|---|
-| CET1 ratio | CET1 / TREA | **15.91%** | 4.5% |
-| Tier 1 ratio | T1 / TREA | **17.98%** | 6% |
-| Total capital ratio | Own funds / TREA | **23.44%** | 8% |
+| CET1 ratio | CET1 / TREA | **15.64%** | 4.5% |
+| Tier 1 ratio | T1 / TREA | **17.67%** | 6% |
+| Total capital ratio | Own funds / TREA | **23.04%** | 8% |
 
 On top of Pillar 1 the supervisor adds layers (set in `config/srep.yaml`):
 
@@ -124,19 +161,20 @@ On top of Pillar 1 the supervisor adds layers (set in `config/srep.yaml`):
 
 P2R must be met at least 56.25% with CET1 and 75% with Tier 1 (Art 104a CRD). That's why the CET1
 part of TSCR is 4.5% + 56.25% × 2% = **5.625%** (r0140). After meeting everything, Demo Bank has
-**€246m of CET1 to spare** (r0220).
+**€241m of CET1 to spare** (r0220).
 
 ## 6. Leverage ratio (C 47.00)
 
 Risk weights can be wrong, so Basel III adds a **non-risk-based backstop**:
 **Tier 1 / total exposure ≥ 3%** (Art 92(1)(d), Art 429).
 
-- Exposure = all balance-sheet assets (6,293.4, r0190)
+- Exposure = balance-sheet assets other than derivatives (6,293.4, r0190)
+- \+ derivatives at SA-CCR with the multiplier set to 1 (7.2 + 48.8, r0061/r0091)
 - \+ off-balance items at their leverage CCFs (Art 429f): 30.5 + 9.6 + 164.8 + 82.0
 - − assets already deducted from Tier 1 (−91.4, r0270)
-- = **6,488.9** (r0290).
+- = **6,544.9** (r0290).
 
-**Leverage ratio = 652.6 / 6,488.9 = 10.06%** (r0330).
+**Leverage ratio = 652.6 / 6,544.9 = 9.97%** (r0330).
 
 Difference from the capital ratio: a government bond at 0% risk weight adds nothing to TREA, but it
 counts in full in the leverage exposure.
@@ -160,4 +198,7 @@ counts in full in the leverage exposure.
 8. What is the difference between COREP and FINREP?
 9. What is the difference between P2R and P2G?
 10. The countercyclical buffer went from 0.75% to 1% (CR-001). Which cells move, and why do own funds and the leverage ratio not? (docs/changes/CR-001.md)
-11. Why does the report carry `decimalsMonetary = -3`, and how does that affect validation? (Values are accurate to the thousand, so each rule allows ±500 per cell under interval arithmetic.)
+11. A swap has €150m notional but SA-CCR exposure of a few million. Why? And why is the multiplier below 1 for NS-04? (docs/changes/CR-002.md)
+12. Why are the corporate swaps in C 25.01's exemption rows but still in counterparty credit risk?
+13. The bank sold €80m USD forward against €110m of USD bonds. What would hedging the last €30m do to TREA?
+14. Why does the report carry `decimalsMonetary = -3`, and how does that affect validation? (Values are accurate to the thousand, so each rule allows ±500 per cell under interval arithmetic.)

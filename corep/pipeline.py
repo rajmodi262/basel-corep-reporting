@@ -14,7 +14,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from corep import OUT, Cell, capital, eba_rules, quality, reconcile
+from corep import OUT, Cell, capital, derivatives, eba_rules, quality, reconcile
 from corep.books import connect, params, run_sql
 from corep.xbrl_csv import HEADER, datapoint_index, write_packages
 
@@ -39,11 +39,22 @@ def build(data_dir=None):
     opr = capital.operational_risk(con)
     cells: dict[Cell, float] = {}
     of = capital.own_funds(con, p)
-    rea = capital.risk_exposure_amounts(con, opr, columns)
+    trades = derivatives.trade_level(con, p["reporting_date"])
+    ns = derivatives.netting_sets(trades, derivatives.risk_weight_lookup(con))
+    con.register("netting_sets_df", ns)
+    con.execute("CREATE OR REPLACE TABLE netting_sets AS SELECT * FROM netting_sets_df")
+    ccr_rows = {"0120" if ct == "institution" else "0125": g.rwea.sum() for ct, g in ns.groupby("counterparty_type")}
+    cva_cells, cva_rea = derivatives.cva(ns, trades)
+    fx_cells, fx_rea = derivatives.fx_risk(con, trades, of[("C_01.00", "0010", "0010")])
+    rea = capital.risk_exposure_amounts(con, opr, columns, ccr_rows, fx_rea, cva_rea)
     cells.update(of)
     cells.update(rea)
     cells.update(capital.capital_ratios(of, rea, p))
-    cells.update(capital.leverage_ratio(con, of, p))
+    cells.update(capital.leverage_ratio(con, of, p, ns))
+    cells.update(derivatives.c34_01(con))
+    cells.update(derivatives.c34_03(trades, ns))
+    cells.update(cva_cells)
+    cells.update(fx_cells)
     cells.update(HEADER)
     dropped = [c for c in cells if c not in index]
     if dropped:
@@ -72,17 +83,23 @@ def main(out: Path = OUT) -> dict:
     readable(cells, index).to_csv(out / "corep_templates.csv", index=False, lineterminator="\n")
     con.execute("SELECT * FROM credit_rwa ORDER BY exposure_id, part_row").df().to_csv(
         out / "credit_risk_by_exposure.csv", index=False, lineterminator="\n")
+    con.execute("SELECT * FROM netting_sets ORDER BY netting_set").df().round(2).to_csv(
+        out / "sa_ccr_by_netting_set.csv", index=False, lineterminator="\n")
     (out / "calculation_trace.json").write_text(json.dumps(capital.trace, indent=1), encoding="utf-8")
 
     c = lambda t, r: cells[(t, r, "0010")]
     summary = {
         "reporting_date": p["reporting_date"],
-        "total_assets": c("C_47.00", "0190"),
+        "total_assets": round(capital.gl_sum(con, [r[0] for r in con.execute(
+            "SELECT account FROM general_ledger WHERE statement='BS' AND class='asset'").fetchall()])),
         "cet1": c("C_01.00", "0020"), "tier1": c("C_01.00", "0015"), "own_funds": c("C_01.00", "0010"),
         "trea": c("C_02.00.a", "0010"), "credit_rwea": c("C_02.00.a", "0040"), "op_risk_rea": c("C_02.00.a", "0590"),
         "cet1_ratio": c("C_03.00", "0010"), "tier1_ratio": c("C_03.00", "0030"), "total_capital_ratio": c("C_03.00", "0050"),
         "ocr": c("C_03.00", "0160"), "cet1_surplus_over_requirements": c("C_03.00", "0220"),
         "leverage_exposure": c("C_47.00", "0290"), "leverage_ratio": c("C_47.00", "0330"),
+        "ccr_exposure_value": round(float(con.execute("SELECT sum(exposure_value) FROM netting_sets").fetchone()[0])),
+        "ccr_rwea": round(float(con.execute("SELECT sum(rwea) FROM netting_sets").fetchone()[0])),
+        "market_risk_rea": c("C_02.00.a", "0520"), "cva_rea": c("C_02.00.a", "0640"),
         "business_indicator": round(opr["bi"]),
         "cells_reported": len(cells),
         "data_quality": {r.rule_id: int(r.hits) for r in dq.itertuples()},

@@ -11,6 +11,9 @@ tables in `config/`, so a mapping change is a reviewed data change, not a code c
 | `data/exposures.csv` | Exposure (3,155 rows) | C 02.00 credit risk rows |
 | `data/off_balance.csv` | Commitment (515 rows) | C 02.00 (via CCF), C 47.00 r0150-r0180 |
 | `data/capital_instruments.csv` | Instrument (4) | C 01.00 r0551 (AT1), r0771 (T2) |
+| `data/derivatives.csv` | Trade (26), CR-002 | C 34.03, C 34.01, C 25.01, C 22.00 (forwards), C 02.00 r0120/r0125, C 47.00 r0061/r0091 |
+| `data/total_assets_history.csv` | Month-end (3) | C 34.01 r0040 |
+| `config/sa_ccr.yaml` | Supervisory parameters | Alpha, supervisory factors, CVA exemptions, FX de minimis |
 | `data/property_valuations_2025Q4.csv` | Valuation (6), from the collateral system (CR-001) | Property value for loan-splitting, if ≤ 3 years old (`sql/05_collateral.sql`) |
 | `data/pl_history.csv` | Year × P&L item (2023-2025) | C 02.00 r0590 operational risk |
 | `config/srep.yaml` | Supervisory parameters | C 03.00 r0130-r0210, C 47.00 r0410-r0470 |
@@ -70,14 +73,26 @@ template is internally consistent by construction, and the rules check it again 
 | Row | Item | Source |
 |---|---|---|
 | 0150 / 0160 / 0165 / 0180 | Off-balance at 10% / 20% / 40% / 100% CCF | `off_balance` × `dt_ccf.lr_ccf` |
-| 0190 | Other assets (on-balance, not derivatives or SFTs) | sum of all asset GL accounts |
+| 0061 / 0091 | Derivatives: replacement cost / PFE (multiplier 1), × 1.4 | `corep/derivatives.py` per netting set |
+| 0190 | Other assets (on-balance, not derivatives or SFTs) | sum of asset GL accounts except 1150 (derivative assets) |
 | 0270 / 0280 | (-) Assets deducted from Tier 1 | C 01.00 r0290 + 0310 + 0340 + 0370 + 0490 |
 | 0290 / 0300 | Total exposure measure | EBA rule v4457 / v4458 |
 | 0310 / 0320 | Tier 1 | C 01.00 r0015 |
 | 0330 / 0340 | Leverage ratio | r0310 / r0290 |
 | 0410-0470 | Requirements | `srep.yaml` leverage block |
 
-## 5. Output: cell → xBRL-CSV datapoint
+## 5. Derivatives (CR-002)
+
+| Cell | Item | Source / rule |
+|---|---|---|
+| C 34.03 r0010-r0140 | Trades, notional, positive/negative market value, add-on by risk category; largest currency EUR, pair EUR/USD | Trade level; add-ons per netting set (Art 280a, 280c), summed |
+| C 34.01 r0010-r0050 | Long / short market values, total assets, % — per month | `mtm_2025_10_31/11_30/12_31`, `total_assets_history` |
+| C 25.01 r0010-r0020 | CVA in scope: CCR exposure, CCR own funds, simplified-approach own funds, REA | Bank netting sets; own funds = RWEA / 12.5 (Art 385) |
+| C 25.01 r0040-r0070 | Exempt: EU non-financial counterparties, marginal impact | Corporate netting sets (Art 382(4)(a)) |
+| C 22.00 r0010/r0030/r0380 | USD long 110m (bonds), short 80m (forwards), net 30m, 8% own funds | Sub-ledger exposures in USD + forward notionals (Art 352) |
+| C 02.00 r0120 / r0125 | + CCR RWEA of bank / corporate netting sets | SA-CCR exposure × Art 120 / 122 risk weight |
+
+## 6. Output: cell → xBRL-CSV datapoint
 
 `taxonomy/datapoints.csv` (extracted from the EBA 4.0 taxonomy by `scripts/extract_taxonomy.py`)
 maps every cell to its datapoint id and type (m = monetary, p = percentage, e = enumeration).

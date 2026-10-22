@@ -30,14 +30,14 @@ C_01.00,0551,0010,"Fully paid up, directly issued capital instruments",75000000,
 C_01.00,0750,0010,TIER 2 CAPITAL,198247536,dp33412
 C_01.00,0760,0010,Capital instruments and share premium eligible as T2 Capital,198247536,dp33343
 C_01.00,0771,0010,"Fully paid up, directly issued capital instruments",198247536,dp455022
-C_02.00.a,0010,0010,TOTAL RISK EXPOSURE AMOUNT,3630384485,dp3295617
-C_02.00.a,0010,0020,TOTAL RISK EXPOSURE AMOUNT,3630384485,dp3294979
-C_02.00.a,0040,0010,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3320684485,dp3295814
-C_02.00.a,0040,0020,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3320684485,dp3295261
-C_02.00.a,0050,0010,Standardised Approach (SA),3320684485,dp3295815
-C_02.00.a,0050,0020,Standardised Approach (SA),3320684485,dp3294981
-C_02.00.a,0060,0010,SA exposure classes excluding securitisation positions,3320684485,dp3295615
-C_02.00.a,0060,0020,SA exposure classes excluding securitisation positions,3320684485,dp3294982
+C_02.00.a,0010,0010,TOTAL RISK EXPOSURE AMOUNT,3693606287,dp3295617
+C_02.00.a,0010,0020,TOTAL RISK EXPOSURE AMOUNT,3693606287,dp3294979
+C_02.00.a,0040,0010,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3348564169,dp3295814
+C_02.00.a,0040,0020,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3348564169,dp3295261
+C_02.00.a,0050,0010,Standardised Approach (SA),3348564169,dp3295815
+C_02.00.a,0050,0020,Standardised Approach (SA),3348564169,dp3294981
+C_02.00.a,0060,0010,SA exposure classes excluding securitisation positions,3348564169,dp3295615
+C_02.00.a,0060,0020,SA exposure classes excluding securitisation positions,3348564169,dp3294982
 C_02.00.a,0070,0010,Central governments or central banks,20000000,dp3295949
 C_02.00.a,0070,0020,Central governments or central banks,20000000,dp3295162
 C_02.00.a,0080,0010,Regional governments or local authorities,0,dp3295661
@@ -48,10 +48,10 @@ C_02.00.a,0100,0010,Multilateral Development Banks,0,dp3295941
 C_02.00.a,0100,0020,Multilateral Development Banks,0,dp3294951
 C_02.00.a,0110,0010,International Organisations,0,dp3295942
 C_02.00.a,0110,0020,International Organisations,0,dp3294952
-C_02.00.a,0120,0010,Institutions,81462397,dp3295663
-C_02.00.a,0120,0020,Institutions,81462397,dp3295163
-C_02.00.a,0125,0010,Corporates - Other,1943238748,dp3295614
-C_02.00.a,0125,0020,Corporates - Other,1943238748,dp3295213
+C_02.00.a,0120,0010,Institutions,86804514,dp3295663
+C_02.00.a,0120,0020,Institutions,86804514,dp3295163
+C_02.00.a,0125,0010,Corporates - Other,1965776314,dp3295614
+C_02.00.a,0125,0020,Corporates - Other,1965776314,dp3295213
 C_02.00.a,0131,0010,Corporates - Specialised Lending,0,dp3295817
 C_02.00.a,0131,0020,Corporates - Specialised Lending,0,dp3295214
 C_02.00.a,0140,0010,Retail,399055526,dp3295664
@@ -76,17 +76,27 @@ C_02.00.a,0210,0010,Equity,0,dp3295938
 C_02.00.a,0210,0020,Equity,0,dp3295166
 C_02.00.a,0211,0010,Other items,215000000,dp3295937
 C_02.00.a,0211,0020,Other items,215000000,dp3294946
+C_02.00.a,0520,0010,TOTAL RISK EXPOSURE AMOUNT FOR THE BUSINESS SUBJECT TO MARKET RISK,30000000,dp3295934
+C_02.00.a,0520,0020,TOTAL RISK EXPOSURE AMOUNT FOR THE BUSINESS SUBJECT TO MARKET RISK,30000000,dp3295150
+C_02.00.a,0530,0010,Risk exposure amount for business subject to market risk calculated by entities exclusively applying the simplified standardised approach (SSA),30000000,dp3295932
+C_02.00.a,0530,0020,Risk exposure amount for business subject to market risk calculated by entities exclusively applying the simplified standardised approach (SSA),30000000,dp3294959
+C_02.00.a,0560,0010,Foreign Exchange,30000000,dp3295654
+C_02.00.a,0560,0020,Foreign Exchange,30000000,dp3294957
 C_02.00.a,0590,0010,TOTAL RISK EXPOSURE AMOUNT FOR OPERATIONAL RISK (OpR ),309700000,dp3295823
 C_02.00.a,0590,0020,TOTAL RISK EXPOSURE AMOUNT FOR OPERATIONAL RISK (OpR ),309700000,dp3295222
-C_03.00,0010,0010,CET1 Capital ratio,0.1591,dp85151
-C_03.00,0020,0010,Surplus(+)/Deficit(-) of CET1 capital,414242698,dp33280
-C_03.00,0030,0010,T1 Capital ratio,0.1798,dp85152
-C_03.00,0040,0010,Surplus(+)/Deficit(-) of T1 capital,434786931,dp33281
-C_03.00,0050,0010,Total capital ratio,0.2344,dp85153
-C_03.00,0060,0010,Surplus(+)/Deficit(-) of total capital,560426777,dp33282
-C_03.00,0070,0010,CET1 Capital ratio considering unfloored TREA,0.1591,dp3294198
-C_03.00,0080,0010,T1 Capital ratio considering unfloored TREA,0.1798,dp3294199
-C_03.00,0090,0010,Total capital ratio considering unfloored TREA,0.2344,dp3294197
+C_02.00.a,0640,0010,TOTAL RISK EXPOSURE AMOUNT FOR CREDIT VALUATION ADJUSTMENT,5342118,dp3295621
+C_02.00.a,0640,0020,TOTAL RISK EXPOSURE AMOUNT FOR CREDIT VALUATION ADJUSTMENT,5342118,dp3295257
+C_02.00.a,0675,0010,Simplified approach,5342118,dp3295657
+C_02.00.a,0675,0020,Simplified approach,5342118,dp3295149
+C_03.00,0010,0010,CET1 Capital ratio,0.1564,dp85151
+C_03.00,0020,0010,Surplus(+)/Deficit(-) of CET1 capital,411397717,dp33280
+C_03.00,0030,0010,T1 Capital ratio,0.1767,dp85152
+C_03.00,0040,0010,Surplus(+)/Deficit(-) of T1 capital,430993623,dp33281
+C_03.00,0050,0010,Total capital ratio,0.2304,dp85153
+C_03.00,0060,0010,Surplus(+)/Deficit(-) of total capital,555369033,dp33282
+C_03.00,0070,0010,CET1 Capital ratio considering unfloored TREA,0.1564,dp3294198
+C_03.00,0080,0010,T1 Capital ratio considering unfloored TREA,0.1767,dp3294199
+C_03.00,0090,0010,Total capital ratio considering unfloored TREA,0.2304,dp3294197
 C_03.00,0130,0010,Total SREP capital requirement ratio (TSCR),0.1,dp85156
 C_03.00,0140,0010,TSCR: to be made up of CET1 capital,0.0563,dp85154
 C_03.00,0150,0010,TSCR: to be made up of Tier 1,0.075,dp85155
@@ -99,13 +109,124 @@ C_03.00,0180,0010,OCR: to be made up of Tier 1,0.11,dp410432
 C_03.00,0190,0010,OCR and Pillar 2 Guidance (P2G),0.145,dp410436
 C_03.00,0200,0010,OCR and P2G: to be made up of CET1 capital,0.1013,dp410434
 C_03.00,0210,0010,OCR and P2G: to be made up of Tier 1 capital,0.12,dp410435
-C_03.00,0220,0010,Surplus(+)/Deficit(-) of CET1 capital considering the requirements of Article 92 of Regulation (EU) No 575/2013 and Article 104a of Directive 2013/36/EU,246337416,dp454688
-C_03.00,0330,0010,Fully loaded CET1 Capital ratio,0.1591,dp3294200
-C_03.00,0340,0010,Fully loaded T1 Capital ratio,0.1798,dp3294203
-C_03.00,0350,0010,Fully loaded Total capital ratio,0.2344,dp3294202
-C_03.00,0360,0010,"CET1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.1591,dp3294201
-C_03.00,0370,0010,"T1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4, (5) and 7 of Regulation (EU) No 575/2013",0.1798,dp3294196
-C_03.00,0380,0010,"Total capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.2344,dp3294195
+C_03.00,0220,0010,Surplus(+)/Deficit(-) of CET1 capital considering the requirements of Article 92 of Regulation (EU) No 575/2013 and Article 104a of Directive 2013/36/EU,240568426,dp454688
+C_03.00,0330,0010,Fully loaded CET1 Capital ratio,0.1564,dp3294200
+C_03.00,0340,0010,Fully loaded T1 Capital ratio,0.1767,dp3294203
+C_03.00,0350,0010,Fully loaded Total capital ratio,0.2304,dp3294202
+C_03.00,0360,0010,"CET1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.1564,dp3294201
+C_03.00,0370,0010,"T1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4, (5) and 7 of Regulation (EU) No 575/2013",0.1767,dp3294196
+C_03.00,0380,0010,"Total capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.2304,dp3294195
+C_22.00,0010,0020,TOTAL POSITIONS,110000000,dp78926
+C_22.00,0010,0030,TOTAL POSITIONS,80000000,dp78927
+C_22.00,0010,0040,TOTAL POSITIONS,30000000,dp78928
+C_22.00,0010,0050,TOTAL POSITIONS,0,dp78929
+C_22.00,0010,0060,TOTAL POSITIONS,30000000,dp78930
+C_22.00,0010,0070,TOTAL POSITIONS,0,dp78932
+C_22.00,0010,0090,TOTAL POSITIONS,2400000,dp78924
+C_22.00,0010,0100,TOTAL POSITIONS,30000000,dp78925
+C_22.00,0030,0020,All other currencies (including CIUs treated as different currencies),110000000,dp24545
+C_22.00,0030,0030,All other currencies (including CIUs treated as different currencies),80000000,dp24546
+C_22.00,0030,0040,All other currencies (including CIUs treated as different currencies),30000000,dp24559
+C_22.00,0030,0050,All other currencies (including CIUs treated as different currencies),0,dp24560
+C_22.00,0030,0060,All other currencies (including CIUs treated as different currencies),30000000,dp24572
+C_22.00,0030,0070,All other currencies (including CIUs treated as different currencies),0,dp24573
+C_22.00,0030,0090,All other currencies (including CIUs treated as different currencies),2400000,dp24538
+C_22.00,0100,0020,Other assets and liabilities other than off-balance sheet items and derivatives,110000000,dp24553
+C_22.00,0100,0030,Other assets and liabilities other than off-balance sheet items and derivatives,0,dp24554
+C_22.00,0120,0020,Derivatives,0,dp24549
+C_22.00,0120,0030,Derivatives,80000000,dp24550
+C_22.00,0380,0020,US Dollar,110000000,dp49876
+C_22.00,0380,0030,US Dollar,80000000,dp49877
+C_22.00,0380,0040,US Dollar,30000000,dp49934
+C_22.00,0380,0050,US Dollar,0,dp49935
+C_25.01.a,0010,0010,Transactions in scope of the own funds requirement for CVA risk,22442557,dp3292619
+C_25.01.a,0010,0020,Transactions in scope of the own funds requirement for CVA risk,427369,dp475430
+C_25.01.a,0010,0060,Transactions in scope of the own funds requirement for CVA risk,427369,dp3294159
+C_25.01.a,0010,0130,Transactions in scope of the own funds requirement for CVA risk,4,dp3291757
+C_25.01.a,0010,0280,Transactions in scope of the own funds requirement for CVA risk,427369,dp3293994
+C_25.01.a,0010,0290,Transactions in scope of the own funds requirement for CVA risk,5342118,dp3294543
+C_25.01.a,0020,0010,of which: derivatives only,22442557,dp3293052
+C_25.01.a,0020,0020,of which: derivatives only,427369,dp3294095
+C_25.01.a,0020,0060,of which: derivatives only,427369,dp3294093
+C_25.01.a,0020,0280,of which: derivatives only,427369,dp3293978
+C_25.01.a,0020,0290,of which: derivatives only,5342118,dp3294690
+C_25.01.a,0040,0010,All transactions exempted,24645143,dp3293055
+C_25.01.a,0040,0020,All transactions exempted,1803005,dp3294000
+C_25.01.a,0040,0060,All transactions exempted,1803005,dp3294164
+C_25.01.a,0040,0280,All transactions exempted,1803005,dp3293990
+C_25.01.a,0040,0290,All transactions exempted,22537566,dp3294545
+C_25.01.a,0060,0010,Transactions with non-financial counterparties,24645143,dp3293054
+C_25.01.a,0060,0020,Transactions with non-financial counterparties,1803005,dp3294006
+C_25.01.a,0060,0060,Transactions with non-financial counterparties,1803005,dp3294004
+C_25.01.a,0060,0280,Transactions with non-financial counterparties,1803005,dp3294039
+C_25.01.a,0060,0290,Transactions with non-financial counterparties,22537566,dp3294687
+C_25.01.a,0070,0010,Transactions with EU non-financial counterparties only,24645143,dp3292624
+C_25.01.a,0070,0020,Transactions with EU non-financial counterparties only,1803005,dp3294171
+C_25.01.a,0070,0060,Transactions with EU non-financial counterparties only,1803005,dp3294173
+C_25.01.a,0070,0280,Transactions with EU non-financial counterparties only,1803005,dp3294020
+C_25.01.a,0070,0290,Transactions with EU non-financial counterparties only,22537566,dp3294745
+C_34.01.a,0010,0010,Size of the derivative business,18873296,dp457469
+C_34.01.a,0010,0020,Size of the derivative business,17267927,dp457472
+C_34.01.a,0010,0030,Size of the derivative business,36141223,dp457475
+C_34.01.a,0010,0040,Size of the derivative business,12289360,dp457470
+C_34.01.a,0010,0050,Size of the derivative business,22258135,dp457473
+C_34.01.a,0010,0060,Size of the derivative business,34547495,dp457476
+C_34.01.a,0010,0070,Size of the derivative business,9808157,dp457471
+C_34.01.a,0010,0080,Size of the derivative business,21265219,dp457474
+C_34.01.a,0010,0090,Size of the derivative business,31073376,dp457477
+C_34.01.a,0020,0010,On- and off-balance sheet derivatives,18873296,dp456993
+C_34.01.a,0020,0020,On- and off-balance sheet derivatives,17267927,dp456996
+C_34.01.a,0020,0030,On- and off-balance sheet derivatives,36141223,dp456999
+C_34.01.a,0020,0040,On- and off-balance sheet derivatives,12289360,dp456994
+C_34.01.a,0020,0050,On- and off-balance sheet derivatives,22258135,dp456997
+C_34.01.a,0020,0060,On- and off-balance sheet derivatives,34547495,dp457000
+C_34.01.a,0020,0070,On- and off-balance sheet derivatives,9808157,dp456995
+C_34.01.a,0020,0080,On- and off-balance sheet derivatives,21265219,dp456998
+C_34.01.a,0020,0090,On- and off-balance sheet derivatives,31073376,dp457001
+C_34.01.a,0040,0030,Total assets,6189722014,dp455017
+C_34.01.a,0040,0060,Total assets,6246450627,dp455018
+C_34.01.a,0040,0090,Total assets,6303179240,dp455019
+C_34.01.a,0050,0030,Percentage of total assets,0.0058,dp457487
+C_34.01.a,0050,0060,Percentage of total assets,0.0055,dp457488
+C_34.01.a,0050,0090,Percentage of total assets,0.0049,dp457489
+C_34.03,0010,0030,Total,26,dp457167
+C_34.03,0010,0040,Total,1960000000,dp456625
+C_34.03,0010,0050,Total,9808157,dp457630
+C_34.03,0010,0060,Total,-21265219,dp457776
+C_34.03,0010,0070,Total,34870281,dp457888
+C_34.03,0050,0030,Interest rate risk,20,dp457169
+C_34.03,0050,0040,Interest rate risk,1880000000,dp456627
+C_34.03,0050,0050,Interest rate risk,9502293,dp457632
+C_34.03,0050,0060,Interest rate risk,-21163865,dp457778
+C_34.03,0050,0070,Interest rate risk,33253289,dp457890
+C_34.03,0060,0030,Of which: mapped exclusively to interest rate risk category,20,dp457162
+C_34.03,0060,0040,Of which: mapped exclusively to interest rate risk category,1880000000,dp456620
+C_34.03,0060,0050,Of which: mapped exclusively to interest rate risk category,9502293,dp457625
+C_34.03,0060,0060,Of which: mapped exclusively to interest rate risk category,-21163865,dp457771
+C_34.03,0070,0010,Of which: largest currency,eba_CU:EUR,dp456955
+C_34.03,0070,0030,Of which: largest currency,20,dp457101
+C_34.03,0070,0040,Of which: largest currency,1880000000,dp456546
+C_34.03,0070,0050,Of which: largest currency,9502293,dp457564
+C_34.03,0070,0060,Of which: largest currency,-21163865,dp457710
+C_34.03,0070,0070,Of which: largest currency,33253289,dp457853
+C_34.03,0120,0030,Foreign exchange risk,6,dp457172
+C_34.03,0120,0040,Foreign exchange risk,80000000,dp456630
+C_34.03,0120,0050,Foreign exchange risk,305864,dp457635
+C_34.03,0120,0060,Foreign exchange risk,-101354,dp457781
+C_34.03,0120,0070,Foreign exchange risk,1616991,dp457893
+C_34.03,0130,0030,Of which: mapped exclusively to foreign exchange risk category,6,dp457163
+C_34.03,0130,0040,Of which: mapped exclusively to foreign exchange risk category,80000000,dp456621
+C_34.03,0130,0050,Of which: mapped exclusively to foreign exchange risk category,305864,dp457626
+C_34.03,0130,0060,Of which: mapped exclusively to foreign exchange risk category,-101354,dp457772
+C_34.03,0140,0010,Of which: largest currency pair,eba_CU:EUR,dp456956
+C_34.03,0140,0020,Of which: largest currency pair,eba_CU:USD,dp457842
+C_34.03,0140,0030,Of which: largest currency pair,6,dp457102
+C_34.03,0140,0040,Of which: largest currency pair,80000000,dp456547
+C_34.03,0140,0050,Of which: largest currency pair,305864,dp457565
+C_34.03,0140,0060,Of which: largest currency pair,-101354,dp457711
+C_34.03,0140,0070,Of which: largest currency pair,1616991,dp457854
+C_47.00,0061,0010,Derivatives: replacement cost under the SA-CCR (without the effect of collateral on NICA),7217335,dp454660
+C_47.00,0091,0010,Derivatives: Potential future exposure contribution under SA-CCR (multiplier at 1),48818393,dp454663
 C_47.00,0150,0010,Off-balance sheet items with a 10% CCF in accordance with Article 429f CRR,30500000,dp132890
 C_47.00,0160,0010,Off-balance sheet items with a 20% CCF in accordance with Article 429f CRR,9600000,dp132891
 C_47.00,0165,0010,Off-balance sheet items with a 40% CCF  in accordance with Article 429f CRR,164800000,dp3293919
@@ -113,12 +234,12 @@ C_47.00,0180,0010,Off-balance sheet items with a 100% CCF in accordance with Art
 C_47.00,0190,0010,Other assets,6293371083,dp135743
 C_47.00,0270,0010,(-) Asset amount deducted - Tier 1 - fully phased-in definition,-91390000,dp143082
 C_47.00,0280,0010,(-) Asset amount deducted - Tier 1 capital  - transitional definition,-91390000,dp143084
-C_47.00,0290,0010,Total Leverage Ratio exposure  measure - using a fully phased-in definition of Tier 1 capital,6488881083,dp134660
-C_47.00,0300,0010,Total Leverage Ratio exposure measure - using a transitional definition of Tier 1 capital,6488881083,dp134661
+C_47.00,0290,0010,Total Leverage Ratio exposure  measure - using a fully phased-in definition of Tier 1 capital,6544916811,dp134660
+C_47.00,0300,0010,Total Leverage Ratio exposure measure - using a transitional definition of Tier 1 capital,6544916811,dp134661
 C_47.00,0310,0010,Tier 1 capital - fully phased-in definition,652610000,dp132949
 C_47.00,0320,0010,Tier 1 capital - transitional definition,652610000,dp84817
-C_47.00,0330,0010,Leverage Ratio - using a fully phased-in definition of Tier 1 capital,0.1006,dp135745
-C_47.00,0340,0010,Leverage Ratio - using a transitional definition of Tier 1 capital,0.1006,dp135746
+C_47.00,0330,0010,Leverage Ratio - using a fully phased-in definition of Tier 1 capital,0.0997,dp135745
+C_47.00,0340,0010,Leverage Ratio - using a transitional definition of Tier 1 capital,0.0997,dp135746
 C_47.00,0350,0010,Pillar 2 requirement (P2R) to address risks of excessive leverage,0,dp457439
 C_47.00,0360,0010,of which: to be made up of CET1 capital,0,dp457440
 C_47.00,0370,0010,G-SII leverage ratio buffer,0,dp457441

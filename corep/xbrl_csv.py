@@ -16,8 +16,9 @@ from pathlib import Path
 from corep import TAXONOMY, Cell
 
 MODULES = {
-    "corep_of": {"code": "COREPOF", "templates": ["C_00.01", "C_01.00", "C_02.00.a", "C_03.00"],
-                 "filing": ["C_00.01", "C_01.00", "C_02.00", "C_03.00"]},
+    "corep_of": {"code": "COREPOF",
+                 "templates": ["C_00.01", "C_01.00", "C_02.00.a", "C_03.00", "C_22.00", "C_25.01.a", "C_34.01.a", "C_34.03"],
+                 "filing": ["C_00.01", "C_01.00", "C_02.00", "C_03.00", "C_22.00", "C_25.01", "C_34.01", "C_34.03"]},
     "corep_lr": {"code": "COREPLR", "templates": ["C_00.01", "C_47.00"], "filing": ["C_00.01", "C_47.00"]},
 }
 HEADER = {("C_00.01", "0010", "0010"): "eba_AS:x2",   # Nature of report: IFRS
@@ -32,7 +33,7 @@ def datapoint_index() -> dict[Cell, dict]:
 def fmt(value, kind: str) -> str:
     if kind == "p":
         return f"{value:.4f}"
-    if kind == "m":
+    if kind in ("m", "i"):
         return str(int(round(value)))
     return str(value)
 

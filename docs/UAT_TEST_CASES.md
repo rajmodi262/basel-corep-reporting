@@ -1,6 +1,6 @@
 # UAT Test Cases
 
-All cases are automated (`python -m pytest`, 33 tests) and run in CI on every change.
+All cases are automated (`python -m pytest`, 45 tests) and run in CI on every change.
 
 | ID | Requirement | Given / When / Then | Test |
 |---|---|---|---|
@@ -29,8 +29,18 @@ All cases are automated (`python -m pytest`, 33 tests) and run in CI on every ch
 | UT-22 | — | Total capital ratio above OCR, leverage above 3% | `test_capital_well_above_requirements` |
 | UT-23 | FR-11 | Packages follow the EBA sample layout; every datapoint id exists in the taxonomy | `test_xbrl_csv_packages_match_eba_layout` |
 | UT-24 | FR-11 | Same inputs → byte-identical packages | `test_packages_are_reproducible` |
-| UT-25 | FR-13 | **CR-001 regression:** exactly the 38 cells on the agreed impact list change, no other cell | `test_only_the_agreed_cells_change` |
-| UT-26 | FR-13 | C 01.00 and C 47.00 unchanged by a buffer rate or a collateral value | `test_own_funds_and_leverage_untouched` |
-| UT-27 | FR-07 | CCyB 0.75% → 1.00% raises OCR from 13.25% to 13.50% | `test_ccyb_raises_ocr_by_25bp` |
+| UT-25 | FR-13 | **CR-001 regression:** exactly the 38 cells on the agreed impact list change, no other cell | `test_cr001_only_the_agreed_cells_change` |
+| UT-26 | FR-13 | C 01.00 and C 47.00 unchanged by a buffer rate or a collateral value | `test_cr001_own_funds_and_leverage_untouched` |
+| UT-27 | FR-07 | CCyB 0.75% → 1.00% raises OCR from 13.25% to 13.50% | `test_cr001_ccyb_raises_ocr_by_25bp` |
 | UT-28 | FR-04 | A fresh valuation moves a mortgage into loan-splitting (20% / 75%) | `test_fresh_valuation_moves_mortgage_to_secured_class` |
 | UT-29 | FR-14 | A 2021 valuation is rejected (DQ-09) and the mortgage stays retail | `test_stale_valuation_is_rejected_not_used` |
+| UT-30 | FR-15 | SA-CCR for netting set NS-01 recomputed by hand from its 6 trades | `test_sa_ccr_by_hand_for_one_netting_set` |
+| UT-31 | FR-15 | Out-of-the-money netting set: RC = 0, multiplier = 0.05 + 0.95·exp(V / 1.9·AddOn) < 1 | `test_out_of_the_money_netting_set_gets_rc_zero_and_multiplier_below_one` |
+| UT-32 | FR-16 | Leverage PFE = 1.4 × add-on (multiplier 1); leverage RC = 1.4 × RC | `test_leverage_uses_multiplier_one` |
+| UT-33 | FR-17 | CVA REA = CCR RWEA of bank netting sets only; corporate netting sets in the exemption rows | `test_cva_excludes_non_financial_counterparties` |
+| UT-34 | FR-18 | Net USD 30m > 2% of own funds → €2.4m own funds, €30m REA | `test_fx_risk_charged_above_de_minimis` |
+| UT-35 | FR-18 | Same position with €2bn own funds → under de minimis → 0 | `test_fx_risk_waived_below_de_minimis` |
+| UT-36 | FR-17 | Derivative business < 5% of assets and < €100m in each month | `test_derivative_business_is_small` |
+| UT-37 | FR-10 | **Planted errors** in the new templates caught (v0629, v22976, v10288) | `test_planted_errors_in_new_templates_are_caught` (3 cases) |
+| UT-38 | FR-13 | **CR-002 regression:** 153 cells changed, exactly the agreed list | `test_cr002_only_the_agreed_cells_change` |
+| UT-39 | FR-13 | C 01.00 and C 47.00 r0190 unchanged by CR-002 | `test_cr002_capital_and_on_balance_leverage_untouched` |
