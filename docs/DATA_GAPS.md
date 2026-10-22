@@ -7,12 +7,14 @@ A regulatory report is only as good as the attributes behind it. Before any calc
 |---|---|---|---|---|---|
 | DQ-01 | BLOCK | Exposure id unique | Every figure counted once | 0 | — |
 | DQ-02 | WARN | Counterparty type present | Exposure class (Art 112) | **4** | Corporate class, the obligor's rating still applies (decision rule 6) |
-| DQ-03 | WARN | Property value present for mortgages | Loan-splitting (Art 124-125) | **6** | Not evidenced as secured → retail 75% (decision rule 8) |
+| DQ-03 | WARN | Property value present for mortgages (after the collateral feed) | Loan-splitting (Art 124-125) | **1** (was 6 before CR-001) | Not evidenced as secured → retail 75% (decision rule 8) |
 | DQ-04 | BLOCK | Provision between 0 and gross amount | Exposure value (Art 111(1)) | 0 | — |
 | DQ-05 | BLOCK | Credit quality step is 1-6 or blank | Rating tables (Art 136) | 0 | — |
 | DQ-06 | BLOCK | Exposure books to a GL account | Reconciliation REC-01 | 0 | — |
 | DQ-07 | BLOCK | Off-balance product has a CCF | Annex I | 0 | — |
 | DQ-08 | WARN | Defaulted exposures carry a provision | Art 127 cover test | 0 | — |
+| DQ-09 | WARN | Valuation no older than 3 years at the reference date | Art 208(3) | **1** | Valuation not used; mortgage stays retail 75% |
+| DQ-10 | BLOCK | Every valuation in the collateral feed belongs to a known mortgage | Feed integrity | 0 | — |
 
 **BLOCK** stops the run (`corep/pipeline.py`); a report must not be produced from broken data.
 **WARN** produces a report with a documented, never favourable fallback, and lists the exposures in
@@ -26,9 +28,9 @@ A regulatory report is only as good as the attributes behind it. Before any calc
   that has been valued (Art 124(3), 125). With no valuation, no part is evidenced as secured, so the
   whole exposure is treated as an unsecured retail exposure at 75%.
 
-**Impact of the gaps:** the 6 mortgages without valuations carry 75% on their full amount. Fixing
-the data would move part of them to 20%, so the gaps make the reported ratios slightly *lower* (safer),
-never higher.
+**Impact of the gaps:** a mortgage without a usable valuation carries 75% on its full amount. Fixing
+the data moves part of it to 20%, so the gaps make the reported ratios slightly *lower* (safer),
+never higher. CR-001 proved it: valuing 5 of the 6 mortgages lowered TREA by €4.3m.
 
 ## Gaps in scope (what this bank does not have)
 

@@ -22,6 +22,7 @@ from corep.xbrl_csv import HEADER, datapoint_index, write_packages
 def build(data_dir=None):
     con = connect(data_dir) if data_dir else connect()
     p = params()
+    run_sql(con, "05_collateral.sql")
     dq = quality.run(con)
     blocking = dq[(dq.severity == "BLOCK") & (dq.hits > 0)]
     if not blocking.empty:

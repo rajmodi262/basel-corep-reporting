@@ -30,14 +30,14 @@ C_01.00,0551,0010,"Fully paid up, directly issued capital instruments",75000000,
 C_01.00,0750,0010,TIER 2 CAPITAL,198247536,dp33412
 C_01.00,0760,0010,Capital instruments and share premium eligible as T2 Capital,198247536,dp33343
 C_01.00,0771,0010,"Fully paid up, directly issued capital instruments",198247536,dp455022
-C_02.00.a,0010,0010,TOTAL RISK EXPOSURE AMOUNT,3634713428,dp3295617
-C_02.00.a,0010,0020,TOTAL RISK EXPOSURE AMOUNT,3634713428,dp3294979
-C_02.00.a,0040,0010,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3325013428,dp3295814
-C_02.00.a,0040,0020,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3325013428,dp3295261
-C_02.00.a,0050,0010,Standardised Approach (SA),3325013428,dp3295815
-C_02.00.a,0050,0020,Standardised Approach (SA),3325013428,dp3294981
-C_02.00.a,0060,0010,SA exposure classes excluding securitisation positions,3325013428,dp3295615
-C_02.00.a,0060,0020,SA exposure classes excluding securitisation positions,3325013428,dp3294982
+C_02.00.a,0010,0010,TOTAL RISK EXPOSURE AMOUNT,3630384485,dp3295617
+C_02.00.a,0010,0020,TOTAL RISK EXPOSURE AMOUNT,3630384485,dp3294979
+C_02.00.a,0040,0010,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3320684485,dp3295814
+C_02.00.a,0040,0020,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3320684485,dp3295261
+C_02.00.a,0050,0010,Standardised Approach (SA),3320684485,dp3295815
+C_02.00.a,0050,0020,Standardised Approach (SA),3320684485,dp3294981
+C_02.00.a,0060,0010,SA exposure classes excluding securitisation positions,3320684485,dp3295615
+C_02.00.a,0060,0020,SA exposure classes excluding securitisation positions,3320684485,dp3294982
 C_02.00.a,0070,0010,Central governments or central banks,20000000,dp3295949
 C_02.00.a,0070,0020,Central governments or central banks,20000000,dp3295162
 C_02.00.a,0080,0010,Regional governments or local authorities,0,dp3295661
@@ -54,14 +54,14 @@ C_02.00.a,0125,0010,Corporates - Other,1943238748,dp3295614
 C_02.00.a,0125,0020,Corporates - Other,1943238748,dp3295213
 C_02.00.a,0131,0010,Corporates - Specialised Lending,0,dp3295817
 C_02.00.a,0131,0020,Corporates - Specialised Lending,0,dp3295214
-C_02.00.a,0140,0010,Retail,405857314,dp3295664
-C_02.00.a,0140,0020,Retail,405857314,dp3295164
-C_02.00.a,0150,0010,Secured by mortgages on immovable property and ADC exposures,584935996,dp3295613
-C_02.00.a,0150,0020,Secured by mortgages on immovable property and ADC exposures,584935996,dp3295215
-C_02.00.a,0151,0010,Secured by mortgages on residential immovable property - non-IPRE (secured),337925120,dp3295612
-C_02.00.a,0151,0020,Secured by mortgages on residential immovable property - non-IPRE (secured),337925120,dp3295216
-C_02.00.a,0152,0010,Secured by mortgages on residential immovable property - non-IPRE (unsecured),247010876,dp3295611
-C_02.00.a,0152,0020,Secured by mortgages on residential immovable property - non-IPRE (unsecured),247010876,dp3294983
+C_02.00.a,0140,0010,Retail,399055526,dp3295664
+C_02.00.a,0140,0020,Retail,399055526,dp3295164
+C_02.00.a,0150,0010,Secured by mortgages on immovable property and ADC exposures,587408840,dp3295613
+C_02.00.a,0150,0020,Secured by mortgages on immovable property and ADC exposures,587408840,dp3295215
+C_02.00.a,0151,0010,Secured by mortgages on residential immovable property - non-IPRE (secured),339499281,dp3295612
+C_02.00.a,0151,0020,Secured by mortgages on residential immovable property - non-IPRE (secured),339499281,dp3295216
+C_02.00.a,0152,0010,Secured by mortgages on residential immovable property - non-IPRE (unsecured),247909559,dp3295611
+C_02.00.a,0152,0020,Secured by mortgages on residential immovable property - non-IPRE (unsecured),247909559,dp3294983
 C_02.00.a,0160,0010,Exposures in default,74518974,dp3295665
 C_02.00.a,0160,0020,Exposures in default,74518974,dp3295165
 C_02.00.a,0171,0010,Subordinated debt exposures,0,dp3295604
@@ -78,34 +78,34 @@ C_02.00.a,0211,0010,Other items,215000000,dp3295937
 C_02.00.a,0211,0020,Other items,215000000,dp3294946
 C_02.00.a,0590,0010,TOTAL RISK EXPOSURE AMOUNT FOR OPERATIONAL RISK (OpR ),309700000,dp3295823
 C_02.00.a,0590,0020,TOTAL RISK EXPOSURE AMOUNT FOR OPERATIONAL RISK (OpR ),309700000,dp3295222
-C_03.00,0010,0010,CET1 Capital ratio,0.1589,dp85151
-C_03.00,0020,0010,Surplus(+)/Deficit(-) of CET1 capital,414047896,dp33280
-C_03.00,0030,0010,T1 Capital ratio,0.1795,dp85152
-C_03.00,0040,0010,Surplus(+)/Deficit(-) of T1 capital,434527194,dp33281
-C_03.00,0050,0010,Total capital ratio,0.2341,dp85153
-C_03.00,0060,0010,Surplus(+)/Deficit(-) of total capital,560080462,dp33282
-C_03.00,0070,0010,CET1 Capital ratio considering unfloored TREA,0.1589,dp3294198
-C_03.00,0080,0010,T1 Capital ratio considering unfloored TREA,0.1795,dp3294199
-C_03.00,0090,0010,Total capital ratio considering unfloored TREA,0.2341,dp3294197
+C_03.00,0010,0010,CET1 Capital ratio,0.1591,dp85151
+C_03.00,0020,0010,Surplus(+)/Deficit(-) of CET1 capital,414242698,dp33280
+C_03.00,0030,0010,T1 Capital ratio,0.1798,dp85152
+C_03.00,0040,0010,Surplus(+)/Deficit(-) of T1 capital,434786931,dp33281
+C_03.00,0050,0010,Total capital ratio,0.2344,dp85153
+C_03.00,0060,0010,Surplus(+)/Deficit(-) of total capital,560426777,dp33282
+C_03.00,0070,0010,CET1 Capital ratio considering unfloored TREA,0.1591,dp3294198
+C_03.00,0080,0010,T1 Capital ratio considering unfloored TREA,0.1798,dp3294199
+C_03.00,0090,0010,Total capital ratio considering unfloored TREA,0.2344,dp3294197
 C_03.00,0130,0010,Total SREP capital requirement ratio (TSCR),0.1,dp85156
 C_03.00,0140,0010,TSCR: to be made up of CET1 capital,0.0563,dp85154
 C_03.00,0150,0010,TSCR: to be made up of Tier 1,0.075,dp85155
 C_03.00,0151,0010,"Total SREP capital requirement (TSCR) ratio without cap of Article 104a(6), point (a), of Directive 2013/36/EU",0.1,dp3295271
 C_03.00,0152,0010,TSCR: to be made up of CET1 capital,0.0563,dp3295269
 C_03.00,0153,0010,TSCR: to be made up of Tier 1 capital,0.075,dp3295270
-C_03.00,0160,0010,Overall capital requirement ratio (OCR),0.1325,dp410433
-C_03.00,0170,0010,OCR: to be made up of CET1 capital,0.0888,dp410431
-C_03.00,0180,0010,OCR: to be made up of Tier 1,0.1075,dp410432
-C_03.00,0190,0010,OCR and Pillar 2 Guidance (P2G),0.1425,dp410436
-C_03.00,0200,0010,OCR and P2G: to be made up of CET1 capital,0.0988,dp410434
-C_03.00,0210,0010,OCR and P2G: to be made up of Tier 1 capital,0.1175,dp410435
-C_03.00,0220,0010,Surplus(+)/Deficit(-) of CET1 capital considering the requirements of Article 92 of Regulation (EU) No 575/2013 and Article 104a of Directive 2013/36/EU,255029183,dp454688
-C_03.00,0330,0010,Fully loaded CET1 Capital ratio,0.1589,dp3294200
-C_03.00,0340,0010,Fully loaded T1 Capital ratio,0.1795,dp3294203
-C_03.00,0350,0010,Fully loaded Total capital ratio,0.2341,dp3294202
-C_03.00,0360,0010,"CET1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.1589,dp3294201
-C_03.00,0370,0010,"T1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4, (5) and 7 of Regulation (EU) No 575/2013",0.1795,dp3294196
-C_03.00,0380,0010,"Total capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.2341,dp3294195
+C_03.00,0160,0010,Overall capital requirement ratio (OCR),0.135,dp410433
+C_03.00,0170,0010,OCR: to be made up of CET1 capital,0.0913,dp410431
+C_03.00,0180,0010,OCR: to be made up of Tier 1,0.11,dp410432
+C_03.00,0190,0010,OCR and Pillar 2 Guidance (P2G),0.145,dp410436
+C_03.00,0200,0010,OCR and P2G: to be made up of CET1 capital,0.1013,dp410434
+C_03.00,0210,0010,OCR and P2G: to be made up of Tier 1 capital,0.12,dp410435
+C_03.00,0220,0010,Surplus(+)/Deficit(-) of CET1 capital considering the requirements of Article 92 of Regulation (EU) No 575/2013 and Article 104a of Directive 2013/36/EU,246337416,dp454688
+C_03.00,0330,0010,Fully loaded CET1 Capital ratio,0.1591,dp3294200
+C_03.00,0340,0010,Fully loaded T1 Capital ratio,0.1798,dp3294203
+C_03.00,0350,0010,Fully loaded Total capital ratio,0.2344,dp3294202
+C_03.00,0360,0010,"CET1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.1591,dp3294201
+C_03.00,0370,0010,"T1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4, (5) and 7 of Regulation (EU) No 575/2013",0.1798,dp3294196
+C_03.00,0380,0010,"Total capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.2344,dp3294195
 C_47.00,0150,0010,Off-balance sheet items with a 10% CCF in accordance with Article 429f CRR,30500000,dp132890
 C_47.00,0160,0010,Off-balance sheet items with a 20% CCF in accordance with Article 429f CRR,9600000,dp132891
 C_47.00,0165,0010,Off-balance sheet items with a 40% CCF  in accordance with Article 429f CRR,164800000,dp3293919

@@ -13,9 +13,9 @@ REC-01/1900,Risk sub-ledger vs GL account 1900,58000000.0,58000000.0,0.0,RECONCI
 REC-01/1590,Specific provisions in sub-ledger vs GL loan-loss allowance,-24628917.0,-24628917.0,0.0,RECONCILED
 REC-02,Trial balance: debits = credits,0.0,0.0,0.0,RECONCILED
 REC-03a,Exposures in = exposures risk-weighted,3155.0,3155.0,0.0,RECONCILED
-REC-03b,Net exposure value in = sum of risk-weighted parts (incl. mortgage split),6196371083.0,6196371083.0,-0.0,RECONCILED
+REC-03b,Net exposure value in = sum of risk-weighted parts (incl. mortgage split),6196371083.0,6196371083.0,0.0,RECONCILED
 REC-04,Total assets (GL) vs C 47.00 r0190 on-balance exposures,6293371083.0,6293371083.0,0.0,RECONCILED
-REC-05,Total assets = risk-weighted exposure value + assets deducted from CET1,6293371083.0,6293371083.0,-0.0,RECONCILED
+REC-05,Total assets = risk-weighted exposure value + assets deducted from CET1,6293371083.0,6293371083.0,0.0,RECONCILED
 REC-06,Balance-sheet equity incl. profit vs own-funds items before filters and deductions,764000000.0,764000000.0,0.0,RECONCILED
 REC-07/interest_income,Business indicator 2025 interest_income vs GL 4000,246000000.0,246000000.0,0.0,RECONCILED
 REC-07/interest_expense,Business indicator 2025 interest_expense vs GL 4100,98000000.0,98000000.0,0.0,RECONCILED
@@ -25,4 +25,4 @@ REC-07/fee_expense,Business indicator 2025 fee_expense vs GL 4400,14000000.0,140
 REC-07/other_operating_income,Business indicator 2025 other_operating_income vs GL 4600,6000000.0,6000000.0,0.0,RECONCILED
 REC-07/other_operating_expense,Business indicator 2025 other_operating_expense vs GL 5300,5000000.0,5000000.0,0.0,RECONCILED
 REC-07/net_banking_book,Business indicator 2025 net_banking_book vs GL 4500,3000000.0,3000000.0,0.0,RECONCILED
-REC-08,C 02.00 r0060 vs loan-level RWEA,3325013428.0,3325013427.74,0.26,RECONCILED
+REC-08,C 02.00 r0060 vs loan-level RWEA,3320684485.0,3320684484.99,0.01,RECONCILED

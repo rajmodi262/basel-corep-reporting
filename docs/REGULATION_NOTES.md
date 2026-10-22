@@ -80,8 +80,8 @@ money.
 | Central governments (Art 114) | By rating (credit quality step 1-6). **EU governments in their own currency: 0%** (Art 114(4)) | Bund, OAT, BTP: 0%; US Treasury CQS1: 0%; Turkey CQS5: 100% | 20.0 |
 | Institutions (Art 120) | By rating; short-term (≤ 3 months) gets better weights | 20-50% | 81.5 |
 | Corporates (Art 122) | By rating; **unrated = 100%** | 50-150%, mostly 100% | 1,943.2 |
-| Retail (Art 123) | Flat 75% | 75% | 405.9 |
-| Residential mortgages (Art 125) | **Loan-splitting**: the part up to 55% of the property value at 20%, the rest at 75% | 20% / 75% | 584.9 |
+| Retail (Art 123) | Flat 75% | 75% | 399.1 |
+| Residential mortgages (Art 125) | **Loan-splitting**: the part up to 55% of the property value at 20%, the rest at 75% | 20% / 75% | 587.4 |
 | In default (Art 127) | 150% if provisions < 20%, else 100% | 100-150% | 74.5 |
 | Other items (Art 134) | Cash 0%, fixed assets 100%, DTA 250% | | 215.0 |
 
@@ -101,15 +101,15 @@ Losses from failed processes, people, systems or external events. CRR3 sizes it 
 
 Why 12.5? Because 1 / 8% = 12.5. Multiplying a capital *requirement* by 12.5 turns it into an RWA-equivalent amount.
 
-**TREA = 3,325.0 credit + 309.7 operational = 3,634.7.** (No trading book, so no market risk; no derivatives, so no CVA.)
+**TREA = 3,320.7 credit + 309.7 operational = 3,630.4.** (No trading book, so no market risk; no derivatives, so no CVA.)
 
 ## 5. Capital ratios and the requirement stack (C 03.00)
 
 | Ratio (Art 92) | Formula | Demo Bank | Pillar 1 minimum |
 |---|---|---|---|
-| CET1 ratio | CET1 / TREA | **15.89%** | 4.5% |
-| Tier 1 ratio | T1 / TREA | **17.95%** | 6% |
-| Total capital ratio | Own funds / TREA | **23.41%** | 8% |
+| CET1 ratio | CET1 / TREA | **15.91%** | 4.5% |
+| Tier 1 ratio | T1 / TREA | **17.98%** | 6% |
+| Total capital ratio | Own funds / TREA | **23.44%** | 8% |
 
 On top of Pillar 1 the supervisor adds layers (set in `config/srep.yaml`):
 
@@ -117,14 +117,14 @@ On top of Pillar 1 the supervisor adds layers (set in `config/srep.yaml`):
  Pillar 1            8.00%   everyone (Art 92 CRR)
 + P2R                2.00%   bank-specific, from the supervisor's SREP (Art 104 CRD)
 = TSCR              10.00%   total SREP capital requirement            -> C 03.00 r0130
-+ Combined buffer    3.25%   conservation 2.5% + countercyclical 0.75% (Art 128-140 CRD)
-= OCR               13.25%   overall capital requirement               -> r0160
-+ P2G                1.00%   guidance, not binding                     -> r0190 = 14.25%
++ Combined buffer    3.50%   conservation 2.5% + countercyclical 1.00% (Art 128-140 CRD)
+= OCR               13.50%   overall capital requirement               -> r0160
++ P2G                1.00%   guidance, not binding                     -> r0190 = 14.50%
 ```
 
 P2R must be met at least 56.25% with CET1 and 75% with Tier 1 (Art 104a CRD). That's why the CET1
 part of TSCR is 4.5% + 56.25% × 2% = **5.625%** (r0140). After meeting everything, Demo Bank has
-**€255m of CET1 to spare** (r0220).
+**€246m of CET1 to spare** (r0220).
 
 ## 6. Leverage ratio (C 47.00)
 
@@ -159,4 +159,5 @@ counts in full in the leverage exposure.
 7. What does the 12.5 in "12.5 × BIC" mean? (1 / 8%.)
 8. What is the difference between COREP and FINREP?
 9. What is the difference between P2R and P2G?
-10. Why does the report carry `decimalsMonetary = -3`, and how does that affect validation? (Values are accurate to the thousand, so each rule allows ±500 per cell under interval arithmetic.)
+10. The countercyclical buffer went from 0.75% to 1% (CR-001). Which cells move, and why do own funds and the leverage ratio not? (docs/changes/CR-001.md)
+11. Why does the report carry `decimalsMonetary = -3`, and how does that affect validation? (Values are accurate to the thousand, so each rule allows ±500 per cell under interval arithmetic.)
