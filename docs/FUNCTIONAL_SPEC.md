@@ -23,9 +23,10 @@ validation rules, and deliver it in the EBA's xBRL-CSV format.
 
 | In scope | Out of scope (the bank has no such business) |
 |---|---|
-| C 00.01 header, C 01.00, C 02.00, C 03.00, C 47.00 | Market risk, CVA, counterparty credit risk, securitisation, IRB |
+| C 00.01, C 01.00, C 02.00, C 03.00, C 22.00, C 25.01, C 34.01, C 34.03, C 47.00 | Trading book (other than FX), securitisation, IRB, IMM |
 | Standardised Approach credit risk incl. off-balance items | Large exposures, liquidity (LCR/NSFR), FINREP |
-| BIC operational risk | Consolidation (individual-level report) |
+| Counterparty credit risk (SA-CCR), CVA (simplified), FX risk (CR-002) | Consolidation (individual-level report) |
+| BIC operational risk | Margined netting sets, collateral |
 
 ## 4. Functional requirements
 
@@ -45,6 +46,10 @@ validation rules, and deliver it in the EBA's xBRL-CSV format.
 | FR-12 | Keep a trace of how each derived number was calculated | `out/calculation_trace.json` |
 | FR-13 | Change control: every regulatory or data change carries an impact list agreed in advance; the change is accepted only if exactly those cells move | `scripts/impact_analysis.py`, UT-25..UT-29, `docs/changes/` |
 | FR-14 | Use a property valuation only if it is no older than 3 years at the reference date | DQ-09, UT-29 |
+| FR-15 | Compute counterparty credit risk with SA-CCR per netting set and report it in C 02.00 and C 34.03 | UT-30, UT-31 |
+| FR-16 | Include derivatives in the leverage exposure with the PFE multiplier set to 1; exclude derivative assets from r0190 | UT-32, REC-04 |
+| FR-17 | Compute CVA risk with the simplified approach, excluding exempt non-financial counterparties; justify eligibility with the monthly size test (C 34.01) | UT-33, UT-36 |
+| FR-18 | Compute FX risk on the whole balance sheet, applying the 2% de minimis | UT-34, UT-35 |
 
 ## 5. Outputs (`out/`)
 

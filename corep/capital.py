@@ -118,9 +118,12 @@ SA_ROWS = ["0070", "0080", "0090", "0100", "0110", "0120", "0125", "0131", "0140
            "0171", "0180", "0190", "0200", "0210", "0211"]
 
 
-def risk_exposure_amounts(con: duckdb.DuckDBPyConnection, opr: dict, columns: dict[str, set[str]]) -> dict[Cell, float]:
+def risk_exposure_amounts(con: duckdb.DuckDBPyConnection, opr: dict, columns: dict[str, set[str]],
+                          ccr: dict[str, float], fx_rea: float, cva_rea: float) -> dict[Cell, float]:
     t = "C_02.00.a"
     credit = dict(con.execute("SELECT row, rwea FROM c02_credit").fetchall())
+    for row, rwea in ccr.items():           # SA exposure classes include counterparty credit risk (CR-002)
+        credit[row] = credit.get(row, 0.0) + rwea
     v = {r: credit.get(r, 0.0) for r in SA_ROWS}
     v["0151"], v["0152"] = credit.get("0151", 0.0), credit.get("0152", 0.0)
     v["0150"] = v["0151"] + v["0152"]
@@ -128,7 +131,12 @@ def risk_exposure_amounts(con: duckdb.DuckDBPyConnection, opr: dict, columns: di
     v["0050"] = v["0060"]                  # no securitisation positions
     v["0040"] = v["0050"]                  # no IRB, no default-fund contributions
     v["0590"] = opr["rea"]
-    v["0010"] = v["0040"] + v["0590"]       # no market risk, settlement or CVA (no trading book, no derivatives)
+    v["0560"] = fx_rea                      # FX risk, simplified standardised approach (Art 351-354)
+    v["0530"] = v["0560"]
+    v["0520"] = v["0530"]
+    v["0675"] = cva_rea                     # CVA risk, simplified approach (Art 385)
+    v["0640"] = v["0675"]
+    v["0010"] = v["0040"] + v["0520"] + v["0590"] + v["0640"]   # no settlement risk or large-exposure add-ons
     cells = {}
     for row, x in v.items():
         # Standardised-only bank: the output-floor S-TREA (c0020) equals TREA wherever the template has the cell.
@@ -174,13 +182,17 @@ def capital_ratios(of: dict[Cell, float], rea: dict[Cell, float], p: dict) -> di
 
 
 # --------------------------------------------------------------------------- leverage C 47.00
-def leverage_ratio(con: duckdb.DuckDBPyConnection, of: dict[Cell, float], p: dict) -> dict[Cell, float]:
+def leverage_ratio(con: duckdb.DuckDBPyConnection, of: dict[Cell, float], p: dict, ns) -> dict[Cell, float]:
     t = "C_47.00"
     v: dict[str, float] = {}
-    # On-balance sheet: every asset at its accounting value (net of specific provisions) - Art 429b(1).
+    # On-balance sheet: every asset at its accounting value (net of specific provisions) - Art 429b(1),
+    # except derivatives, which are measured with SA-CCR in r0061/r0091 instead (Art 429c).
     v["0190"] = gl_sum(con, [r[0] for r in con.execute(
-        "SELECT account FROM general_ledger WHERE statement = 'BS' AND class = 'asset'").fetchall()])
-    trace[f"{t} r0190"] = "Total assets on the balance sheet (all asset GL accounts, net of allowances)"
+        "SELECT account FROM general_ledger WHERE statement = 'BS' AND class = 'asset' AND account <> '1150'").fetchall()])
+    trace[f"{t} r0190"] = "Total assets on the balance sheet less derivative assets (GL 1150)"
+    v["0061"] = float(ns.lr_rc.sum())       # alpha x replacement cost
+    v["0091"] = float(ns.lr_pfe.sum())      # alpha x add-on, multiplier 1 (Art 429c(5))
+    trace[f"{t} r0061/r0091"] = "SA-CCR replacement cost and PFE (multiplier 1), both x alpha 1.4"
     # Off-balance sheet items at their leverage-ratio CCF (Art 429f).
     for row, value in con.execute(
             "SELECT c47_row, sum(nominal_amount * lr_ccf) FROM off_balance_rwa GROUP BY 1").fetchall():
@@ -188,7 +200,7 @@ def leverage_ratio(con: duckdb.DuckDBPyConnection, of: dict[Cell, float], p: dic
     # Assets already deducted from Tier 1 are taken out of the exposure measure (C 47.00 r0270/r0280): same amount, negative.
     v["0270"] = deductions_from_tier1(of)
     v["0280"] = v["0270"]
-    exposure_rows = ["0150", "0160", "0165", "0170", "0180", "0190"]
+    exposure_rows = ["0061", "0091", "0150", "0160", "0165", "0170", "0180", "0190"]
     v["0290"] = sum(v.get(r, 0.0) for r in exposure_rows) + v["0270"]
     v["0300"] = sum(v.get(r, 0.0) for r in exposure_rows) + v["0280"]
     t1 = of[("C_01.00", "0015", "0010")]

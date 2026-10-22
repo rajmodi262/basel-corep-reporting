@@ -3,6 +3,7 @@ account,description,statement,class,amount
 1010,Balances with central banks,BS,asset,410000000
 1110,Government bonds - amortised cost,BS,asset,520000000
 1120,Government bonds - FVOCI,BS,asset,390000000
+1150,Derivative assets (positive fair values),BS,asset,9808157
 1210,Loans and advances to banks,BS,asset,310000000
 1310,Loans to corporates - gross,BS,asset,1820000000
 1410,Consumer loans - gross,BS,asset,520000000
@@ -15,8 +16,9 @@ account,description,statement,class,amount
 1810,Deferred tax asset - tax loss carry-forward,BS,asset,12000000
 1820,Deferred tax asset - temporary differences,BS,asset,26000000
 1900,Other assets,BS,asset,58000000
-2000,Customer deposits,BS,liability,-4578371083
+2000,Customer deposits,BS,liability,-4566914021
 2100,Debt securities issued,BS,liability,-600000000
+2150,Derivative liabilities (negative fair values),BS,liability,-21265219
 2600,Subordinated bond T2-2033,BS,liability,-150000000
 2610,Subordinated bond T2-2028,BS,liability,-100000000
 2700,Provisions,BS,liability,-31000000

@@ -51,9 +51,13 @@ def check(changed: pd.DataFrame, expected_path: str | None) -> tuple[set, set]:
     if not expected_path:
         return set(), set()
     exp = pd.read_csv(expected_path, dtype=str)
-    expected = set(map(tuple, exp[KEY].to_numpy()))
     actual = set(map(tuple, changed[KEY].to_numpy()))
-    return actual - expected, expected - actual
+    # "*" in row or col expects every cell it covers to change (used for whole new templates)
+    patterns = [tuple(r) for r in exp[KEY].to_numpy()]
+    match = lambda cell, pat: all(p in ("*", c) for c, p in zip(cell, pat))
+    unexpected = {c for c in actual if not any(match(c, p) for p in patterns)}
+    missed = {p for p in patterns if not any(match(c, p) for c in actual)}
+    return unexpected, missed
 
 
 def fmt(x) -> str:

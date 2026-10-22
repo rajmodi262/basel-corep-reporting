@@ -15,5 +15,6 @@
  "T2 T2-2033": "150,000,000 -> 150,000,000 (Art 64, maturity 2033-09-20)",
  "T2 T2-2028": "100,000,000 -> 48,247,536 (Art 64, maturity 2028-05-30)",
  "C_01.00 r0490": "DTA temporary differences 26,000,000 vs 10% of CET1 57,761,000: deduct 0; the rest is risk-weighted at 250% (Art 48(4))",
- "C_47.00 r0190": "Total assets on the balance sheet (all asset GL accounts, net of allowances)"
+ "C_47.00 r0190": "Total assets on the balance sheet less derivative assets (GL 1150)",
+ "C_47.00 r0061/r0091": "SA-CCR replacement cost and PFE (multiplier 1), both x alpha 1.4"
 }

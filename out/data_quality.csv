@@ -9,3 +9,6 @@ DQ-07,BLOCK,Every off-balance product has a CCF in the decision table (Annex I),
 DQ-08,WARN,Defaulted exposures carry a specific provision (IFRS 9 stage 3),0,
 DQ-09,WARN,Property valuation no older than 3 years at the reference date (Art 208(3)) - else not used,1,EXP-MTG-00960
 DQ-10,BLOCK,Every valuation in the collateral feed belongs to a known mortgage,0,
+DQ-11,BLOCK,Every netting set has exactly one counterparty (Art 272(4): netting is per counterparty),0,
+DQ-12,BLOCK,Every derivative matures after the reference date and has a direction SA-CCR can sign (Art 279a),0,
+DQ-13,BLOCK,Every bank counterparty has a credit quality step (Art 120 has no unrated row here),0,

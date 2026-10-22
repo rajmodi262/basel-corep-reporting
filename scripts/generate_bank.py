@@ -158,7 +158,59 @@ def capital_instruments() -> list[dict]:
     ]
 
 
-def general_ledger(exp: list[dict]) -> list[dict]:
+def derivatives() -> list[dict]:
+    """Banking-book hedges and client derivatives (CR-002): EUR interest-rate swaps and EUR/USD forwards.
+
+    Uses its own seed so the rest of the books stay identical to earlier releases. Market values are
+    given for the three month-ends of Q4 (C 34.01 tests the size of the derivative business monthly).
+    """
+    rng = np.random.default_rng(20251232)
+    netting_sets = [  # netting set, counterparty, type, credit quality step
+        ("NS-01", "BNK-901", "institution", "1"), ("NS-02", "BNK-902", "institution", "2"),
+        ("NS-03", "BNK-903", "institution", "2"), ("NS-04", "BNK-904", "institution", "1"),
+        ("NS-05", "CORP-9001", "corporate", ""), ("NS-06", "CORP-9002", "corporate", "3"),
+    ]
+    rows = []
+    n = 0
+    for ns, cpty, ctype, cqs in netting_sets:
+        for _ in range(int(rng.integers(2, 5))):
+            n += 1
+            notional = int(rng.integers(5, 31)) * 5 * M
+            years = int(rng.integers(1, 11))
+            maturity = f"{2025 + years + (1 if rng.random() < 0.5 else 0)}-{int(rng.integers(1, 13)):02d}-15"
+            direction = "pay_fixed" if (ctype == "institution") == (rng.random() < 0.7) else "receive_fixed"
+            mtm = [round(notional * rng.normal(0, 0.02)) for _ in range(3)]
+            rows.append({"trade_id": f"IRS-{n:03d}", "netting_set": ns, "counterparty_id": cpty,
+                         "counterparty_type": ctype, "cqs": cqs, "asset_class": "interest_rate",
+                         "product": "interest_rate_swap", "currency": "EUR", "currency_2": "",
+                         "notional": notional, "start_date": "2025-12-31", "maturity_date": maturity,
+                         "direction": direction, "mtm_2025_10_31": mtm[0], "mtm_2025_11_30": mtm[1],
+                         "mtm_2025_12_31": mtm[2]})
+    # EUR/USD forwards selling USD to hedge the USD bond portfolio, with the four banks
+    for i, (ns, cpty, ctype, cqs) in enumerate(netting_sets[:4], start=1):
+        for j in range(2 if i <= 2 else 1):
+            n += 1
+            notional = (15 if i <= 2 else 10) * M
+            mtm = [round(notional * rng.normal(0, 0.012)) for _ in range(3)]
+            rows.append({"trade_id": f"FXF-{n:03d}", "netting_set": ns, "counterparty_id": cpty,
+                         "counterparty_type": ctype, "cqs": cqs, "asset_class": "foreign_exchange",
+                         "product": "fx_forward", "currency": "EUR", "currency_2": "USD",
+                         "notional": notional, "start_date": "2025-12-31",
+                         "maturity_date": f"2026-{int(rng.integers(2, 10)):02d}-27",
+                         "direction": "sell_currency_2", "mtm_2025_10_31": mtm[0], "mtm_2025_11_30": mtm[1],
+                         "mtm_2025_12_31": mtm[2]})
+    return rows
+
+
+def total_assets_history(gl: list[dict]) -> list[dict]:
+    """Month-end total assets for Q4 (Oct and Nov from the monthly balance sheets; Dec = the trial balance)."""
+    dec = sum(r["amount"] for r in gl if r["statement"] == "BS" and r["class"] == "asset")
+    return [{"month_end": "2025-10-31", "total_assets": round(dec * 0.982)},
+            {"month_end": "2025-11-30", "total_assets": round(dec * 0.991)},
+            {"month_end": "2025-12-31", "total_assets": dec}]
+
+
+def general_ledger(exp: list[dict], der: list[dict]) -> list[dict]:
     gl: dict[str, int] = {}
     for e in exp:
         gl[e["gl_account"]] = gl.get(e["gl_account"], 0) + e["gross_amount"]
@@ -169,6 +221,8 @@ def general_ledger(exp: list[dict]) -> list[dict]:
         ("1010", "Balances with central banks", "BS", "asset", gl["1010"]),
         ("1110", "Government bonds - amortised cost", "BS", "asset", gl["1110"]),
         ("1120", "Government bonds - FVOCI", "BS", "asset", gl["1120"]),
+        ("1150", "Derivative assets (positive fair values)", "BS", "asset",
+         sum(d["mtm_2025_12_31"] for d in der if d["mtm_2025_12_31"] > 0)),
         ("1210", "Loans and advances to banks", "BS", "asset", gl["1210"]),
         ("1310", "Loans to corporates - gross", "BS", "asset", gl["1310"]),
         ("1410", "Consumer loans - gross", "BS", "asset", gl["1410"]),
@@ -182,6 +236,8 @@ def general_ledger(exp: list[dict]) -> list[dict]:
         ("1820", "Deferred tax asset - temporary differences", "BS", "asset", gl["1820"]),
         ("1900", "Other assets", "BS", "asset", gl["1900"]),
         ("2100", "Debt securities issued", "BS", "liability", -600 * M),
+        ("2150", "Derivative liabilities (negative fair values)", "BS", "liability",
+         sum(d["mtm_2025_12_31"] for d in der if d["mtm_2025_12_31"] < 0)),
         ("2600", "Subordinated bond T2-2033", "BS", "liability", -150 * M),
         ("2610", "Subordinated bond T2-2028", "BS", "liability", -100 * M),
         ("2700", "Provisions", "BS", "liability", -31 * M),
@@ -218,7 +274,7 @@ def general_ledger(exp: list[dict]) -> list[dict]:
     profit = -sum(v for a, d, s, c, v in pl)
     # Customer deposits close the balance sheet: assets + liabilities + equity - profit = 0.
     balance = sum(v for *_, v in accounts) - profit
-    rows.insert(16, ("2000", "Customer deposits", "BS", "liability", -balance))
+    rows.insert([r[0] for r in rows].index("2100"), ("2000", "Customer deposits", "BS", "liability", -balance))
     return [{"account": a, "description": d, "statement": s, "class": c, "amount": int(v)} for a, d, s, c, v in rows]
 
 
@@ -244,7 +300,11 @@ def main() -> None:
     write("exposures.csv", exp)
     write("off_balance.csv", off_balance())
     write("capital_instruments.csv", capital_instruments())
-    write("general_ledger.csv", general_ledger(exp))
+    der = derivatives()
+    write("derivatives.csv", der)
+    gl = general_ledger(exp, der)
+    write("general_ledger.csv", gl)
+    write("total_assets_history.csv", total_assets_history(gl))
     write("pl_history.csv", pl_history())
     print(f"{len(exp)} exposures written")
 

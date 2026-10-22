@@ -15,6 +15,9 @@ A regulatory report is only as good as the attributes behind it. Before any calc
 | DQ-08 | WARN | Defaulted exposures carry a provision | Art 127 cover test | 0 | — |
 | DQ-09 | WARN | Valuation no older than 3 years at the reference date | Art 208(3) | **1** | Valuation not used; mortgage stays retail 75% |
 | DQ-10 | BLOCK | Every valuation in the collateral feed belongs to a known mortgage | Feed integrity | 0 | — |
+| DQ-11 | BLOCK | One counterparty per netting set | Netting (Art 272(4)) | 0 | — |
+| DQ-12 | BLOCK | Derivative matures after the reference date and has a direction SA-CCR can sign | Supervisory delta (Art 279a) | 0 | — |
+| DQ-13 | BLOCK | Bank counterparties carry a credit quality step | CCR risk weight (Art 120) | 0 | — |
 
 **BLOCK** stops the run (`corep/pipeline.py`); a report must not be produced from broken data.
 **WARN** produces a report with a documented, never favourable fallback, and lists the exposures in
@@ -34,7 +37,7 @@ never higher. CR-001 proved it: valuing 5 of the 6 mortgages lowered TREA by €
 
 ## Gaps in scope (what this bank does not have)
 
-There is no trading book (so no market risk), no derivatives or securities financing (so no
-counterparty credit risk, CVA, or leverage rows for SFTs and derivatives), no securitisations, and
-no IRB models. Their template rows are left empty, and the EBA rules on those rows are reported as
+Since CR-002 the bank has derivatives (counterparty credit risk, CVA, FX risk). It still has no
+trading book beyond FX, no securities financing transactions, no margined netting sets, no
+securitisations, and no IRB or internal models. Their template rows are left empty, and the EBA rules on those rows are reported as
 "not applicable" in `out/eba_validation_results.csv`.

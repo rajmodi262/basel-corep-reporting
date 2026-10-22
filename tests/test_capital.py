@@ -59,11 +59,15 @@ def test_ratios_are_own_funds_over_trea(run):
 
 
 def test_leverage_ratio_by_hand(run):
-    # UT-15 Art 429: Tier 1 / (assets + off-balance at LR CCF - assets deducted from Tier 1)
+    # UT-15 Art 429: Tier 1 / (assets other than derivatives + derivatives at SA-CCR (multiplier 1)
+    #                + off-balance at LR CCF - assets deducted from Tier 1)
     con, _, _, cells = run
-    assets = c(cells, "C_47.00", "0190")
+    assets = con.execute("SELECT sum(amount) FROM general_ledger WHERE statement='BS' AND class='asset' "
+                         "AND account <> '1150'").fetchone()[0]
+    assert c(cells, "C_47.00", "0190") == assets
+    derivatives = c(cells, "C_47.00", "0061") + c(cells, "C_47.00", "0091")
     obs = con.execute("SELECT sum(nominal_amount * lr_ccf) FROM off_balance_rwa").fetchone()[0]
     deducted = 40e6 + 39e6 + 12e6 + 390_000
-    exposure = assets + obs - deducted
+    exposure = assets + derivatives + obs - deducted
     assert c(cells, "C_47.00", "0290") == pytest.approx(exposure, abs=1)
     assert c(cells, "C_47.00", "0330") == pct(c(cells, "C_01.00", "0015") / exposure)

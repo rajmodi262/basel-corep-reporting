@@ -1,0 +1,38 @@
+template,row,col,reason
+C_02.00.a,0010,*,"TREA: adds CCR RWEA, market risk and CVA"
+C_02.00.a,0040,*,Credit risk subtotal includes CCR RWEA
+C_02.00.a,0050,*,SA subtotal includes CCR RWEA
+C_02.00.a,0060,*,SA exposure classes include CCR RWEA
+C_02.00.a,0120,*,CCR on derivatives with institutions
+C_02.00.a,0125,*,CCR on derivatives with corporates
+C_02.00.a,0520,*,New: market risk total
+C_02.00.a,0530,*,New: simplified standardised approach
+C_02.00.a,0560,*,New: foreign exchange risk (net USD position)
+C_02.00.a,0640,*,New: CVA risk total
+C_02.00.a,0675,*,New: CVA simplified approach (Art 385)
+C_03.00,0010,0010,Ratio over a higher TREA
+C_03.00,0020,0010,Surplus over a higher TREA
+C_03.00,0030,0010,Ratio over a higher TREA
+C_03.00,0040,0010,Surplus over a higher TREA
+C_03.00,0050,0010,Ratio over a higher TREA
+C_03.00,0060,0010,Surplus over a higher TREA
+C_03.00,0070,0010,Ratio over a higher TREA
+C_03.00,0080,0010,Ratio over a higher TREA
+C_03.00,0090,0010,Ratio over a higher TREA
+C_03.00,0220,0010,Surplus over a higher TREA
+C_03.00,0330,0010,Ratio over a higher TREA
+C_03.00,0340,0010,Ratio over a higher TREA
+C_03.00,0350,0010,Ratio over a higher TREA
+C_03.00,0360,0010,Ratio over a higher TREA
+C_03.00,0370,0010,Ratio over a higher TREA
+C_03.00,0380,0010,Ratio over a higher TREA
+C_47.00,0061,0010,New: derivatives replacement cost (SA-CCR)
+C_47.00,0091,0010,New: derivatives PFE (SA-CCR multiplier 1)
+C_47.00,0290,0010,Exposure measure includes derivatives
+C_47.00,0300,0010,Exposure measure includes derivatives
+C_47.00,0330,0010,Leverage ratio over a larger exposure
+C_47.00,0340,0010,Leverage ratio over a larger exposure
+C_22.00,*,*,New template: FX risk
+C_25.01.a,*,*,New template: CVA risk
+C_34.01.a,*,*,New template: size of derivative business
+C_34.03,*,*,New template: SA-CCR

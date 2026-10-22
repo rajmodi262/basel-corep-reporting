@@ -1,0 +1,21 @@
+# CR-002 supervisory parameters. Source: CRR as amended by Regulation (EU) 2024/1623.
+sa_ccr:
+  alpha: 1.4                      # Art 274(2): exposure value = alpha x (RC + PFE)
+  multiplier_floor: 0.05          # Art 278(3)
+  min_maturity_years: 0.04        # Art 279c(1)(a): floor of 10 business days (10/250)
+  interest_rate:
+    supervisory_factor: 0.005     # Art 280a(1)
+    bucket_edges_years: [1, 5]    # Art 280a(2)-(3): <1y, 1-5y, >5y
+    correlation_adjacent: 1.4     # Art 280a(4): 1.4 x D1D2 and 1.4 x D2D3
+    correlation_outer: 0.6        #              0.6 x D1D3
+    supervisory_duration_rate: 0.05  # Art 279b(1)(a)
+  foreign_exchange:
+    supervisory_factor: 0.04      # Art 280c
+
+cva:
+  approach: simplified            # Art 385: own funds requirement = CCR RWEA / 12.5
+  exempt_counterparty_types: [corporate]   # Art 382(4)(a): non-financial counterparties
+
+fx_risk:
+  de_minimis_share_of_own_funds: 0.02      # Art 351
+  own_funds_rate: 0.08                     # Art 351

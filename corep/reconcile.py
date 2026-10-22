@@ -40,16 +40,34 @@ def run(con: duckdb.DuckDBPyConnection, cells: dict[Cell, float], opr: dict) -> 
     ev_out = con.execute("SELECT sum(exposure_value) FROM credit_rwa").fetchone()[0]
     add("REC-03b", "Net exposure value in = sum of risk-weighted parts (incl. mortgage split)", ev_in, ev_out)
 
-    # REC-04: balance sheet total assets = leverage ratio on-balance exposure (C 47.00 r0190).
+    # REC-04: balance sheet total assets, less derivatives (measured by SA-CCR), = C 47.00 r0190.
     assets = gl_sum(con, [r[0] for r in con.execute(
         "SELECT account FROM general_ledger WHERE statement='BS' AND class='asset'").fetchall()])
-    add("REC-04", "Total assets (GL) vs C 47.00 r0190 on-balance exposures", assets, cells[("C_47.00", "0190", "0010")])
+    derivative_assets = gl_sum(con, ["1150"])
+    add("REC-04", "Total assets (GL) less derivative assets vs C 47.00 r0190 on-balance exposures",
+        assets - derivative_assets, cells[("C_47.00", "0190", "0010")])
 
-    # REC-05: on-balance credit exposure + deducted assets = total assets.
-    #   Everything on the balance sheet is either risk-weighted (C 02.00) or deducted from own funds (C 01.00).
+    # REC-05: every asset is either risk-weighted as credit risk, deducted from CET1, or a derivative
+    #   (counterparty credit risk). Nothing is missed and nothing is counted twice.
     deducted_assets = gl_sum(con, ["1600", "1610", "1620", "1810"])
-    add("REC-05", "Total assets = risk-weighted exposure value + assets deducted from CET1",
-        assets, float(ev_out) + deducted_assets)
+    add("REC-05", "Total assets = credit exposure value + assets deducted from CET1 + derivative assets",
+        assets, float(ev_out) + deducted_assets + derivative_assets)
+
+    # REC-09: derivative fair values in the GL = trade-level market values (CR-002).
+    mtm = con.execute("SELECT sum(CASE WHEN mtm_2025_12_31 > 0 THEN mtm_2025_12_31 END), "
+                      "sum(CASE WHEN mtm_2025_12_31 < 0 THEN mtm_2025_12_31 END) FROM derivatives").fetchone()
+    add("REC-09a", "Positive trade market values vs GL 1150 derivative assets", float(mtm[0]), derivative_assets)
+    add("REC-09b", "Negative trade market values vs GL 2150 derivative liabilities", float(mtm[1]), gl_sum(con, ["2150"]))
+
+    # REC-10: C 34.03 notional and trade count = the derivatives book.
+    n, notional = con.execute("SELECT count(*), sum(notional) FROM derivatives").fetchone()
+    add("REC-10a", "Trades in the book vs C 34.03 r0010 number of transactions", n, cells[("C_34.03", "0010", "0030")], 0)
+    add("REC-10b", "Notional in the book vs C 34.03 r0010 notional", float(notional), cells[("C_34.03", "0010", "0040")])
+
+    # REC-11: C 22.00 USD long position = USD exposures in the credit sub-ledger.
+    usd = con.execute("SELECT sum(gross_amount - specific_provision) FROM exposures WHERE currency = 'USD'").fetchone()[0]
+    add("REC-11", "USD exposures in the sub-ledger vs C 22.00 USD long position (on-balance part)",
+        float(usd), cells[("C_22.00", "0100", "0020")])
 
     # REC-06: equity in the GL bridges to CET1 + AT1 before regulatory adjustments.
     equity = -gl_sum(con, [r[0] for r in con.execute(
@@ -70,6 +88,8 @@ def run(con: duckdb.DuckDBPyConnection, cells: dict[Cell, float], opr: dict) -> 
 
     # REC-08: C 02.00 credit RWEA = sum of loan-level RWEA.
     loan_level = con.execute("SELECT sum(exposure_value * risk_weight) FROM credit_rwa").fetchone()[0] \
-        + con.execute("SELECT sum(exposure_value * risk_weight) FROM off_balance_rwa").fetchone()[0]
-    add("REC-08", "C 02.00 r0060 vs loan-level RWEA", cells[("C_02.00.a", "0060", "0010")], loan_level, 1.0)
+        + con.execute("SELECT sum(exposure_value * risk_weight) FROM off_balance_rwa").fetchone()[0] \
+        + con.execute("SELECT sum(rwea) FROM netting_sets").fetchone()[0]
+    add("REC-08", "C 02.00 r0060 vs loan-level RWEA + netting-set CCR RWEA", cells[("C_02.00.a", "0060", "0010")],
+        loan_level, 1.0)
     return pd.DataFrame(checks)

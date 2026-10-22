@@ -1,26 +1,38 @@
-# Basel III COREP Reporting — own funds and leverage ratio
+# Basel III COREP Reporting — capital, credit, counterparty, market and CVA risk, leverage
 
-**From a bank's general ledger to a validated EBA regulatory submission:** capital (C 01.00),
-risk-weighted assets (C 02.00), capital ratios (C 03.00) and the leverage ratio (C 47.00), built
-under the CRR as amended by CRR3, checked against the **EBA's own validation rules**, and written in
-the EBA 4.0 **xBRL-CSV** format.
+**From a bank's general ledger and trading records to a validated EBA regulatory submission.**
+Built under the CRR as amended by CRR3, checked against the **EBA's own validation rules**, and
+written in the EBA 4.0 **xBRL-CSV** format. It covers 9 COREP templates:
+
+| Template | What it reports | Risk |
+|---|---|---|
+| C 01.00 | Own funds: CET1, AT1, Tier 2 and every deduction | Capital |
+| C 02.00 | Risk exposure amounts by risk type and exposure class | All |
+| C 03.00 | Capital ratios and the requirement stack (Pillar 1, P2R, buffers, P2G) | Capital |
+| C 22.00 | Foreign-exchange position and own funds requirement | **Market risk** |
+| C 25.01 | CVA risk, simplified approach, with exempted transactions | **CVA risk** |
+| C 34.01 | Size of the derivative business, month by month | **Counterparty credit risk** |
+| C 34.03 | SA-CCR: notionals, market values and add-ons by risk category | **Counterparty credit risk** |
+| C 47.00 | Leverage ratio exposure measure, including derivatives | Leverage |
+| C 00.01 | Report header | — |
 
 | Demo Bank AG, 31 Dec 2025 | | |
 |---|---|---|
-| Total assets | €6,293.4m | C 47.00 r0190 |
+| Total assets | €6,303.2m | GL |
 | CET1 / Tier 1 / Own funds | €577.6m / €652.6m / €850.9m | C 01.00 |
-| Total risk exposure amount | €3,630.4m (credit 3,320.7 + operational 309.7) | C 02.00 |
-| CET1 / Tier 1 / Total capital ratio | **15.91% / 17.98% / 23.44%** vs OCR 13.50% | C 03.00 |
-| Leverage ratio | **10.06%** vs 3% | C 47.00 |
+| Total risk exposure amount | €3,693.6m = credit 3,320.7 + **counterparty 27.9** + **market 30.0** + operational 309.7 + **CVA 5.3** | C 02.00 |
+| CET1 / Tier 1 / Total capital ratio | **15.64% / 17.67% / 23.04%** vs OCR 13.50% | C 03.00 |
+| Derivatives book | 26 trades, €1.96bn notional, 6 netting sets → SA-CCR exposure €47.1m | C 34.03 |
+| Leverage ratio | **9.97%** vs 3% | C 47.00 |
 
 | Control | Result |
 |---|---|
-| EBA validation rules on these templates (from the official taxonomy) | **216 / 216 applicable rules pass**, 0 fail (290 n/a: no IRB, trading book or derivatives) |
-| Planted-error tests | 4 / 4 deliberately broken cells caught by the EBA rule that guards them |
-| Reconciliations, books → report | **27 / 27 tie** (sub-ledger ↔ GL by account, balance sheet ↔ leverage, equity ↔ own funds, P&L ↔ business indicator) |
-| Data-quality rules | 10 rules; gaps found and handled conservatively (4 exposures without a type, 1 mortgage with a stale valuation) |
-| Change control | **CR-001** (buffer rate + collateral feed): 38 cells predicted from the regulation, 38 changed, **0 unexpected** ([change record](docs/changes/CR-001.md)) |
-| Tests | 33, run in CI |
+| EBA validation rules on these templates (from the official taxonomy) | **453 / 453 applicable rules pass**, 0 fail (975 n/a: no IRB, IMM, securitisation or trading book) |
+| Planted-error tests | 7 / 7 deliberately broken cells caught by the EBA rule that guards them |
+| Reconciliations, books → report | **32 / 32 tie** (sub-ledger ↔ GL by account, derivative fair values ↔ GL, balance sheet ↔ leverage, equity ↔ own funds, P&L ↔ business indicator, FX position ↔ sub-ledger) |
+| Data-quality rules | 13 rules; gaps found and handled conservatively (4 exposures without a type, 1 mortgage with a stale valuation) |
+| Change control | **CR-001** (buffer rate + collateral feed): 38 cells predicted, 38 changed, 0 unexpected. **CR-002** (derivatives, CCR, market risk, CVA): 153 cells predicted, 153 changed, 0 unexpected ([change records](docs/changes/)) |
+| Tests | 45, run in CI |
 
 > **The bank is synthetic.** Real bank data is confidential, so `scripts/generate_bank.py` creates
 > the books of a fictional mid-sized EU bank (fixed seed). **The regulation, templates, datapoints
@@ -32,22 +44,27 @@ the EBA 4.0 **xBRL-CSV** format.
 
 ```
  general ledger ─┐
- risk sub-ledger ┤─► data-quality ─► decision tables (SQL) ─► own funds, RWEA, ─► EBA validation ─► xBRL-CSV
- off-balance     │    rules DQ-01..10   exposure class,          ratios, leverage    rules (216)       packages
- P&L history    ─┘                      risk weight, CCF          │                                    + readable
-                                                                  └─► reconciliations REC-01..08       templates
+ risk sub-ledger ┤                    decision tables (SQL)      own funds, RWEA,
+ off-balance     ├─► data-quality ─►  exposure class, risk  ─►  SA-CCR, CVA, FX risk, ─► EBA validation ─► xBRL-CSV
+ derivatives     │    DQ-01..13       weight, CCF, SA-CCR        ratios, leverage          rules (453)       packages
+ collateral feed │                    supervisory factors        │                                           + readable
+ P&L history    ─┘                                               └─► reconciliations REC-01..11              templates
 ```
 
 1. **Taxonomy extract** — `scripts/extract_taxonomy.py` reads the EBA 4.0 taxonomy and keeps the
-   410 cells (with their xBRL-CSV datapoint ids) and the 506 validation rules for these templates.
+   1,073 cells (with their xBRL-CSV datapoint ids) and the 1,428 validation rules for these templates.
 2. **Data quality** — blocking rules stop the run; warnings apply a documented, conservative fallback
    ([DATA_GAPS.md](docs/DATA_GAPS.md)).
-3. **Mapping as data** — exposure class, risk weight, CCF and own-funds mapping live in `config/`
-   decision tables, applied in DuckDB SQL ([DATA_MAPPING_SPEC.md](docs/DATA_MAPPING_SPEC.md)).
-4. **Calculations** — standardised-approach credit risk (incl. Art 114(4), Art 125 loan-splitting,
-   Art 127), operational risk via the Business Indicator Component, own-funds deductions (Art 36),
-   threshold deductions (Art 48), T2 amortisation (Art 64), capital ratios with the full requirement
-   stack, and the leverage exposure measure.
+3. **Mapping as data** — exposure class, risk weight, CCF, own-funds mapping and SA-CCR supervisory
+   parameters live in `config/`, applied in DuckDB SQL and Python ([DATA_MAPPING_SPEC.md](docs/DATA_MAPPING_SPEC.md)).
+4. **Calculations**
+   - **Credit risk:** standardised approach (incl. Art 114(4), Art 125 loan-splitting, Art 127).
+   - **Counterparty credit risk:** SA-CCR (Art 274-280a), with replacement cost, PFE and the multiplier per netting set.
+   - **CVA risk:** simplified approach (Art 385), with the non-financial counterparty exemption (Art 382(4)).
+   - **Market risk:** FX on the whole balance sheet (Art 351-354).
+   - **Operational risk:** via the Business Indicator Component.
+   - **Own funds:** deductions (Art 36, 48), Tier 2 amortisation (Art 64), capital ratios with the requirement stack.
+   - **Leverage:** exposure measure including derivatives at SA-CCR with multiplier 1 (Art 429c).
 5. **EBA validation rules** — evaluated with the interval arithmetic the EBA formula engine uses.
 6. **Submission** — xBRL-CSV report packages in the layout of the EBA's own 4.0 samples.
 
@@ -57,24 +74,26 @@ the EBA 4.0 **xBRL-CSV** format.
 pip install -r requirements.txt
 python scripts/generate_bank.py   # (re)create the synthetic books
 python -m corep.pipeline          # build, reconcile, validate, write out/
-python -m pytest                  # 33 tests
+python -m pytest                  # 45 tests
 ```
 
 ## Documents
 
 - **[Regulation notes](docs/REGULATION_NOTES.md)** — the regulation in plain English, with every Demo Bank figure explained
-- [Functional specification](docs/FUNCTIONAL_SPEC.md) — scope, requirements FR-01..FR-12, assumptions
+- [Functional specification](docs/FUNCTIONAL_SPEC.md) — scope, requirements FR-01..FR-18, assumptions
 - [Data mapping specification](docs/DATA_MAPPING_SPEC.md) — every cell traced to its source
 - [Data gaps](docs/DATA_GAPS.md) — data-quality rules and fallbacks
-- [UAT test cases](docs/UAT_TEST_CASES.md) — 29 cases traced to requirements and tests
-- [CR-001 change record](docs/changes/CR-001.md) — a regulatory change run end to end: request, impact analysis, spec update, regression
+- [UAT test cases](docs/UAT_TEST_CASES.md) — 39 cases traced to requirements and tests
+- Change records: [CR-001](docs/changes/CR-001.md) (buffer rate + collateral feed), [CR-002](docs/changes/CR-002.md) (derivatives, CCR, market risk, CVA)
 - [Taxonomy extract](taxonomy/README.md) — source and validation approach
 
 ## Outputs (`out/`)
 
-The two `.zip` files are the submission. `corep_templates.csv` shows every reported cell readably,
-`eba_validation_results.csv` shows each rule with the values it used, `reconciliation.csv` and
-`data_quality.csv` show the controls, and `credit_risk_by_exposure.csv` gives the RWEA of every exposure.
+The two `.zip` files are the submission. Supporting outputs:
+- `corep_templates.csv` shows every reported cell readably.
+- `eba_validation_results.csv` shows each rule with the values it used.
+- `reconciliation.csv` and `data_quality.csv` show the controls.
+- `credit_risk_by_exposure.csv` and `sa_ccr_by_netting_set.csv` give the RWEA of every exposure and netting set.
 
 ## Stack
 

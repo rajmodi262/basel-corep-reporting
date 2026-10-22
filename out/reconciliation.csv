@@ -14,8 +14,13 @@ REC-01/1590,Specific provisions in sub-ledger vs GL loan-loss allowance,-2462891
 REC-02,Trial balance: debits = credits,0.0,0.0,0.0,RECONCILED
 REC-03a,Exposures in = exposures risk-weighted,3155.0,3155.0,0.0,RECONCILED
 REC-03b,Net exposure value in = sum of risk-weighted parts (incl. mortgage split),6196371083.0,6196371083.0,0.0,RECONCILED
-REC-04,Total assets (GL) vs C 47.00 r0190 on-balance exposures,6293371083.0,6293371083.0,0.0,RECONCILED
-REC-05,Total assets = risk-weighted exposure value + assets deducted from CET1,6293371083.0,6293371083.0,0.0,RECONCILED
+REC-04,Total assets (GL) less derivative assets vs C 47.00 r0190 on-balance exposures,6293371083.0,6293371083.0,0.0,RECONCILED
+REC-05,Total assets = credit exposure value + assets deducted from CET1 + derivative assets,6303179240.0,6303179240.0,0.0,RECONCILED
+REC-09a,Positive trade market values vs GL 1150 derivative assets,9808157.0,9808157.0,0.0,RECONCILED
+REC-09b,Negative trade market values vs GL 2150 derivative liabilities,-21265219.0,-21265219.0,0.0,RECONCILED
+REC-10a,Trades in the book vs C 34.03 r0010 number of transactions,26.0,26.0,0.0,RECONCILED
+REC-10b,Notional in the book vs C 34.03 r0010 notional,1960000000.0,1960000000.0,0.0,RECONCILED
+REC-11,USD exposures in the sub-ledger vs C 22.00 USD long position (on-balance part),110000000.0,110000000.0,0.0,RECONCILED
 REC-06,Balance-sheet equity incl. profit vs own-funds items before filters and deductions,764000000.0,764000000.0,0.0,RECONCILED
 REC-07/interest_income,Business indicator 2025 interest_income vs GL 4000,246000000.0,246000000.0,0.0,RECONCILED
 REC-07/interest_expense,Business indicator 2025 interest_expense vs GL 4100,98000000.0,98000000.0,0.0,RECONCILED
@@ -25,4 +30,4 @@ REC-07/fee_expense,Business indicator 2025 fee_expense vs GL 4400,14000000.0,140
 REC-07/other_operating_income,Business indicator 2025 other_operating_income vs GL 4600,6000000.0,6000000.0,0.0,RECONCILED
 REC-07/other_operating_expense,Business indicator 2025 other_operating_expense vs GL 5300,5000000.0,5000000.0,0.0,RECONCILED
 REC-07/net_banking_book,Business indicator 2025 net_banking_book vs GL 4500,3000000.0,3000000.0,0.0,RECONCILED
-REC-08,C 02.00 r0060 vs loan-level RWEA,3320684485.0,3320684484.99,0.01,RECONCILED
+REC-08,C 02.00 r0060 vs loan-level RWEA + netting-set CCR RWEA,3348564169.0,3348564168.82,0.18,RECONCILED
