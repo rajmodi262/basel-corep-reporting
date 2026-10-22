@@ -1,0 +1,5 @@
+product,risk_weight,crr_article
+cash,0.00,Art 134(2)
+tangible_asset,1.00,Art 134(1)
+other_asset,1.00,Art 134(1)
+dta_temporary_differences,2.50,Art 48(4)

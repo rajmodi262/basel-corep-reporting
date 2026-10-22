@@ -1,0 +1,17 @@
+c01_row,source,reference,crr_article,description
+0040,gl,3000,Art 26(1)(a) / 28,Fully paid up capital instruments
+0060,gl,3100,Art 26(1)(b),Share premium
+0140,gl,3200,Art 26(1)(c),Previous years retained earnings
+0160,gl,4000 4100 4200 4300 4400 4500 4600 5000 5100 5200 5300 5400 5900,Art 26(2),Profit of the year (all P&L accounts)
+0170,param,foreseeable_dividend,Art 26(2)(b),(-) Foreseeable dividend not eligible
+0180,gl,3300,Art 26(1)(d),Accumulated other comprehensive income
+0200,gl,3400,Art 26(1)(e),Other reserves
+0290,calc,prudent_valuation,Art 34 / 105,(-) Additional value adjustments (simplified approach)
+0310,gl,1600,Art 36(1)(b) / 37,(-) Goodwill
+0350,gl,1610 1620,Art 36(1)(b) / 37,(-) Other intangible assets before DTL
+0352,gl,1610,Art 36(1)(b),(-) of which software (no prudent-amortisation exemption claimed)
+0360,gl,2810,Art 37(a),DTL associated with other intangible assets
+0370,gl,1810,Art 36(1)(c) / 38,(-) DTA relying on future profitability not from temporary differences
+0490,calc,dta_threshold,Art 36(1)(c) / 48,(-) DTA from temporary differences above the 10% threshold
+0551,instrument,AT1,Art 51-52,AT1 instruments (equity-classified)
+0771,instrument,T2,Art 62-64,T2 instruments after amortisation in the final 5 years

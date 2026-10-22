@@ -1,0 +1,5 @@
+instrument_id,type,tier,gl_account,nominal,issue_date,maturity_date,call_date
+SHR-ORD,ordinary_shares,CET1,3000,200000000,2004-06-01,,
+AT1-2030C,perpetual_contingent_convertible,AT1,3500,75000000,2023-03-15,,2030-03-15
+T2-2033,subordinated_bond,T2,2600,150000000,2023-09-20,2033-09-20,2028-09-20
+T2-2028,subordinated_bond,T2,2610,100000000,2018-05-30,2028-05-30,

@@ -1,0 +1,38 @@
+{
+ "reporting_date": "2025-12-31",
+ "total_assets": 6293371083,
+ "cet1": 577610000,
+ "tier1": 652610000,
+ "own_funds": 850857536,
+ "trea": 3634713428,
+ "credit_rwea": 3325013428,
+ "op_risk_rea": 309700000,
+ "cet1_ratio": 0.1589,
+ "tier1_ratio": 0.1795,
+ "total_capital_ratio": 0.2341,
+ "ocr": 0.1325,
+ "cet1_surplus_over_requirements": 255029183,
+ "leverage_exposure": 6488881083,
+ "leverage_ratio": 0.1006,
+ "business_indicator": 206466667,
+ "cells_reported": 133,
+ "data_quality": {
+  "DQ-01": 0,
+  "DQ-02": 4,
+  "DQ-03": 6,
+  "DQ-04": 0,
+  "DQ-05": 0,
+  "DQ-06": 0,
+  "DQ-07": 0,
+  "DQ-08": 0
+ },
+ "reconciliations": "27/27 reconciled",
+ "eba_rules": {
+  "not applicable": 290,
+  "pass": 216
+ },
+ "packages": [
+  "DUMMYLEI123456789012.IND_FR_COREP040000_COREPOF_2025-12-31_20260101000000000.zip",
+  "DUMMYLEI123456789012.IND_FR_COREP040000_COREPLR_2025-12-31_20260101000000000.zip"
+ ]
+}

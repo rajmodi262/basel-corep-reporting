@@ -1,0 +1,1 @@
+# Sign convention: every GL-sourced cell = -1 x (sum of GL balances). Equity is a credit (negative) in the GL, so it reports positive; assets deducted are debits (positive), so they report negative, as COREP requires for (-) rows.

@@ -1,0 +1,28 @@
+exposure_class,cqs,short_term,risk_weight,crr_article
+central_government,1,*,0.00,Art 114(2) Table 1
+central_government,2,*,0.20,Art 114(2) Table 1
+central_government,3,*,0.50,Art 114(2) Table 1
+central_government,4,*,1.00,Art 114(2) Table 1
+central_government,5,*,1.00,Art 114(2) Table 1
+central_government,6,*,1.50,Art 114(2) Table 1
+central_government,,*,1.00,Art 114(1)
+institution,1,0,0.20,Art 120(1) Table 3
+institution,2,0,0.30,Art 120(1) Table 3
+institution,3,0,0.50,Art 120(1) Table 3
+institution,4,0,1.00,Art 120(1) Table 3
+institution,5,0,1.00,Art 120(1) Table 3
+institution,6,0,1.50,Art 120(1) Table 3
+institution,1,1,0.20,Art 120(2) Table 4
+institution,2,1,0.20,Art 120(2) Table 4
+institution,3,1,0.20,Art 120(2) Table 4
+institution,4,1,0.50,Art 120(2) Table 4
+institution,5,1,0.50,Art 120(2) Table 4
+institution,6,1,1.50,Art 120(2) Table 4
+corporate,1,*,0.20,Art 122(1) Table 6
+corporate,2,*,0.50,Art 122(1) Table 6
+corporate,3,*,0.75,Art 122(1) Table 6
+corporate,4,*,1.00,Art 122(1) Table 6
+corporate,5,*,1.50,Art 122(1) Table 6
+corporate,6,*,1.50,Art 122(1) Table 6
+corporate,,*,1.00,Art 122(2)
+retail,*,*,0.75,Art 123(3)

@@ -1,0 +1,19 @@
+{
+ "C_01.00 r0040": "-1 x GL 3000 (Art 26(1)(a) / 28)",
+ "C_01.00 r0060": "-1 x GL 3100 (Art 26(1)(b))",
+ "C_01.00 r0140": "-1 x GL 3200 (Art 26(1)(c))",
+ "C_01.00 r0160": "-1 x GL 4000 4100 4200 4300 4400 4500 4600 5000 5100 5200 5300 5400 5900 (Art 26(2))",
+ "C_01.00 r0170": "-foreseeable_dividend from config/srep.yaml (Art 26(2)(b))",
+ "C_01.00 r0180": "-1 x GL 3300 (Art 26(1)(d))",
+ "C_01.00 r0200": "-1 x GL 3400 (Art 26(1)(e))",
+ "C_01.00 r0310": "-1 x GL 1600 (Art 36(1)(b) / 37)",
+ "C_01.00 r0350": "-1 x GL 1610 1620 (Art 36(1)(b) / 37)",
+ "C_01.00 r0352": "-1 x GL 1610 (Art 36(1)(b))",
+ "C_01.00 r0360": "-1 x GL 2810 (Art 37(a))",
+ "C_01.00 r0370": "-1 x GL 1810 (Art 36(1)(c) / 38)",
+ "C_01.00 r0290": "-0.1% x fair-valued assets 390,000,000 (Art 34, 105)",
+ "T2 T2-2033": "150,000,000 -> 150,000,000 (Art 64, maturity 2033-09-20)",
+ "T2 T2-2028": "100,000,000 -> 48,247,536 (Art 64, maturity 2028-05-30)",
+ "C_01.00 r0490": "DTA temporary differences 26,000,000 vs 10% of CET1 57,761,000: deduct 0; the rest is risk-weighted at 250% (Art 48(4))",
+ "C_47.00 r0190": "Total assets on the balance sheet (all asset GL accounts, net of allowances)"
+}

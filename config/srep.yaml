@@ -1,0 +1,12 @@
+# Supervisory parameters for Demo Bank AG at 2025-12-31 (illustrative, set by the "supervisor").
+reporting_date: "2025-12-31"
+entity: "DUMMYLEI123456789012.IND"   # EBA sample LEI, individual level
+pillar1: {cet1: 0.045, tier1: 0.06, total: 0.08}       # CRR Art 92(1)
+p2r: 0.020                                              # CRD Art 104(1)(a)
+p2r_share: {cet1: 0.5625, tier1: 0.75}                  # CRD Art 104a(4)
+combined_buffer: {ccb: 0.025, ccyb: 0.0075, srb: 0.0}   # CRD Art 128-133
+p2g: 0.010
+leverage: {pillar1: 0.03, p2r: 0.0, p2g: 0.0, gsii_buffer: 0.0}  # CRR Art 92(1)(d)
+foreseeable_dividend: 20000000                          # CRR Art 26(2): proposed dividend on 2025 profit
+prudent_valuation_simplified: 0.001                     # Del. Reg. 2016/101 Art 5: 0.1% of fair-valued assets
+eu_sovereign_domestic_zero: true                        # CRR Art 114(4)

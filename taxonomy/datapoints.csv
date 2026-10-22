@@ -1,0 +1,411 @@
+template,module,file,row,col,datapoint,type,cellcode,row_label
+C_00.01,both,c_00.01.csv,0010,0010,dp31870,e,"{C_00.01, r0010, c0010}",Accounting framework
+C_00.01,both,c_00.01.csv,0020,0010,dp37969,e,"{C_00.01, r0020, c0010}",Reporting Level
+C_01.00,corep_of,c_01.00.csv,0471,0010,dp109056,m,"{C_01.00, r0471, c0010}","(-) Positions in a basket for which an institution cannot determine the risk weight under the IRB approach, and can alternatively be subject to a 1.250% risk weight"
+C_01.00,corep_of,c_01.00.csv,0472,0010,dp109143,m,"{C_01.00, r0472, c0010}",(-) Equity exposures under an internal models approach which can alternatively be subject to a 1.250% risk weight
+C_01.00,corep_of,c_01.00.csv,0460,0010,dp109203,m,"{C_01.00, r0460, c0010}",(-) Securitisation positions which can alternatively be subject to a 1.250% risk weight
+C_01.00,corep_of,c_01.00.csv,0400,0010,dp109292,m,"{C_01.00, r0400, c0010}",(-)Defined benefit pension fund assets
+C_01.00,corep_of,c_01.00.csv,0320,0010,dp109293,m,"{C_01.00, r0320, c0010}",(-) Goodwill included in the valuation of significant investments
+C_01.00,corep_of,c_01.00.csv,0450,0010,dp109294,m,"{C_01.00, r0450, c0010}",(-) Qualifying holdings outside the financial sector which can alternatively be subject to a 1.250% risk weight
+C_01.00,corep_of,c_01.00.csv,0470,0010,dp109295,m,"{C_01.00, r0470, c0010}",(-) Free deliveries which can alternatively be subject to a 1.250% risk weight
+C_01.00,corep_of,c_01.00.csv,0390,0010,dp109296,m,"{C_01.00, r0390, c0010}",(-)Defined benefit pension fund assets
+C_01.00,corep_of,c_01.00.csv,0045,0010,dp117442,m,"{C_01.00, r0045, c0010}",Of which: Capital instruments subscribed by public authorities in emergency situations
+C_01.00,corep_of,c_01.00.csv,0920,0010,dp17459,m,"{C_01.00, r0920, c0010}",SA General credit risk adjustments
+C_01.00,corep_of,c_01.00.csv,0590,0010,dp32668,m,"{C_01.00, r0590, c0010}",(-) Direct holdings of AT1 instruments
+C_01.00,corep_of,c_01.00.csv,0080,0010,dp32669,m,"{C_01.00, r0080, c0010}",(-) Direct holdings of CET1 instruments
+C_01.00,corep_of,c_01.00.csv,0810,0010,dp32670,m,"{C_01.00, r0810, c0010}",(-) Direct holdings of T2 instruments
+C_01.00,corep_of,c_01.00.csv,0180,0010,dp32671,m,"{C_01.00, r0180, c0010}",Accumulated other comprehensive income
+C_01.00,corep_of,c_01.00.csv,0040,0010,dp32673,m,"{C_01.00, r0040, c0010}",Fully paid up capital instruments
+C_01.00,corep_of,c_01.00.csv,0560,0010,dp32674,m,"{C_01.00, r0560, c0010}",Memorandum item: Capital instruments not eligible
+C_01.00,corep_of,c_01.00.csv,0050,0010,dp32675,m,"{C_01.00, r0050, c0010}",Memorandum item: Capital instruments not eligible
+C_01.00,corep_of,c_01.00.csv,0210,0010,dp32676,m,"{C_01.00, r0210, c0010}",Funds for general banking risk
+C_01.00,corep_of,c_01.00.csv,0200,0010,dp32677,m,"{C_01.00, r0200, c0010}",Other reserves
+C_01.00,corep_of,c_01.00.csv,0160,0010,dp32678,m,"{C_01.00, r0160, c0010}",Profit or loss attributable to owners of the parent
+C_01.00,corep_of,c_01.00.csv,0140,0010,dp32679,m,"{C_01.00, r0140, c0010}",Previous years retained earnings
+C_01.00,corep_of,c_01.00.csv,0060,0010,dp32681,m,"{C_01.00, r0060, c0010}",Share premium
+C_01.00,corep_of,c_01.00.csv,0270,0010,dp32682,m,"{C_01.00, r0270, c0010}",Cash flow hedge reserve
+C_01.00,corep_of,c_01.00.csv,0330,0010,dp32683,m,"{C_01.00, r0330, c0010}",Deferred tax liabilities associated to goodwill
+C_01.00,corep_of,c_01.00.csv,0360,0010,dp32684,m,"{C_01.00, r0360, c0010}",Deferred tax liabilities associated to other intangible assets
+C_01.00,corep_of,c_01.00.csv,0690,0010,dp32685,m,"{C_01.00, r0690, c0010}",(-) Reciprocal cross holdings in AT1 Capital
+C_01.00,corep_of,c_01.00.csv,0930,0010,dp32686,m,"{C_01.00, r0930, c0010}",(-) Reciprocal cross holdings in T2 Capital
+C_01.00,corep_of,c_01.00.csv,0410,0010,dp32687,m,"{C_01.00, r0410, c0010}",Deferred tax liabilities associated to defined benefit pension fund assets
+C_01.00,corep_of,c_01.00.csv,0420,0010,dp32688,m,"{C_01.00, r0420, c0010}",Defined benefit pension fund assets which the institution has an unrestricted ability to use
+C_01.00,corep_of,c_01.00.csv,0780,0010,dp32690,m,"{C_01.00, r0780, c0010}",Memorandum item: Capital instruments not eligible
+C_01.00,corep_of,c_01.00.csv,0310,0010,dp32692,m,"{C_01.00, r0310, c0010}",(-) Goodwill accounted for as intangible asset
+C_01.00,corep_of,c_01.00.csv,0350,0010,dp32693,m,"{C_01.00, r0350, c0010}",(-) Other intangible assets before deduction of deferred tax liabilities
+C_01.00,corep_of,c_01.00.csv,0890,0010,dp33291,m,"{C_01.00, r0890, c0010}",Instruments issued by subsidiaries that are given recognition in T2 Capital
+C_01.00,corep_of,c_01.00.csv,0670,0010,dp33292,m,"{C_01.00, r0670, c0010}",Instruments issued by subsidiaries that are given recognition in AT1 Capital
+C_01.00,corep_of,c_01.00.csv,0230,0010,dp33293,m,"{C_01.00, r0230, c0010}",Minority interest given recognition in CET1 capital
+C_01.00,corep_of,c_01.00.csv,0620,0010,dp33294,m,"{C_01.00, r0620, c0010}",(-) Indirect holdings of AT1 instruments
+C_01.00,corep_of,c_01.00.csv,0090,0010,dp33295,m,"{C_01.00, r0090, c0010}",(-) Indirect holdings of CET1 instruments
+C_01.00,corep_of,c_01.00.csv,0621,0010,dp33296,m,"{C_01.00, r0621, c0010}",(-) Synthetic holdings of AT1 instruments
+C_01.00,corep_of,c_01.00.csv,0091,0010,dp33297,m,"{C_01.00, r0091, c0010}",(-) Synthetic holdings of CET1 instruments
+C_01.00,corep_of,c_01.00.csv,0580,0010,dp33298,m,"{C_01.00, r0580, c0010}",(-) Own AT1 instruments
+C_01.00,corep_of,c_01.00.csv,0070,0010,dp33299,m,"{C_01.00, r0070, c0010}",(-) Own CET1 instruments
+C_01.00,corep_of,c_01.00.csv,0622,0010,dp33300,m,"{C_01.00, r0622, c0010}",(-) Actual or contingent obligations to purchase own AT1 instruments
+C_01.00,corep_of,c_01.00.csv,0092,0010,dp33301,m,"{C_01.00, r0092, c0010}",(-) Actual or contingent obligations to purchase own CET1 instruments
+C_01.00,corep_of,c_01.00.csv,0840,0010,dp33302,m,"{C_01.00, r0840, c0010}",(-) Indirect holdings of T2 instruments
+C_01.00,corep_of,c_01.00.csv,0841,0010,dp33303,m,"{C_01.00, r0841, c0010}",(-) Synthetic holdings of T2 instruments
+C_01.00,corep_of,c_01.00.csv,0800,0010,dp33304,m,"{C_01.00, r0800, c0010}",(-) Own T2 instruments
+C_01.00,corep_of,c_01.00.csv,0540,0010,dp33305,m,"{C_01.00, r0540, c0010}",Capital instruments and share premium eligible as AT1 Capital
+C_01.00,corep_of,c_01.00.csv,0030,0010,dp33306,m,"{C_01.00, r0030, c0010}",Capital instruments and share premium eligible as CET1 Capital
+C_01.00,corep_of,c_01.00.csv,0150,0010,dp33307,m,"{C_01.00, r0150, c0010}",Profit or loss eligible
+C_01.00,corep_of,c_01.00.csv,0170,0010,dp33308,m,"{C_01.00, r0170, c0010}",(-) Part of interim or year-end profit not eligible
+C_01.00,corep_of,c_01.00.csv,0130,0010,dp33309,m,"{C_01.00, r0130, c0010}",Retained earnings
+C_01.00,corep_of,c_01.00.csv,0700,0010,dp33310,m,"{C_01.00, r0700, c0010}",(-) AT1 instruments of financial sector entities where the institution does not have a significant investment
+C_01.00,corep_of,c_01.00.csv,0480,0010,dp33311,m,"{C_01.00, r0480, c0010}",(-) CET1 instruments of financial sector entities where the institution does not have a significant investment
+C_01.00,corep_of,c_01.00.csv,0940,0010,dp33312,m,"{C_01.00, r0940, c0010}",(-) T2 instruments of financial sector entities where the institution does not have a significant investment
+C_01.00,corep_of,c_01.00.csv,0710,0010,dp33313,m,"{C_01.00, r0710, c0010}",(-) AT1 instruments of financial sector entities where the institution has a significant investment
+C_01.00,corep_of,c_01.00.csv,0500,0010,dp33314,m,"{C_01.00, r0500, c0010}",(-) CET1 instruments of financial sector entities where the institution has a significant investment
+C_01.00,corep_of,c_01.00.csv,0950,0010,dp33315,m,"{C_01.00, r0950, c0010}",(-) T2 instruments of financial sector entities where the institution has a significant investment
+C_01.00,corep_of,c_01.00.csv,0430,0010,dp33327,m,"{C_01.00, r0430, c0010}",(-) Reciprocal cross holdings in CET1 Capital
+C_01.00,corep_of,c_01.00.csv,0842,0010,dp33328,m,"{C_01.00, r0842, c0010}",(-) Actual or contingent obligations to purchase own T2 instruments
+C_01.00,corep_of,c_01.00.csv,0250,0010,dp33329,m,"{C_01.00, r0250, c0010}",Adjustments to CET1 due to prudential filters
+C_01.00,corep_of,c_01.00.csv,0490,0010,dp33330,m,"{C_01.00, r0490, c0010}",(-) Deductible deferred tax assets that rely on future profitability and arise from temporary differences
+C_01.00,corep_of,c_01.00.csv,0510,0010,dp33331,m,"{C_01.00, r0510, c0010}",(-) Amount exceeding the 17.65% threshold
+C_01.00,corep_of,c_01.00.csv,0370,0010,dp33334,m,"{C_01.00, r0370, c0010}",(-) Deferred tax assets that rely on future profitability and do not arise from temporary differences net of associated tax liabilities
+C_01.00,corep_of,c_01.00.csv,0300,0010,dp33336,m,"{C_01.00, r0300, c0010}",(-) Goodwill
+C_01.00,corep_of,c_01.00.csv,0340,0010,dp33337,m,"{C_01.00, r0340, c0010}",(-) Other intangible assets
+C_01.00,corep_of,c_01.00.csv,0910,0010,dp33338,m,"{C_01.00, r0910, c0010}",IRB Excess of provisions over expected losses eligible
+C_01.00,corep_of,c_01.00.csv,0380,0010,dp33339,m,"{C_01.00, r0380, c0010}",(-) IRB shortfall of credit risk adjustments to expected losses
+C_01.00,corep_of,c_01.00.csv,0260,0010,dp33340,m,"{C_01.00, r0260, c0010}",(-) Increases in equity resulting from securitised assets
+C_01.00,corep_of,c_01.00.csv,0280,0010,dp33341,m,"{C_01.00, r0280, c0010}",Cumulative gains and losses due to changes in own credit risk on fair valued liabilities
+C_01.00,corep_of,c_01.00.csv,0290,0010,dp33342,m,"{C_01.00, r0290, c0010}",(-) Value adjustments due to the requirements for prudent valuation
+C_01.00,corep_of,c_01.00.csv,0760,0010,dp33343,m,"{C_01.00, r0760, c0010}",Capital instruments and share premium eligible as T2 Capital
+C_01.00,corep_of,c_01.00.csv,0748,0010,dp33344,m,"{C_01.00, r0748, c0010}",AT1 capital elements or deductions - other
+C_01.00,corep_of,c_01.00.csv,0529,0010,dp33345,m,"{C_01.00, r0529, c0010}",CET1 capital elements or deductions - other
+C_01.00,corep_of,c_01.00.csv,0978,0010,dp33346,m,"{C_01.00, r0978, c0010}",T2 capital elements or deductions - other
+C_01.00,corep_of,c_01.00.csv,0720,0010,dp33406,m,"{C_01.00, r0720, c0010}",(-) Excess of deduction from T2 items over T2 Capital
+C_01.00,corep_of,c_01.00.csv,0440,0010,dp33407,m,"{C_01.00, r0440, c0010}",(-) Excess of deduction from AT1 items over AT1 Capital (see 1.2.10)
+C_01.00,corep_of,c_01.00.csv,0740,0010,dp33408,m,"{C_01.00, r0740, c0010}",Excess of deduction from AT1 items over AT1 Capital (deducted in CET1)
+C_01.00,corep_of,c_01.00.csv,0970,0010,dp33409,m,"{C_01.00, r0970, c0010}",Excess of deduction from T2 items over T2 Capital (deducted in AT1)
+C_01.00,corep_of,c_01.00.csv,0530,0010,dp33410,m,"{C_01.00, r0530, c0010}",ADDITIONAL TIER 1 CAPITAL
+C_01.00,corep_of,c_01.00.csv,0020,0010,dp33411,m,"{C_01.00, r0020, c0010}",COMMON EQUITY TIER 1 CAPITAL
+C_01.00,corep_of,c_01.00.csv,0750,0010,dp33412,m,"{C_01.00, r0750, c0010}",TIER 2 CAPITAL
+C_01.00,corep_of,c_01.00.csv,0010,0010,dp33413,m,"{C_01.00, r0010, c0010}",OWN FUNDS
+C_01.00,corep_of,c_01.00.csv,0680,0010,dp38532,m,"{C_01.00, r0680, c0010}",Transitional adjustments due to additional recognition in AT1 Capital of instruments issued by subsidiaries
+C_01.00,corep_of,c_01.00.csv,0240,0010,dp38533,m,"{C_01.00, r0240, c0010}",Transitional adjustments due to additional minority interests
+C_01.00,corep_of,c_01.00.csv,0900,0010,dp38534,m,"{C_01.00, r0900, c0010}",Transitional adjustments due to additional recognition in T2 Capital of instruments issued by subsidiaries
+C_01.00,corep_of,c_01.00.csv,0660,0010,dp38540,m,"{C_01.00, r0660, c0010}",Transitional adjustments due to grandfathered AT1 Capital instruments
+C_01.00,corep_of,c_01.00.csv,0220,0010,dp38541,m,"{C_01.00, r0220, c0010}",Transitional adjustments due to grandfathered CET1 Capital instruments
+C_01.00,corep_of,c_01.00.csv,0880,0010,dp38542,m,"{C_01.00, r0880, c0010}",Transitional adjustments due to grandfathered T2 Capital instruments
+C_01.00,corep_of,c_01.00.csv,0730,0010,dp38631,m,"{C_01.00, r0730, c0010}",Other transitional adjustments to AT1 Capital
+C_01.00,corep_of,c_01.00.csv,0520,0010,dp38632,m,"{C_01.00, r0520, c0010}",Other transitional adjustments to CET1 Capital
+C_01.00,corep_of,c_01.00.csv,0960,0010,dp38633,m,"{C_01.00, r0960, c0010}",Other transitional adjustments to T2 Capital
+C_01.00,corep_of,c_01.00.csv,0571,0010,dp455020,m,"{C_01.00, r0571, c0010}",Share premium
+C_01.00,corep_of,c_01.00.csv,0551,0010,dp455021,m,"{C_01.00, r0551, c0010}","Fully paid up, directly issued capital instruments"
+C_01.00,corep_of,c_01.00.csv,0771,0010,dp455022,m,"{C_01.00, r0771, c0010}","Fully paid up, directly issued capital instruments"
+C_01.00,corep_of,c_01.00.csv,0791,0010,dp455023,m,"{C_01.00, r0791, c0010}",Share premium
+C_01.00,corep_of,c_01.00.csv,0515,0010,dp455024,m,"{C_01.00, r0515, c0010}",(-) Other foreseeable tax charges
+C_01.00,corep_of,c_01.00.csv,0511,0010,dp456028,m,"{C_01.00, r0511, c0010}",(-) Amount exceeding the 17.65% threshold related to CET1 instruments of financial sector entities where the institution has a significant investment
+C_01.00,corep_of,c_01.00.csv,0512,0010,dp456030,m,"{C_01.00, r0512, c0010}",(-) Amount exceeding the 17.65% threshold related to deferred tax assets arising from temporary differences
+C_01.00,corep_of,c_01.00.csv,0513,0010,dp456059,m,"{C_01.00, r0513, c0010}",(-) Insufficient coverage for non-performing exposures
+C_01.00,corep_of,c_01.00.csv,0514,0010,dp456069,m,"{C_01.00, r0514, c0010}",(-) Minimum value commitment shortfalls
+C_01.00,corep_of,c_01.00.csv,0955,0010,dp456077,m,"{C_01.00, r0955, c0010}",(-) Excess of deductions from eligible liabilities over eligible liabilities
+C_01.00,corep_of,c_01.00.csv,0335,0010,dp458574,m,"{C_01.00, r0335, c0010}",Accounting revaluation of subsidiaries' goodwill derived from the consolidation of subsidiaries attributable to third persons
+C_01.00,corep_of,c_01.00.csv,0365,0010,dp458575,m,"{C_01.00, r0365, c0010}",Accounting revaluation of subsidiaries' other intangible assets derived from the consolidation of subsidiaries attributable to third persons
+C_01.00,corep_of,c_01.00.csv,0352,0010,dp465427,m,"{C_01.00, r0352, c0010}",(-) Of wich: software assets accounted for as intangible assets before deduction of deferred tax liabilities
+C_01.00,corep_of,c_01.00.csv,0362,0010,dp465428,m,"{C_01.00, r0362, c0010}",Of which: Deferred tax liabilities associated with software assets accounted for as intangible assets
+C_01.00,corep_of,c_01.00.csv,0285,0010,dp55216,m,"{C_01.00, r0285, c0010}",Fair value gains and losses arising from the institution's own credit risk related to derivative liabilities
+C_01.00,corep_of,c_01.00.csv,0744,0010,dp55217,m,"{C_01.00, r0744, c0010}",(-) Additional deductions of AT1 Capital due to Article 3 of Regulation (EU) No 575/2013
+C_01.00,corep_of,c_01.00.csv,0524,0010,dp55218,m,"{C_01.00, r0524, c0010}",(-) Additional deductions of CET1 Capital due to Article 3 of Regulation (EU) No 575/2013
+C_01.00,corep_of,c_01.00.csv,0974,0010,dp55219,m,"{C_01.00, r0974, c0010}",(-) Additional deductions of T2 Capital due to Article 3 of Regulation (EU) No 575/2013
+C_01.00,corep_of,c_01.00.csv,0015,0010,dp84817,m,"{C_01.00, r0015, c0010}",TIER 1 CAPITAL
+C_02.00.a,corep_of,c_02.00.a.csv,0401,0020,dp3294933,m,"{C_02.00.a, r0401, c0020}",Retail - Other
+C_02.00.a,corep_of,c_02.00.a.csv,0395,0020,dp3294934,m,"{C_02.00.a, r0395, c0020}",Retail - Purchased receivables
+C_02.00.a,corep_of,c_02.00.a.csv,0390,0020,dp3294935,m,"{C_02.00.a, r0390, c0020}",Retail - Qualifying revolving
+C_02.00.a,corep_of,c_02.00.a.csv,0470,0020,dp3294936,m,"{C_02.00.a, r0470, c0020}",Securitisation positions
+C_02.00.a,corep_of,c_02.00.a.csv,0450,0020,dp3294937,m,"{C_02.00.a, r0450, c0020}",Other non credit-obligation assets
+C_02.00.a,corep_of,c_02.00.a.csv,0355,0020,dp3294938,m,"{C_02.00.a, r0355, c0020}",Corporates - Purchased receivables
+C_02.00.a,corep_of,c_02.00.a.csv,0295,0020,dp3294939,m,"{C_02.00.a, r0295, c0020}",Corporates - Purchased receivables
+C_02.00.a,corep_of,c_02.00.a.csv,0350,0020,dp3294940,m,"{C_02.00.a, r0350, c0020}",Corporates - Specialised Lending
+C_02.00.a,corep_of,c_02.00.a.csv,0290,0020,dp3294941,m,"{C_02.00.a, r0290, c0020}",Corporates - Specialised Lending
+C_02.00.a,corep_of,c_02.00.a.csv,0270,0020,dp3294942,m,"{C_02.00.a, r0270, c0020}",Institutions
+C_02.00.a,corep_of,c_02.00.a.csv,0261,0020,dp3294943,m,"{C_02.00.a, r0261, c0020}",Regional governments or local authorities
+C_02.00.a,corep_of,c_02.00.a.csv,0260,0020,dp3294944,m,"{C_02.00.a, r0260, c0020}",Central governments and central banks
+C_02.00.a,corep_of,c_02.00.a.csv,0212,0020,dp3294945,m,"{C_02.00.a, r0212, c0020}",Of which: software assets accounted for as intangible assets
+C_02.00.a,corep_of,c_02.00.a.csv,0211,0020,dp3294946,m,"{C_02.00.a, r0211, c0020}",Other items
+C_02.00.a,corep_of,c_02.00.a.csv,0200,0020,dp3294947,m,"{C_02.00.a, r0200, c0020}",Collective investments undertakings (CIU)
+C_02.00.a,corep_of,c_02.00.a.csv,0190,0020,dp3294948,m,"{C_02.00.a, r0190, c0020}",Claims on institutions and corporates with a short-term credit assessment
+C_02.00.a,corep_of,c_02.00.a.csv,0180,0020,dp3294949,m,"{C_02.00.a, r0180, c0020}",Covered bonds
+C_02.00.a,corep_of,c_02.00.a.csv,0090,0020,dp3294950,m,"{C_02.00.a, r0090, c0020}",Public sector entities
+C_02.00.a,corep_of,c_02.00.a.csv,0100,0020,dp3294951,m,"{C_02.00.a, r0100, c0020}",Multilateral Development Banks
+C_02.00.a,corep_of,c_02.00.a.csv,0110,0020,dp3294952,m,"{C_02.00.a, r0110, c0020}",International Organisations
+C_02.00.a,corep_of,c_02.00.a.csv,0080,0020,dp3294953,m,"{C_02.00.a, r0080, c0020}",Regional governments or local authorities
+C_02.00.a,corep_of,c_02.00.a.csv,0250,0020,dp3294954,m,"{C_02.00.a, r0250, c0020}",IRB approaches when neither own estimates of LGD nor Conversion Factors are used
+C_02.00.a,corep_of,c_02.00.a.csv,0557,0020,dp3294955,m,"{C_02.00.a, r0557, c0020}",Memo item: CIUs invested exclusively in equity instruments or in mixed instruments
+C_02.00.a,corep_of,c_02.00.a.csv,0555,0020,dp3294956,m,"{C_02.00.a, r0555, c0020}",Particular approach for position risk in CIUs
+C_02.00.a,corep_of,c_02.00.a.csv,0560,0020,dp3294957,m,"{C_02.00.a, r0560, c0020}",Foreign Exchange
+C_02.00.a,corep_of,c_02.00.a.csv,0540,0020,dp3294958,m,"{C_02.00.a, r0540, c0020}",Traded debt instruments
+C_02.00.a,corep_of,c_02.00.a.csv,0530,0020,dp3294959,m,"{C_02.00.a, r0530, c0020}",Risk exposure amount for business subject to market risk calculated by entities exclusively applying the simplified standardised approach (SSA)
+C_02.00.a,corep_of,c_02.00.a.csv,0425,0020,dp3294972,m,"{C_02.00.a, r0425, c0020}",Collective investments undertakings (CIU)
+C_02.00.a,corep_of,c_02.00.a.csv,0010,0020,dp3294979,m,"{C_02.00.a, r0010, c0020}",TOTAL RISK EXPOSURE AMOUNT
+C_02.00.a,corep_of,c_02.00.a.csv,0680,0020,dp3294980,m,"{C_02.00.a, r0680, c0020}",TOTAL RISK EXPOSURE AMOUNT RELATED TO LARGE EXPOSURES IN THE TRADING BOOK
+C_02.00.a,corep_of,c_02.00.a.csv,0050,0020,dp3294981,m,"{C_02.00.a, r0050, c0020}",Standardised Approach (SA)
+C_02.00.a,corep_of,c_02.00.a.csv,0060,0020,dp3294982,m,"{C_02.00.a, r0060, c0020}",SA exposure classes excluding securitisation positions
+C_02.00.a,corep_of,c_02.00.a.csv,0152,0020,dp3294983,m,"{C_02.00.a, r0152, c0020}",Secured by mortgages on residential immovable property - non-IPRE (unsecured)
+C_02.00.a,corep_of,c_02.00.a.csv,0153,0020,dp3294984,m,"{C_02.00.a, r0153, c0020}",Secured by mortgages on residential immovable property - Other - non-IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0154,0020,dp3294985,m,"{C_02.00.a, r0154, c0020}",Secured by mortgages on residential immovable property - IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0155,0020,dp3294986,m,"{C_02.00.a, r0155, c0020}",Secured by mortgages on residential immovable property - Other - IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0156,0020,dp3294987,m,"{C_02.00.a, r0156, c0020}",Secured by mortgages on commercial immovable property - non-IPRE (secured)
+C_02.00.a,corep_of,c_02.00.a.csv,0158,0020,dp3294988,m,"{C_02.00.a, r0158, c0020}",Secured by mortgages on commercial immovable property - Other - non-IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0900,0020,dp3294989,m,"{C_02.00.a, r0900, c0020}",Secured by mortgages on commercial immovable property - Other - IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0910,0020,dp3294990,m,"{C_02.00.a, r0910, c0020}","Acquisition, development and construction (ADC)"
+C_02.00.a,corep_of,c_02.00.a.csv,0171,0020,dp3294991,m,"{C_02.00.a, r0171, c0020}",Subordinated debt exposures
+C_02.00.a,corep_of,c_02.00.a.csv,0240,0020,dp3294992,m,"{C_02.00.a, r0240, c0020}",Internal ratings based Approach(IRB)
+C_02.00.a,corep_of,c_02.00.a.csv,0581,0020,dp3294993,m,"{C_02.00.a, r0581, c0020}",Risk exposure amount for on- and off-balance sheet subject to market risk of entities applying exclusively the Alternative standardised approach (ASA)
+C_02.00.a,corep_of,c_02.00.a.csv,0585,0020,dp3294994,m,"{C_02.00.a, r0585, c0020}",Risk exposure amount for on- and off-balance sheet subject to market risk of entities applying only the Alternative Internal Models Approach (AIMA) or a combination of AIMA and ASA
+C_02.00.a,corep_of,c_02.00.a.csv,0665,0020,dp3294995,m,"{C_02.00.a, r0665, c0020}",Full Basic approach (F-BA)
+C_02.00.a,corep_of,c_02.00.a.csv,0655,0020,dp3294996,m,"{C_02.00.a, r0655, c0020}",Standardised approach (SA)
+C_02.00.a,corep_of,c_02.00.a.csv,0676,0020,dp3294997,m,"{C_02.00.a, r0676, c0020}",Simplified treatment for derivative positions in CIUs
+C_02.00.a,corep_of,c_02.00.a.csv,0675,0020,dp3295149,m,"{C_02.00.a, r0675, c0020}",Simplified approach
+C_02.00.a,corep_of,c_02.00.a.csv,0520,0020,dp3295150,m,"{C_02.00.a, r0520, c0020}",TOTAL RISK EXPOSURE AMOUNT FOR THE BUSINESS SUBJECT TO MARKET RISK
+C_02.00.a,corep_of,c_02.00.a.csv,0570,0020,dp3295151,m,"{C_02.00.a, r0570, c0020}",Commodities
+C_02.00.a,corep_of,c_02.00.a.csv,0550,0020,dp3295152,m,"{C_02.00.a, r0550, c0020}",Equity
+C_02.00.a,corep_of,c_02.00.a.csv,0556,0020,dp3295158,m,"{C_02.00.a, r0556, c0020}",Memo item: CIUs exclusively invested in traded debt instruments
+C_02.00.a,corep_of,c_02.00.a.csv,0310,0020,dp3295159,m,"{C_02.00.a, r0310, c0020}",IRB approaches when own estimates of LGD and/or Conversion Factors are used
+C_02.00.a,corep_of,c_02.00.a.csv,0460,0020,dp3295161,m,"{C_02.00.a, r0460, c0020}",Risk exposure amount for contributions to the default fund of a CCP
+C_02.00.a,corep_of,c_02.00.a.csv,0070,0020,dp3295162,m,"{C_02.00.a, r0070, c0020}",Central governments or central banks
+C_02.00.a,corep_of,c_02.00.a.csv,0120,0020,dp3295163,m,"{C_02.00.a, r0120, c0020}",Institutions
+C_02.00.a,corep_of,c_02.00.a.csv,0140,0020,dp3295164,m,"{C_02.00.a, r0140, c0020}",Retail
+C_02.00.a,corep_of,c_02.00.a.csv,0160,0020,dp3295165,m,"{C_02.00.a, r0160, c0020}",Exposures in default
+C_02.00.a,corep_of,c_02.00.a.csv,0210,0020,dp3295166,m,"{C_02.00.a, r0210, c0020}",Equity
+C_02.00.a,corep_of,c_02.00.a.csv,0320,0020,dp3295167,m,"{C_02.00.a, r0320, c0020}",Central governments and central banks
+C_02.00.a,corep_of,c_02.00.a.csv,0325,0020,dp3295168,m,"{C_02.00.a, r0325, c0020}",Regional governments or local authorities
+C_02.00.a,corep_of,c_02.00.a.csv,0262,0020,dp3295169,m,"{C_02.00.a, r0262, c0020}",Public sector entities
+C_02.00.a,corep_of,c_02.00.a.csv,0326,0020,dp3295170,m,"{C_02.00.a, r0326, c0020}",Public sector entities
+C_02.00.a,corep_of,c_02.00.a.csv,0300,0020,dp3295171,m,"{C_02.00.a, r0300, c0020}",Corporates - Other
+C_02.00.a,corep_of,c_02.00.a.csv,0360,0020,dp3295172,m,"{C_02.00.a, r0360, c0020}",Corporates - Other
+C_02.00.a,corep_of,c_02.00.a.csv,0420,0020,dp3295173,m,"{C_02.00.a, r0420, c0020}",Equity IRB
+C_02.00.a,corep_of,c_02.00.a.csv,0371,0020,dp3295174,m,"{C_02.00.a, r0371, c0020}",Retail - Secured by residential real estate
+C_02.00.a,corep_of,c_02.00.a.csv,0125,0020,dp3295213,m,"{C_02.00.a, r0125, c0020}",Corporates - Other
+C_02.00.a,corep_of,c_02.00.a.csv,0131,0020,dp3295214,m,"{C_02.00.a, r0131, c0020}",Corporates - Specialised Lending
+C_02.00.a,corep_of,c_02.00.a.csv,0150,0020,dp3295215,m,"{C_02.00.a, r0150, c0020}",Secured by mortgages on immovable property and ADC exposures
+C_02.00.a,corep_of,c_02.00.a.csv,0151,0020,dp3295216,m,"{C_02.00.a, r0151, c0020}",Secured by mortgages on residential immovable property - non-IPRE (secured)
+C_02.00.a,corep_of,c_02.00.a.csv,0157,0020,dp3295217,m,"{C_02.00.a, r0157, c0020}",Secured by mortgages on commercial immovable property - non-IPRE (unsecured)
+C_02.00.a,corep_of,c_02.00.a.csv,0159,0020,dp3295218,m,"{C_02.00.a, r0159, c0020}",Secured by mortgages on commercial immovable property - IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0500,0020,dp3295219,m,"{C_02.00.a, r0500, c0020}",Settlement/delivery risk in the non-Trading book
+C_02.00.a,corep_of,c_02.00.a.csv,0510,0020,dp3295220,m,"{C_02.00.a, r0510, c0020}",Settlement/delivery risk in the Trading book
+C_02.00.a,corep_of,c_02.00.a.csv,0589,0020,dp3295221,m,"{C_02.00.a, r0589, c0020}",RISK EXPOSURE AMOUNT FOR RECLASSIFICATIONS BETWEEN NON-TRADING BOOK AND TRADING BOOK
+C_02.00.a,corep_of,c_02.00.a.csv,0590,0020,dp3295222,m,"{C_02.00.a, r0590, c0020}",TOTAL RISK EXPOSURE AMOUNT FOR OPERATIONAL RISK (OpR )
+C_02.00.a,corep_of,c_02.00.a.csv,0666,0020,dp3295223,m,"{C_02.00.a, r0666, c0020}",Reduced Basic approach (R-BA)
+C_02.00.a,corep_of,c_02.00.a.csv,0580,0020,dp3295256,m,"{C_02.00.a, r0580, c0020}","Risk exposure amount for Position, foreign exchange and commodities risks under internal models (IM)"
+C_02.00.a,corep_of,c_02.00.a.csv,0640,0020,dp3295257,m,"{C_02.00.a, r0640, c0020}",TOTAL RISK EXPOSURE AMOUNT FOR CREDIT VALUATION ADJUSTMENT
+C_02.00.a,corep_of,c_02.00.a.csv,0690,0020,dp3295258,m,"{C_02.00.a, r0690, c0020}",OTHER RISK EXPOSURE AMOUNTS
+C_02.00.a,corep_of,c_02.00.a.csv,0490,0020,dp3295259,m,"{C_02.00.a, r0490, c0020}",TOTAL RISK EXPOSURE AMOUNT FOR SETTLEMENT/DELIVERY
+C_02.00.a,corep_of,c_02.00.a.csv,0630,0020,dp3295260,m,"{C_02.00.a, r0630, c0020}",ADDITIONAL RISK EXPOSURE AMOUNT DUE TO FIXED OVERHEADS
+C_02.00.a,corep_of,c_02.00.a.csv,0040,0020,dp3295261,m,"{C_02.00.a, r0040, c0020}","RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES"
+C_02.00.a,corep_of,c_02.00.a.csv,0720,0010,dp3295562,m,"{C_02.00.a, r0720, c0010}",Of which: requirements for large exposures
+C_02.00.a,corep_of,c_02.00.a.csv,0676,0010,dp3295594,m,"{C_02.00.a, r0676, c0010}",Simplified treatment for derivative positions in CIUs
+C_02.00.a,corep_of,c_02.00.a.csv,0760,0010,dp3295595,m,"{C_02.00.a, r0760, c0010}",Of which: Additional risk exposure amount due to Article 3 of Regulation (EU) No 575/2013
+C_02.00.a,corep_of,c_02.00.a.csv,0750,0010,dp3295596,m,"{C_02.00.a, r0750, c0010}",Of which: Additional stricter prudential requirements based on Article  459 of Regulation (EU) No 575/2013
+C_02.00.a,corep_of,c_02.00.a.csv,0666,0010,dp3295597,m,"{C_02.00.a, r0666, c0010}",Reduced Basic approach (R-BA)
+C_02.00.a,corep_of,c_02.00.a.csv,0589,0010,dp3295598,m,"{C_02.00.a, r0589, c0010}",RISK EXPOSURE AMOUNT FOR RECLASSIFICATIONS BETWEEN NON-TRADING BOOK AND TRADING BOOK
+C_02.00.a,corep_of,c_02.00.a.csv,0585,0010,dp3295599,m,"{C_02.00.a, r0585, c0010}",Risk exposure amount for on- and off-balance sheet subject to market risk of entities applying only the Alternative Internal Models Approach (AIMA) or a combination of AIMA and ASA
+C_02.00.a,corep_of,c_02.00.a.csv,0510,0010,dp3295600,m,"{C_02.00.a, r0510, c0010}",Settlement/delivery risk in the Trading book
+C_02.00.a,corep_of,c_02.00.a.csv,0500,0010,dp3295601,m,"{C_02.00.a, r0500, c0010}",Settlement/delivery risk in the non-Trading book
+C_02.00.a,corep_of,c_02.00.a.csv,0242,0010,dp3295602,m,"{C_02.00.a, r0242, c0010}",Of which: Additional stricter prudential requirements based on Article 124 of Regulation (EU) No 575/2013
+C_02.00.a,corep_of,c_02.00.a.csv,0240,0010,dp3295603,m,"{C_02.00.a, r0240, c0010}",Internal ratings based Approach(IRB)
+C_02.00.a,corep_of,c_02.00.a.csv,0171,0010,dp3295604,m,"{C_02.00.a, r0171, c0010}",Subordinated debt exposures
+C_02.00.a,corep_of,c_02.00.a.csv,0910,0010,dp3295605,m,"{C_02.00.a, r0910, c0010}","Acquisition, development and construction (ADC)"
+C_02.00.a,corep_of,c_02.00.a.csv,0159,0010,dp3295606,m,"{C_02.00.a, r0159, c0010}",Secured by mortgages on commercial immovable property - IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0158,0010,dp3295607,m,"{C_02.00.a, r0158, c0010}",Secured by mortgages on commercial immovable property - Other - non-IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0157,0010,dp3295608,m,"{C_02.00.a, r0157, c0010}",Secured by mortgages on commercial immovable property - non-IPRE (unsecured)
+C_02.00.a,corep_of,c_02.00.a.csv,0156,0010,dp3295609,m,"{C_02.00.a, r0156, c0010}",Secured by mortgages on commercial immovable property - non-IPRE (secured)
+C_02.00.a,corep_of,c_02.00.a.csv,0153,0010,dp3295610,m,"{C_02.00.a, r0153, c0010}",Secured by mortgages on residential immovable property - Other - non-IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0152,0010,dp3295611,m,"{C_02.00.a, r0152, c0010}",Secured by mortgages on residential immovable property - non-IPRE (unsecured)
+C_02.00.a,corep_of,c_02.00.a.csv,0151,0010,dp3295612,m,"{C_02.00.a, r0151, c0010}",Secured by mortgages on residential immovable property - non-IPRE (secured)
+C_02.00.a,corep_of,c_02.00.a.csv,0150,0010,dp3295613,m,"{C_02.00.a, r0150, c0010}",Secured by mortgages on immovable property and ADC exposures
+C_02.00.a,corep_of,c_02.00.a.csv,0125,0010,dp3295614,m,"{C_02.00.a, r0125, c0010}",Corporates - Other
+C_02.00.a,corep_of,c_02.00.a.csv,0060,0010,dp3295615,m,"{C_02.00.a, r0060, c0010}",SA exposure classes excluding securitisation positions
+C_02.00.a,corep_of,c_02.00.a.csv,0680,0010,dp3295616,m,"{C_02.00.a, r0680, c0010}",TOTAL RISK EXPOSURE AMOUNT RELATED TO LARGE EXPOSURES IN THE TRADING BOOK
+C_02.00.a,corep_of,c_02.00.a.csv,0010,0010,dp3295617,m,"{C_02.00.a, r0010, c0010}",TOTAL RISK EXPOSURE AMOUNT
+C_02.00.a,corep_of,c_02.00.a.csv,0630,0010,dp3295618,m,"{C_02.00.a, r0630, c0010}",ADDITIONAL RISK EXPOSURE AMOUNT DUE TO FIXED OVERHEADS
+C_02.00.a,corep_of,c_02.00.a.csv,0030,0010,dp3295619,m,"{C_02.00.a, r0030, c0010}","Of which : Investment firms under Article 96, paragraph 2 and Article 97 of Regulation (EU) No 575/2013"
+C_02.00.a,corep_of,c_02.00.a.csv,0490,0010,dp3295620,m,"{C_02.00.a, r0490, c0010}",TOTAL RISK EXPOSURE AMOUNT FOR SETTLEMENT/DELIVERY
+C_02.00.a,corep_of,c_02.00.a.csv,0640,0010,dp3295621,m,"{C_02.00.a, r0640, c0010}",TOTAL RISK EXPOSURE AMOUNT FOR CREDIT VALUATION ADJUSTMENT
+C_02.00.a,corep_of,c_02.00.a.csv,0740,0010,dp3295622,m,"{C_02.00.a, r0740, c0010}",Of which: due to intra financial sector exposures
+C_02.00.a,corep_of,c_02.00.a.csv,0730,0010,dp3295623,m,"{C_02.00.a, r0730, c0010}",Of which: due to modified risk weights for targeting asset bubbles in the residential and commercial property
+C_02.00.a,corep_of,c_02.00.a.csv,0550,0010,dp3295653,m,"{C_02.00.a, r0550, c0010}",Equity
+C_02.00.a,corep_of,c_02.00.a.csv,0560,0010,dp3295654,m,"{C_02.00.a, r0560, c0010}",Foreign Exchange
+C_02.00.a,corep_of,c_02.00.a.csv,0555,0010,dp3295655,m,"{C_02.00.a, r0555, c0010}",Particular approach for position risk in CIUs
+C_02.00.a,corep_of,c_02.00.a.csv,0570,0010,dp3295656,m,"{C_02.00.a, r0570, c0010}",Commodities
+C_02.00.a,corep_of,c_02.00.a.csv,0675,0010,dp3295657,m,"{C_02.00.a, r0675, c0010}",Simplified approach
+C_02.00.a,corep_of,c_02.00.a.csv,0556,0010,dp3295658,m,"{C_02.00.a, r0556, c0010}",Memo item: CIUs exclusively invested in traded debt instruments
+C_02.00.a,corep_of,c_02.00.a.csv,0557,0010,dp3295659,m,"{C_02.00.a, r0557, c0010}",Memo item: CIUs invested exclusively in equity instruments or in mixed instruments
+C_02.00.a,corep_of,c_02.00.a.csv,0460,0010,dp3295660,m,"{C_02.00.a, r0460, c0010}",Risk exposure amount for contributions to the default fund of a CCP
+C_02.00.a,corep_of,c_02.00.a.csv,0080,0010,dp3295661,m,"{C_02.00.a, r0080, c0010}",Regional governments or local authorities
+C_02.00.a,corep_of,c_02.00.a.csv,0090,0010,dp3295662,m,"{C_02.00.a, r0090, c0010}",Public sector entities
+C_02.00.a,corep_of,c_02.00.a.csv,0120,0010,dp3295663,m,"{C_02.00.a, r0120, c0010}",Institutions
+C_02.00.a,corep_of,c_02.00.a.csv,0140,0010,dp3295664,m,"{C_02.00.a, r0140, c0010}",Retail
+C_02.00.a,corep_of,c_02.00.a.csv,0160,0010,dp3295665,m,"{C_02.00.a, r0160, c0010}",Exposures in default
+C_02.00.a,corep_of,c_02.00.a.csv,0180,0010,dp3295666,m,"{C_02.00.a, r0180, c0010}",Covered bonds
+C_02.00.a,corep_of,c_02.00.a.csv,0261,0010,dp3295667,m,"{C_02.00.a, r0261, c0010}",Regional governments or local authorities
+C_02.00.a,corep_of,c_02.00.a.csv,0262,0010,dp3295668,m,"{C_02.00.a, r0262, c0010}",Public sector entities
+C_02.00.a,corep_of,c_02.00.a.csv,0326,0010,dp3295669,m,"{C_02.00.a, r0326, c0010}",Public sector entities
+C_02.00.a,corep_of,c_02.00.a.csv,0290,0010,dp3295670,m,"{C_02.00.a, r0290, c0010}",Corporates - Specialised Lending
+C_02.00.a,corep_of,c_02.00.a.csv,0295,0010,dp3295671,m,"{C_02.00.a, r0295, c0010}",Corporates - Purchased receivables
+C_02.00.a,corep_of,c_02.00.a.csv,0300,0010,dp3295672,m,"{C_02.00.a, r0300, c0010}",Corporates - Other
+C_02.00.a,corep_of,c_02.00.a.csv,0420,0010,dp3295673,m,"{C_02.00.a, r0420, c0010}",Equity IRB
+C_02.00.a,corep_of,c_02.00.a.csv,0455,0010,dp3295674,m,"{C_02.00.a, r0455, c0010}",Of which: software assets accounted for as intangible assets
+C_02.00.a,corep_of,c_02.00.a.csv,0371,0010,dp3295675,m,"{C_02.00.a, r0371, c0010}",Retail - Secured by residential real estate
+C_02.00.a,corep_of,c_02.00.a.csv,0390,0010,dp3295676,m,"{C_02.00.a, r0390, c0010}",Retail - Qualifying revolving
+C_02.00.a,corep_of,c_02.00.a.csv,0395,0010,dp3295677,m,"{C_02.00.a, r0395, c0010}",Retail - Purchased receivables
+C_02.00.a,corep_of,c_02.00.a.csv,0401,0010,dp3295678,m,"{C_02.00.a, r0401, c0010}",Retail - Other
+C_02.00.a,corep_of,c_02.00.a.csv,0425,0010,dp3295751,m,"{C_02.00.a, r0425, c0010}",Collective investments undertakings (CIU)
+C_02.00.a,corep_of,c_02.00.a.csv,0580,0010,dp3295810,m,"{C_02.00.a, r0580, c0010}","Risk exposure amount for Position, foreign exchange and commodities risks under internal models (IM)"
+C_02.00.a,corep_of,c_02.00.a.csv,0710,0010,dp3295811,m,"{C_02.00.a, r0710, c0010}",Of which: Additional stricter prudential requirements based on Article 458 of Regulation (EU) No 575/2013
+C_02.00.a,corep_of,c_02.00.a.csv,0690,0010,dp3295812,m,"{C_02.00.a, r0690, c0010}",OTHER RISK EXPOSURE AMOUNTS
+C_02.00.a,corep_of,c_02.00.a.csv,0020,0010,dp3295813,m,"{C_02.00.a, r0020, c0010}","Of which: Investment firms under Article 95, paragraph 2 and Article 98 of Regulation (EU) No 575/2013"
+C_02.00.a,corep_of,c_02.00.a.csv,0040,0010,dp3295814,m,"{C_02.00.a, r0040, c0010}","RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES"
+C_02.00.a,corep_of,c_02.00.a.csv,0050,0010,dp3295815,m,"{C_02.00.a, r0050, c0010}",Standardised Approach (SA)
+C_02.00.a,corep_of,c_02.00.a.csv,0051,0010,dp3295816,m,"{C_02.00.a, r0051, c0010}",Of which: Additional stricter prudential requirements based on Article 124 of Regulation (EU) No 575/2013
+C_02.00.a,corep_of,c_02.00.a.csv,0131,0010,dp3295817,m,"{C_02.00.a, r0131, c0010}",Corporates - Specialised Lending
+C_02.00.a,corep_of,c_02.00.a.csv,0154,0010,dp3295818,m,"{C_02.00.a, r0154, c0010}",Secured by mortgages on residential immovable property - IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0155,0010,dp3295819,m,"{C_02.00.a, r0155, c0010}",Secured by mortgages on residential immovable property - Other - IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0900,0010,dp3295820,m,"{C_02.00.a, r0900, c0010}",Secured by mortgages on commercial immovable property - Other - IPRE
+C_02.00.a,corep_of,c_02.00.a.csv,0241,0010,dp3295821,m,"{C_02.00.a, r0241, c0010}",Of which: Additional stricter prudential requirements based on Article 164 of Regulation (EU) No 575/2013
+C_02.00.a,corep_of,c_02.00.a.csv,0581,0010,dp3295822,m,"{C_02.00.a, r0581, c0010}",Risk exposure amount for on- and off-balance sheet subject to market risk of entities applying exclusively the Alternative standardised approach (ASA)
+C_02.00.a,corep_of,c_02.00.a.csv,0590,0010,dp3295823,m,"{C_02.00.a, r0590, c0010}",TOTAL RISK EXPOSURE AMOUNT FOR OPERATIONAL RISK (OpR )
+C_02.00.a,corep_of,c_02.00.a.csv,0665,0010,dp3295824,m,"{C_02.00.a, r0665, c0010}",Full Basic approach (F-BA)
+C_02.00.a,corep_of,c_02.00.a.csv,0755,0010,dp3295825,m,"{C_02.00.a, r0755, c0010}",Of which: additional RWEA for market risk imposed by supervisor based on Article 110 of Directive 2013/36/EU
+C_02.00.a,corep_of,c_02.00.a.csv,0770,0010,dp3295826,m,"{C_02.00.a, r0770, c0010}",Of which:  additional RWEA for market risk
+C_02.00.a,corep_of,c_02.00.a.csv,0655,0010,dp3295827,m,"{C_02.00.a, r0655, c0010}",Standardised approach (SA)
+C_02.00.a,corep_of,c_02.00.a.csv,0212,0010,dp3295880,m,"{C_02.00.a, r0212, c0010}",Of which: software assets accounted for as intangible assets
+C_02.00.a,corep_of,c_02.00.a.csv,0260,0010,dp3295881,m,"{C_02.00.a, r0260, c0010}",Central governments and central banks
+C_02.00.a,corep_of,c_02.00.a.csv,0320,0010,dp3295882,m,"{C_02.00.a, r0320, c0010}",Central governments and central banks
+C_02.00.a,corep_of,c_02.00.a.csv,0325,0010,dp3295883,m,"{C_02.00.a, r0325, c0010}",Regional governments or local authorities
+C_02.00.a,corep_of,c_02.00.a.csv,0270,0010,dp3295884,m,"{C_02.00.a, r0270, c0010}",Institutions
+C_02.00.a,corep_of,c_02.00.a.csv,0350,0010,dp3295885,m,"{C_02.00.a, r0350, c0010}",Corporates - Specialised Lending
+C_02.00.a,corep_of,c_02.00.a.csv,0355,0010,dp3295886,m,"{C_02.00.a, r0355, c0010}",Corporates - Purchased receivables
+C_02.00.a,corep_of,c_02.00.a.csv,0360,0010,dp3295887,m,"{C_02.00.a, r0360, c0010}",Corporates - Other
+C_02.00.a,corep_of,c_02.00.a.csv,0450,0010,dp3295888,m,"{C_02.00.a, r0450, c0010}",Other non credit-obligation assets
+C_02.00.a,corep_of,c_02.00.a.csv,0780,0010,dp3295889,m,"{C_02.00.a, r0780, c0010}",Of which: Transitional risk exposure amount related to crypto assets due to Article 501d (2) of Regulation (EU) No 575/2013
+C_02.00.a,corep_of,c_02.00.a.csv,0530,0010,dp3295932,m,"{C_02.00.a, r0530, c0010}",Risk exposure amount for business subject to market risk calculated by entities exclusively applying the simplified standardised approach (SSA)
+C_02.00.a,corep_of,c_02.00.a.csv,0540,0010,dp3295933,m,"{C_02.00.a, r0540, c0010}",Traded debt instruments
+C_02.00.a,corep_of,c_02.00.a.csv,0520,0010,dp3295934,m,"{C_02.00.a, r0520, c0010}",TOTAL RISK EXPOSURE AMOUNT FOR THE BUSINESS SUBJECT TO MARKET RISK
+C_02.00.a,corep_of,c_02.00.a.csv,0250,0010,dp3295935,m,"{C_02.00.a, r0250, c0010}",IRB approaches when neither own estimates of LGD nor Conversion Factors are used
+C_02.00.a,corep_of,c_02.00.a.csv,0310,0010,dp3295936,m,"{C_02.00.a, r0310, c0010}",IRB approaches when own estimates of LGD and/or Conversion Factors are used
+C_02.00.a,corep_of,c_02.00.a.csv,0211,0010,dp3295937,m,"{C_02.00.a, r0211, c0010}",Other items
+C_02.00.a,corep_of,c_02.00.a.csv,0210,0010,dp3295938,m,"{C_02.00.a, r0210, c0010}",Equity
+C_02.00.a,corep_of,c_02.00.a.csv,0200,0010,dp3295939,m,"{C_02.00.a, r0200, c0010}",Collective investments undertakings (CIU)
+C_02.00.a,corep_of,c_02.00.a.csv,0190,0010,dp3295940,m,"{C_02.00.a, r0190, c0010}",Claims on institutions and corporates with a short-term credit assessment
+C_02.00.a,corep_of,c_02.00.a.csv,0100,0010,dp3295941,m,"{C_02.00.a, r0100, c0010}",Multilateral Development Banks
+C_02.00.a,corep_of,c_02.00.a.csv,0110,0010,dp3295942,m,"{C_02.00.a, r0110, c0010}",International Organisations
+C_02.00.a,corep_of,c_02.00.a.csv,0070,0010,dp3295949,m,"{C_02.00.a, r0070, c0010}",Central governments or central banks
+C_02.00.a,corep_of,c_02.00.a.csv,0470,0010,dp424073,m,"{C_02.00.a, r0470, c0010}",Securitisation positions
+C_03.00,corep_of,c_03.00.csv,0380,0010,dp3294195,p,"{C_03.00, r0380, c0010}","Total capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013"
+C_03.00,corep_of,c_03.00.csv,0370,0010,dp3294196,p,"{C_03.00, r0370, c0010}","T1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4, (5) and 7 of Regulation (EU) No 575/2013"
+C_03.00,corep_of,c_03.00.csv,0090,0010,dp3294197,p,"{C_03.00, r0090, c0010}",Total capital ratio considering unfloored TREA
+C_03.00,corep_of,c_03.00.csv,0070,0010,dp3294198,p,"{C_03.00, r0070, c0010}",CET1 Capital ratio considering unfloored TREA
+C_03.00,corep_of,c_03.00.csv,0080,0010,dp3294199,p,"{C_03.00, r0080, c0010}",T1 Capital ratio considering unfloored TREA
+C_03.00,corep_of,c_03.00.csv,0330,0010,dp3294200,p,"{C_03.00, r0330, c0010}",Fully loaded CET1 Capital ratio
+C_03.00,corep_of,c_03.00.csv,0360,0010,dp3294201,p,"{C_03.00, r0360, c0010}","CET1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013"
+C_03.00,corep_of,c_03.00.csv,0350,0010,dp3294202,p,"{C_03.00, r0350, c0010}",Fully loaded Total capital ratio
+C_03.00,corep_of,c_03.00.csv,0340,0010,dp3294203,p,"{C_03.00, r0340, c0010}",Fully loaded T1 Capital ratio
+C_03.00,corep_of,c_03.00.csv,0152,0010,dp3295269,p,"{C_03.00, r0152, c0010}",TSCR: to be made up of CET1 capital
+C_03.00,corep_of,c_03.00.csv,0153,0010,dp3295270,p,"{C_03.00, r0153, c0010}",TSCR: to be made up of Tier 1 capital
+C_03.00,corep_of,c_03.00.csv,0151,0010,dp3295271,p,"{C_03.00, r0151, c0010}","Total SREP capital requirement (TSCR) ratio without cap of Article 104a(6), point (a), of Directive 2013/36/EU"
+C_03.00,corep_of,c_03.00.csv,0020,0010,dp33280,m,"{C_03.00, r0020, c0010}",Surplus(+)/Deficit(-) of CET1 capital
+C_03.00,corep_of,c_03.00.csv,0040,0010,dp33281,m,"{C_03.00, r0040, c0010}",Surplus(+)/Deficit(-) of T1 capital
+C_03.00,corep_of,c_03.00.csv,0060,0010,dp33282,m,"{C_03.00, r0060, c0010}",Surplus(+)/Deficit(-) of total capital
+C_03.00,corep_of,c_03.00.csv,0170,0010,dp410431,p,"{C_03.00, r0170, c0010}",OCR: to be made up of CET1 capital
+C_03.00,corep_of,c_03.00.csv,0180,0010,dp410432,p,"{C_03.00, r0180, c0010}",OCR: to be made up of Tier 1
+C_03.00,corep_of,c_03.00.csv,0160,0010,dp410433,p,"{C_03.00, r0160, c0010}",Overall capital requirement ratio (OCR)
+C_03.00,corep_of,c_03.00.csv,0200,0010,dp410434,p,"{C_03.00, r0200, c0010}",OCR and P2G: to be made up of CET1 capital
+C_03.00,corep_of,c_03.00.csv,0210,0010,dp410435,p,"{C_03.00, r0210, c0010}",OCR and P2G: to be made up of Tier 1 capital
+C_03.00,corep_of,c_03.00.csv,0190,0010,dp410436,p,"{C_03.00, r0190, c0010}",OCR and Pillar 2 Guidance (P2G)
+C_03.00,corep_of,c_03.00.csv,0220,0010,dp454688,m,"{C_03.00, r0220, c0010}",Surplus(+)/Deficit(-) of CET1 capital considering the requirements of Article 92 of Regulation (EU) No 575/2013 and Article 104a of Directive 2013/36/EU
+C_03.00,corep_of,c_03.00.csv,0010,0010,dp85151,p,"{C_03.00, r0010, c0010}",CET1 Capital ratio
+C_03.00,corep_of,c_03.00.csv,0030,0010,dp85152,p,"{C_03.00, r0030, c0010}",T1 Capital ratio
+C_03.00,corep_of,c_03.00.csv,0050,0010,dp85153,p,"{C_03.00, r0050, c0010}",Total capital ratio
+C_03.00,corep_of,c_03.00.csv,0140,0010,dp85154,p,"{C_03.00, r0140, c0010}",TSCR: to be made up of CET1 capital
+C_03.00,corep_of,c_03.00.csv,0150,0010,dp85155,p,"{C_03.00, r0150, c0010}",TSCR: to be made up of Tier 1
+C_03.00,corep_of,c_03.00.csv,0130,0010,dp85156,p,"{C_03.00, r0130, c0010}",Total SREP capital requirement ratio (TSCR)
+C_47.00,corep_lr,c_47.00.csv,0150,0010,dp132890,m,"{C_47.00, r0150, c0010}",Off-balance sheet items with a 10% CCF in accordance with Article 429f CRR
+C_47.00,corep_lr,c_47.00.csv,0160,0010,dp132891,m,"{C_47.00, r0160, c0010}",Off-balance sheet items with a 20% CCF in accordance with Article 429f CRR
+C_47.00,corep_lr,c_47.00.csv,0170,0010,dp132892,m,"{C_47.00, r0170, c0010}",Off-balance sheet items with a 50% CCF in accordance with Article 429f CRR
+C_47.00,corep_lr,c_47.00.csv,0180,0010,dp132893,m,"{C_47.00, r0180, c0010}",Off-balance sheet items with a 100% CCF in accordance with Article 429f CRR
+C_47.00,corep_lr,c_47.00.csv,0040,0010,dp132920,m,"{C_47.00, r0040, c0010}",Counterparty credit risk of SFT agent transactions
+C_47.00,corep_lr,c_47.00.csv,0020,0010,dp132921,m,"{C_47.00, r0020, c0010}",SFTs: Add-on for counterparty credit risk
+C_47.00,corep_lr,c_47.00.csv,0030,0010,dp132924,m,"{C_47.00, r0030, c0010}",Derogation for SFTs: Add-on in accordance with Article 429e(5) and 222 CRR
+C_47.00,corep_lr,c_47.00.csv,0210,0010,dp132925,m,"{C_47.00, r0210, c0010}",(-) Receivables for cash variation margin provided in derivatives transactions
+C_47.00,corep_lr,c_47.00.csv,0130,0010,dp132926,m,"{C_47.00, r0130, c0010}",Capped notional amount of written credit derivatives
+C_47.00,corep_lr,c_47.00.csv,0140,0010,dp132927,m,"{C_47.00, r0140, c0010}",(-) Eligible purchased credit derivatives offset against written credit derivatives
+C_47.00,corep_lr,c_47.00.csv,0260,0010,dp132928,m,"{C_47.00, r0260, c0010}",(-) Exposures exempted in accordance with point (j) of Article 429a(1) CRR
+C_47.00,corep_lr,c_47.00.csv,0240,0010,dp132929,m,"{C_47.00, r0240, c0010}",(-) Fiduciary assets
+C_47.00,corep_lr,c_47.00.csv,0250,0010,dp132930,m,"{C_47.00, r0250, c0010}",(-) Intragroup exposures (solo basis) exempted in accordance with point (c) of Article 429a(1) CRR
+C_47.00,corep_lr,c_47.00.csv,0200,0010,dp132939,m,"{C_47.00, r0200, c0010}",Gross up for derivatives collateral provided
+C_47.00,corep_lr,c_47.00.csv,0120,0010,dp132945,m,"{C_47.00, r0120, c0010}",(-) Exempted CCP leg of client-cleared trade exposures (original exposure method)
+C_47.00,corep_lr,c_47.00.csv,0110,0010,dp132946,m,"{C_47.00, r0110, c0010}",Derogation for derivatives: original exposure method
+C_47.00,corep_lr,c_47.00.csv,0230,0010,dp132947,m,"{C_47.00, r0230, c0010}",Adjustments for SFT sales accounting transactions
+C_47.00,corep_lr,c_47.00.csv,0310,0010,dp132949,m,"{C_47.00, r0310, c0010}",Tier 1 capital - fully phased-in definition
+C_47.00,corep_lr,c_47.00.csv,0290,0010,dp134660,m,"{C_47.00, r0290, c0010}",Total Leverage Ratio exposure  measure - using a fully phased-in definition of Tier 1 capital
+C_47.00,corep_lr,c_47.00.csv,0300,0010,dp134661,m,"{C_47.00, r0300, c0010}",Total Leverage Ratio exposure measure - using a transitional definition of Tier 1 capital
+C_47.00,corep_lr,c_47.00.csv,0010,0010,dp135741,m,"{C_47.00, r0010, c0010}",SFTs: Exposure value
+C_47.00,corep_lr,c_47.00.csv,0190,0010,dp135743,m,"{C_47.00, r0190, c0010}",Other assets
+C_47.00,corep_lr,c_47.00.csv,0330,0010,dp135745,p,"{C_47.00, r0330, c0010}",Leverage Ratio - using a fully phased-in definition of Tier 1 capital
+C_47.00,corep_lr,c_47.00.csv,0340,0010,dp135746,p,"{C_47.00, r0340, c0010}",Leverage Ratio - using a transitional definition of Tier 1 capital
+C_47.00,corep_lr,c_47.00.csv,0270,0010,dp143082,m,"{C_47.00, r0270, c0010}",(-) Asset amount deducted - Tier 1 - fully phased-in definition
+C_47.00,corep_lr,c_47.00.csv,0280,0010,dp143084,m,"{C_47.00, r0280, c0010}",(-) Asset amount deducted - Tier 1 capital  - transitional definition
+C_47.00,corep_lr,c_47.00.csv,0050,0010,dp143086,m,"{C_47.00, r0050, c0010}",(-) Exempted CCP leg of client-cleared SFT exposures
+C_47.00,corep_lr,c_47.00.csv,0220,0010,dp143087,m,"{C_47.00, r0220, c0010}",(-) Exempted CCP leg of client-cleared trade exposures (initial margin)
+C_47.00,corep_lr,c_47.00.csv,0269,0010,dp3293635,m,"{C_47.00, r0269, c0010}",Additional leverage ratio exposure amount in accordance with Article 3 CRR
+C_47.00,corep_lr,c_47.00.csv,0165,0010,dp3293919,m,"{C_47.00, r0165, c0010}",Off-balance sheet items with a 40% CCF  in accordance with Article 429f CRR
+C_47.00,corep_lr,c_47.00.csv,0268,0010,dp3295266,m,"{C_47.00, r0268, c0010}",(-) Exposures deducted in accordance with point (q) of Article 429a(1) CRR
+C_47.00,corep_lr,c_47.00.csv,0900,0010,dp3295267,m,"{C_47.00, r0900, c0010}",(-) IPS exposures exempted in accordance with point (ca) of Article 429a(1) CRR
+C_47.00,corep_lr,c_47.00.csv,0910,0010,dp3295268,m,"{C_47.00, r0910, c0010}","(-) Excluded exposures to shareholders according to Article 429a, paragraph (1) point (da)"
+C_47.00,corep_lr,c_47.00.csv,0262,0010,dp454514,m,"{C_47.00, r0262, c0010}",(-) Excluded exposures of public development credit institutions - Promotional loans granted by a public development credit institution
+C_47.00,corep_lr,c_47.00.csv,0265,0010,dp454515,m,"{C_47.00, r0265, c0010}",(-) Excluded passing-through promotional loan exposures by non-public development credit institutions (or units) - Promotional loans granted by a public development credit institution
+C_47.00,corep_lr,c_47.00.csv,0263,0010,dp454516,m,"{C_47.00, r0263, c0010}","(-) Excluded exposures of public development credit institutions - Promotional loans granted by an entity directly set up by the central government, regional governments or local authorities of a Member State"
+C_47.00,corep_lr,c_47.00.csv,0266,0010,dp454517,m,"{C_47.00, r0266, c0010}","(-) Excluded passing-through promotional loan exposures by non-public development credit institutions (or units) - Promotional loans granted by an entity directly set up by the central government, regional governments or local authorities of a Member Stat"
+C_47.00,corep_lr,c_47.00.csv,0264,0010,dp454518,m,"{C_47.00, r0264, c0010}","(-) Excluded exposures of public development credit institutions - Promotional loans granted by an entity set up by the central government, regional governments or local authorities of a Member State through an intermediate credit institution"
+C_47.00,corep_lr,c_47.00.csv,0267,0010,dp454519,m,"{C_47.00, r0267, c0010}","(-) Excluded passing-through promotional loan exposures by non-public development credit institutions (or units) - Promotional loans granted by an entity set up by the central government, regional governments or local authorities of a Member State through"
+C_47.00,corep_lr,c_47.00.csv,0261,0010,dp454520,m,"{C_47.00, r0261, c0010}",(-) Excluded exposures of public development credit institutions - Public sector investments
+C_47.00,corep_lr,c_47.00.csv,0081,0010,dp454658,m,"{C_47.00, r0081, c0010}",(-) Effect of the exempted CCP leg of client-cleared trade exposures (SA-CCR -replacement cost)
+C_47.00,corep_lr,c_47.00.csv,0071,0010,dp454659,m,"{C_47.00, r0071, c0010}",(-) Effect of the eligible cash variation margin received offset against derivatives market value (SA-CCR - replacement cost)
+C_47.00,corep_lr,c_47.00.csv,0061,0010,dp454660,m,"{C_47.00, r0061, c0010}",Derivatives: replacement cost under the SA-CCR (without the effect of collateral on NICA)
+C_47.00,corep_lr,c_47.00.csv,0065,0010,dp454661,m,"{C_47.00, r0065, c0010}",(-) Effect of the recognition of collateral on NICA on QCCP client-cleared transactions (SA-CCR - replacement cost)
+C_47.00,corep_lr,c_47.00.csv,0093,0010,dp454662,m,"{C_47.00, r0093, c0010}",(-)Effect of the exempted CCP leg of client-cleared trade exposures (SA-CCR approach-potential future exposure)
+C_47.00,corep_lr,c_47.00.csv,0091,0010,dp454663,m,"{C_47.00, r0091, c0010}",Derivatives: Potential future exposure contribution under SA-CCR (multiplier at 1)
+C_47.00,corep_lr,c_47.00.csv,0092,0010,dp454664,m,"{C_47.00, r0092, c0010}",(-) Effect lower multiplier for QCCP client-cleared transactions on the PFE contribution (SA-CCR - Potential future exposure)
+C_47.00,corep_lr,c_47.00.csv,0104,0010,dp454665,m,"{C_47.00, r0104, c0010}",(-)Effect of exempted CCP leg of client-cleared trade exposures (simplified standardised approach - potential future exposure)
+C_47.00,corep_lr,c_47.00.csv,0103,0010,dp454666,m,"{C_47.00, r0103, c0010}",Derogation for derivatives: Potential future exposure contribution under the simplified standardised approach (multiplier at 1)
+C_47.00,corep_lr,c_47.00.csv,0193,0010,dp454667,m,"{C_47.00, r0193, c0010}",Cash pooling arrangements that cannot be netted prudentially: value in the accounting framework
+C_47.00,corep_lr,c_47.00.csv,0194,0010,dp454668,m,"{C_47.00, r0194, c0010}",Cash pooling arrangements that cannot be netted prudentially:  effect of grossing-up the netting applied in the accounting framework
+C_47.00,corep_lr,c_47.00.csv,0195,0010,dp454669,m,"{C_47.00, r0195, c0010}",Cash pooling arrangements that can be netted prudentially: value in the accounting framework
+C_47.00,corep_lr,c_47.00.csv,0196,0010,dp454670,m,"{C_47.00, r0196, c0010}",Cash pooling arrangements that can be netted prudentially: effect of grossing-up the netting applied in the accounting framework
+C_47.00,corep_lr,c_47.00.csv,0197,0010,dp454671,m,"{C_47.00, r0197, c0010}",(-) Cash pooling arrangements that can be netted prudentially: Recognition of netting in accordance with Article 429b(2) CRR
+C_47.00,corep_lr,c_47.00.csv,0198,0010,dp454672,m,"{C_47.00, r0198, c0010}",(-) Cash pooling arrangements that can be netted prudentially: Recognition of netting in accordance with Article 429b(3) CRR
+C_47.00,corep_lr,c_47.00.csv,0251,0010,dp454674,m,"{C_47.00, r0251, c0010}",(-) IPS exposures exempted in accordance with point (c) of Article 429a(1) CRR
+C_47.00,corep_lr,c_47.00.csv,0252,0010,dp454675,m,"{C_47.00, r0252, c0010}",(-) Excluded guaranteed parts of exposures arising from export credits
+C_47.00,corep_lr,c_47.00.csv,0253,0010,dp454676,m,"{C_47.00, r0253, c0010}",(-) Excluded excess collateral deposited at triparty agents
+C_47.00,corep_lr,c_47.00.csv,0254,0010,dp454677,m,"{C_47.00, r0254, c0010}",(-) Excluded securitised exposures representing significant risk transfer
+C_47.00,corep_lr,c_47.00.csv,0255,0010,dp454678,m,"{C_47.00, r0255, c0010}",(-) Exposures to the central bank exempted in accordance with point (n) of Article 429a(1) CRR
+C_47.00,corep_lr,c_47.00.csv,0256,0010,dp454679,m,"{C_47.00, r0256, c0010}",(-) Excluded banking-type ancillary services of CSD/institutions in accordance with point (o) of Article 429a(1) CRR
+C_47.00,corep_lr,c_47.00.csv,0257,0010,dp454680,m,"{C_47.00, r0257, c0010}",(-) Excluded banking-type ancillary services of designated institutions in accordance with point (p) of Article 429a(1) CRR
+C_47.00,corep_lr,c_47.00.csv,0102,0010,dp454682,m,"{C_47.00, r0102, c0010}",(-) Effect of exempted CCP leg of client-cleared trade exposures (simplified standardised approach - replacement costs)
+C_47.00,corep_lr,c_47.00.csv,0101,0010,dp454683,m,"{C_47.00, r0101, c0010}",Derogation for derivatives: replacement costs contribution under the simplified standardised approach
+C_47.00,corep_lr,c_47.00.csv,0181,0010,dp456792,m,"{C_47.00, r0181, c0010}",(-) General credit risk adjustments to off balance sheet items
+C_47.00,corep_lr,c_47.00.csv,0191,0010,dp456793,m,"{C_47.00, r0191, c0010}",(-) General credit risk adjustments to on balance sheet items
+C_47.00,corep_lr,c_47.00.csv,0185,0010,dp457432,m,"{C_47.00, r0185, c0010}",Regular-way purchases and sales awaiting settlement: Accounting value under trade date accounting
+C_47.00,corep_lr,c_47.00.csv,0186,0010,dp457433,m,"{C_47.00, r0186, c0010}",Regular-way sales awaiting settlement: Reverse out of accounting offsetting under trade date accounting
+C_47.00,corep_lr,c_47.00.csv,0187,0010,dp457434,m,"{C_47.00, r0187, c0010}",(-) Regular-way sales awaiting settlement: offset in accordance with 429g(2) CRR
+C_47.00,corep_lr,c_47.00.csv,0188,0010,dp457435,m,"{C_47.00, r0188, c0010}",Regular-way purchases awaiting settlement: Full recognition of commitments to pay under settlement date accounting
+C_47.00,corep_lr,c_47.00.csv,0189,0010,dp457436,m,"{C_47.00, r0189, c0010}",(-) Regular-way purchases or sales awaiting settlement: offset for assets under settlement date accounting in accordance with 429g(3) CRR
+C_47.00,corep_lr,c_47.00.csv,0235,0010,dp457437,m,"{C_47.00, r0235, c0010}",(-) Reduction of the exposure value of pre-financing or intermediate loans
+C_47.00,corep_lr,c_47.00.csv,0350,0010,dp457439,m,"{C_47.00, r0350, c0010}",Pillar 2 requirement (P2R) to address risks of excessive leverage
+C_47.00,corep_lr,c_47.00.csv,0360,0010,dp457440,m,"{C_47.00, r0360, c0010}",of which: to be made up of CET1 capital
+C_47.00,corep_lr,c_47.00.csv,0370,0010,dp457441,m,"{C_47.00, r0370, c0010}",G-SII leverage ratio buffer
+C_47.00,corep_lr,c_47.00.csv,0390,0010,dp457442,m,"{C_47.00, r0390, c0010}",of which: to be made up of CET1 capital
+C_47.00,corep_lr,c_47.00.csv,0400,0010,dp457443,m,"{C_47.00, r0400, c0010}",of which: to be made up of Tier 1 capital
+C_47.00,corep_lr,c_47.00.csv,0380,0010,dp457444,m,"{C_47.00, r0380, c0010}",Pillar 2 guidance (P2G) to address risks of excessive leverage
+C_47.00,corep_lr,c_47.00.csv,0410,0010,dp457445,p,"{C_47.00, r0410, c0010}",Pillar 1 Leverage Ratio requirement
+C_47.00,corep_lr,c_47.00.csv,0430,0010,dp457446,p,"{C_47.00, r0430, c0010}",TSLRR: to be made up of CET1 capital
+C_47.00,corep_lr,c_47.00.csv,0420,0010,dp457447,p,"{C_47.00, r0420, c0010}",Total SREP leverage ratio requirement (TSLRR)
+C_47.00,corep_lr,c_47.00.csv,0440,0010,dp457448,p,"{C_47.00, r0440, c0010}",Overall leverage ratio requirement (OLRR)
+C_47.00,corep_lr,c_47.00.csv,0460,0010,dp457449,p,"{C_47.00, r0460, c0010}",OLRR and P2G: to be made up of CET1 capital
+C_47.00,corep_lr,c_47.00.csv,0470,0010,dp457450,p,"{C_47.00, r0470, c0010}",OLRR and P2G: to be made up of Tier 1 capital
+C_47.00,corep_lr,c_47.00.csv,0450,0010,dp457451,p,"{C_47.00, r0450, c0010}",Overall leverage ratio requirement (OLRR) and Pillar to Guidance (P2G) ratio
+C_47.00,corep_lr,c_47.00.csv,0490,0010,dp457453,p,"{C_47.00, r0490, c0010}",Leverage ratio as if the temporary treatment of unrealised gains and losses measured at fair value through other comprehensive income have not been applied
+C_47.00,corep_lr,c_47.00.csv,0320,0010,dp84817,m,"{C_47.00, r0320, c0010}",Tier 1 capital - transitional definition
