@@ -6,7 +6,7 @@
 CREATE OR REPLACE TABLE classified AS
 WITH candidates AS (
     SELECT e.*, d.priority, d.exposure_class, d.c02_row, d.crr_article, d.note
-    FROM exposures e
+    FROM exposures_enriched e
     JOIN dt_exposure_class d
       ON (d.counterparty_type = '*' OR d.counterparty_type = coalesce(e.counterparty_type, ''))
      AND (d.product = '*' OR d.product = e.product)

@@ -31,6 +31,7 @@ def connect(data_dir=DATA) -> duckdb.DuckDBPyConnection:
         "general_ledger": data_dir / "general_ledger.csv",
         "pl_history": data_dir / "pl_history.csv",
         "capital_instruments": data_dir / "capital_instruments.csv",
+        "property_valuations": data_dir / "property_valuations_2025Q4.csv",
         "dt_exposure_class": CONFIG / "dt_exposure_class.csv",
         "dt_risk_weight": CONFIG / "dt_risk_weight.csv",
         "dt_other_items": CONFIG / "dt_other_items.csv",
@@ -44,7 +45,8 @@ def connect(data_dir=DATA) -> duckdb.DuckDBPyConnection:
         con.register(f"{name}_df", df)
         con.execute(f"CREATE TABLE {name} AS SELECT * FROM {name}_df")
     p = params()
-    con.execute("CREATE TABLE params AS SELECT ? AS eu_sovereign_domestic_zero", [p["eu_sovereign_domestic_zero"]])
+    con.execute("CREATE TABLE params AS SELECT ? AS eu_sovereign_domestic_zero, ? AS reporting_date",
+                [p["eu_sovereign_domestic_zero"], p["reporting_date"]])
     con.register("eu_df", pd.DataFrame({"country": EU_MEMBER_STATES}))
     con.execute("CREATE TABLE eu_member_states AS SELECT * FROM eu_df")
     return con

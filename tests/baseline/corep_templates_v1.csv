@@ -1,0 +1,134 @@
+template,row,col,label,value,datapoint
+C_00.01,0010,0010,Accounting framework,eba_AS:x2,dp31870
+C_00.01,0020,0010,Reporting Level,eba_SC:x6,dp37969
+C_01.00,0010,0010,OWN FUNDS,850857536,dp33413
+C_01.00,0015,0010,TIER 1 CAPITAL,652610000,dp84817
+C_01.00,0020,0010,COMMON EQUITY TIER 1 CAPITAL,577610000,dp33411
+C_01.00,0030,0010,Capital instruments and share premium eligible as CET1 Capital,350000000,dp33306
+C_01.00,0040,0010,Fully paid up capital instruments,200000000,dp32673
+C_01.00,0060,0010,Share premium,150000000,dp32681
+C_01.00,0130,0010,Retained earnings,309000000,dp33309
+C_01.00,0140,0010,Previous years retained earnings,281000000,dp32679
+C_01.00,0150,0010,Profit or loss eligible,28000000,dp33307
+C_01.00,0160,0010,Profit or loss attributable to owners of the parent,48000000,dp32678
+C_01.00,0170,0010,(-) Part of interim or year-end profit not eligible,-20000000,dp33308
+C_01.00,0180,0010,Accumulated other comprehensive income,-15000000,dp32671
+C_01.00,0200,0010,Other reserves,25000000,dp32677
+C_01.00,0250,0010,Adjustments to CET1 due to prudential filters,-390000,dp33329
+C_01.00,0290,0010,(-) Value adjustments due to the requirements for prudent valuation,-390000,dp33342
+C_01.00,0300,0010,(-) Goodwill,-40000000,dp33336
+C_01.00,0310,0010,(-) Goodwill accounted for as intangible asset,-40000000,dp32692
+C_01.00,0340,0010,(-) Other intangible assets,-39000000,dp33337
+C_01.00,0350,0010,(-) Other intangible assets before deduction of deferred tax liabilities,-45000000,dp32693
+C_01.00,0352,0010,(-) Of wich: software assets accounted for as intangible assets before deduction of deferred tax liabilities,-35000000,dp465427
+C_01.00,0360,0010,Deferred tax liabilities associated to other intangible assets,6000000,dp32684
+C_01.00,0370,0010,(-) Deferred tax assets that rely on future profitability and do not arise from temporary differences net of associated tax liabilities,-12000000,dp33334
+C_01.00,0490,0010,(-) Deductible deferred tax assets that rely on future profitability and arise from temporary differences,0,dp33330
+C_01.00,0530,0010,ADDITIONAL TIER 1 CAPITAL,75000000,dp33410
+C_01.00,0540,0010,Capital instruments and share premium eligible as AT1 Capital,75000000,dp33305
+C_01.00,0551,0010,"Fully paid up, directly issued capital instruments",75000000,dp455021
+C_01.00,0750,0010,TIER 2 CAPITAL,198247536,dp33412
+C_01.00,0760,0010,Capital instruments and share premium eligible as T2 Capital,198247536,dp33343
+C_01.00,0771,0010,"Fully paid up, directly issued capital instruments",198247536,dp455022
+C_02.00.a,0010,0010,TOTAL RISK EXPOSURE AMOUNT,3634713428,dp3295617
+C_02.00.a,0010,0020,TOTAL RISK EXPOSURE AMOUNT,3634713428,dp3294979
+C_02.00.a,0040,0010,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3325013428,dp3295814
+C_02.00.a,0040,0020,"RISK WEIGHTED EXPOSURE AMOUNTS FOR CREDIT, COUNTERPARTY CREDIT AND DILUTION RISKS AND FREE DELIVERIES",3325013428,dp3295261
+C_02.00.a,0050,0010,Standardised Approach (SA),3325013428,dp3295815
+C_02.00.a,0050,0020,Standardised Approach (SA),3325013428,dp3294981
+C_02.00.a,0060,0010,SA exposure classes excluding securitisation positions,3325013428,dp3295615
+C_02.00.a,0060,0020,SA exposure classes excluding securitisation positions,3325013428,dp3294982
+C_02.00.a,0070,0010,Central governments or central banks,20000000,dp3295949
+C_02.00.a,0070,0020,Central governments or central banks,20000000,dp3295162
+C_02.00.a,0080,0010,Regional governments or local authorities,0,dp3295661
+C_02.00.a,0080,0020,Regional governments or local authorities,0,dp3294953
+C_02.00.a,0090,0010,Public sector entities,0,dp3295662
+C_02.00.a,0090,0020,Public sector entities,0,dp3294950
+C_02.00.a,0100,0010,Multilateral Development Banks,0,dp3295941
+C_02.00.a,0100,0020,Multilateral Development Banks,0,dp3294951
+C_02.00.a,0110,0010,International Organisations,0,dp3295942
+C_02.00.a,0110,0020,International Organisations,0,dp3294952
+C_02.00.a,0120,0010,Institutions,81462397,dp3295663
+C_02.00.a,0120,0020,Institutions,81462397,dp3295163
+C_02.00.a,0125,0010,Corporates - Other,1943238748,dp3295614
+C_02.00.a,0125,0020,Corporates - Other,1943238748,dp3295213
+C_02.00.a,0131,0010,Corporates - Specialised Lending,0,dp3295817
+C_02.00.a,0131,0020,Corporates - Specialised Lending,0,dp3295214
+C_02.00.a,0140,0010,Retail,405857314,dp3295664
+C_02.00.a,0140,0020,Retail,405857314,dp3295164
+C_02.00.a,0150,0010,Secured by mortgages on immovable property and ADC exposures,584935996,dp3295613
+C_02.00.a,0150,0020,Secured by mortgages on immovable property and ADC exposures,584935996,dp3295215
+C_02.00.a,0151,0010,Secured by mortgages on residential immovable property - non-IPRE (secured),337925120,dp3295612
+C_02.00.a,0151,0020,Secured by mortgages on residential immovable property - non-IPRE (secured),337925120,dp3295216
+C_02.00.a,0152,0010,Secured by mortgages on residential immovable property - non-IPRE (unsecured),247010876,dp3295611
+C_02.00.a,0152,0020,Secured by mortgages on residential immovable property - non-IPRE (unsecured),247010876,dp3294983
+C_02.00.a,0160,0010,Exposures in default,74518974,dp3295665
+C_02.00.a,0160,0020,Exposures in default,74518974,dp3295165
+C_02.00.a,0171,0010,Subordinated debt exposures,0,dp3295604
+C_02.00.a,0171,0020,Subordinated debt exposures,0,dp3294991
+C_02.00.a,0180,0010,Covered bonds,0,dp3295666
+C_02.00.a,0180,0020,Covered bonds,0,dp3294949
+C_02.00.a,0190,0010,Claims on institutions and corporates with a short-term credit assessment,0,dp3295940
+C_02.00.a,0190,0020,Claims on institutions and corporates with a short-term credit assessment,0,dp3294948
+C_02.00.a,0200,0010,Collective investments undertakings (CIU),0,dp3295939
+C_02.00.a,0200,0020,Collective investments undertakings (CIU),0,dp3294947
+C_02.00.a,0210,0010,Equity,0,dp3295938
+C_02.00.a,0210,0020,Equity,0,dp3295166
+C_02.00.a,0211,0010,Other items,215000000,dp3295937
+C_02.00.a,0211,0020,Other items,215000000,dp3294946
+C_02.00.a,0590,0010,TOTAL RISK EXPOSURE AMOUNT FOR OPERATIONAL RISK (OpR ),309700000,dp3295823
+C_02.00.a,0590,0020,TOTAL RISK EXPOSURE AMOUNT FOR OPERATIONAL RISK (OpR ),309700000,dp3295222
+C_03.00,0010,0010,CET1 Capital ratio,0.1589,dp85151
+C_03.00,0020,0010,Surplus(+)/Deficit(-) of CET1 capital,414047896,dp33280
+C_03.00,0030,0010,T1 Capital ratio,0.1795,dp85152
+C_03.00,0040,0010,Surplus(+)/Deficit(-) of T1 capital,434527194,dp33281
+C_03.00,0050,0010,Total capital ratio,0.2341,dp85153
+C_03.00,0060,0010,Surplus(+)/Deficit(-) of total capital,560080462,dp33282
+C_03.00,0070,0010,CET1 Capital ratio considering unfloored TREA,0.1589,dp3294198
+C_03.00,0080,0010,T1 Capital ratio considering unfloored TREA,0.1795,dp3294199
+C_03.00,0090,0010,Total capital ratio considering unfloored TREA,0.2341,dp3294197
+C_03.00,0130,0010,Total SREP capital requirement ratio (TSCR),0.1,dp85156
+C_03.00,0140,0010,TSCR: to be made up of CET1 capital,0.0563,dp85154
+C_03.00,0150,0010,TSCR: to be made up of Tier 1,0.075,dp85155
+C_03.00,0151,0010,"Total SREP capital requirement (TSCR) ratio without cap of Article 104a(6), point (a), of Directive 2013/36/EU",0.1,dp3295271
+C_03.00,0152,0010,TSCR: to be made up of CET1 capital,0.0563,dp3295269
+C_03.00,0153,0010,TSCR: to be made up of Tier 1 capital,0.075,dp3295270
+C_03.00,0160,0010,Overall capital requirement ratio (OCR),0.1325,dp410433
+C_03.00,0170,0010,OCR: to be made up of CET1 capital,0.0888,dp410431
+C_03.00,0180,0010,OCR: to be made up of Tier 1,0.1075,dp410432
+C_03.00,0190,0010,OCR and Pillar 2 Guidance (P2G),0.1425,dp410436
+C_03.00,0200,0010,OCR and P2G: to be made up of CET1 capital,0.0988,dp410434
+C_03.00,0210,0010,OCR and P2G: to be made up of Tier 1 capital,0.1175,dp410435
+C_03.00,0220,0010,Surplus(+)/Deficit(-) of CET1 capital considering the requirements of Article 92 of Regulation (EU) No 575/2013 and Article 104a of Directive 2013/36/EU,255029183,dp454688
+C_03.00,0330,0010,Fully loaded CET1 Capital ratio,0.1589,dp3294200
+C_03.00,0340,0010,Fully loaded T1 Capital ratio,0.1795,dp3294203
+C_03.00,0350,0010,Fully loaded Total capital ratio,0.2341,dp3294202
+C_03.00,0360,0010,"CET1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.1589,dp3294201
+C_03.00,0370,0010,"T1 Capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4, (5) and 7 of Regulation (EU) No 575/2013",0.1795,dp3294196
+C_03.00,0380,0010,"Total capital ratio without application of the transitional provisions on the output floor S-TREA (Article 465 (3), (4), (5) and 7 of Regulation (EU) No 575/2013",0.2341,dp3294195
+C_47.00,0150,0010,Off-balance sheet items with a 10% CCF in accordance with Article 429f CRR,30500000,dp132890
+C_47.00,0160,0010,Off-balance sheet items with a 20% CCF in accordance with Article 429f CRR,9600000,dp132891
+C_47.00,0165,0010,Off-balance sheet items with a 40% CCF  in accordance with Article 429f CRR,164800000,dp3293919
+C_47.00,0180,0010,Off-balance sheet items with a 100% CCF in accordance with Article 429f CRR,82000000,dp132893
+C_47.00,0190,0010,Other assets,6293371083,dp135743
+C_47.00,0270,0010,(-) Asset amount deducted - Tier 1 - fully phased-in definition,-91390000,dp143082
+C_47.00,0280,0010,(-) Asset amount deducted - Tier 1 capital  - transitional definition,-91390000,dp143084
+C_47.00,0290,0010,Total Leverage Ratio exposure  measure - using a fully phased-in definition of Tier 1 capital,6488881083,dp134660
+C_47.00,0300,0010,Total Leverage Ratio exposure measure - using a transitional definition of Tier 1 capital,6488881083,dp134661
+C_47.00,0310,0010,Tier 1 capital - fully phased-in definition,652610000,dp132949
+C_47.00,0320,0010,Tier 1 capital - transitional definition,652610000,dp84817
+C_47.00,0330,0010,Leverage Ratio - using a fully phased-in definition of Tier 1 capital,0.1006,dp135745
+C_47.00,0340,0010,Leverage Ratio - using a transitional definition of Tier 1 capital,0.1006,dp135746
+C_47.00,0350,0010,Pillar 2 requirement (P2R) to address risks of excessive leverage,0,dp457439
+C_47.00,0360,0010,of which: to be made up of CET1 capital,0,dp457440
+C_47.00,0370,0010,G-SII leverage ratio buffer,0,dp457441
+C_47.00,0380,0010,Pillar 2 guidance (P2G) to address risks of excessive leverage,0,dp457444
+C_47.00,0390,0010,of which: to be made up of CET1 capital,0,dp457442
+C_47.00,0400,0010,of which: to be made up of Tier 1 capital,0,dp457443
+C_47.00,0410,0010,Pillar 1 Leverage Ratio requirement,0.03,dp457445
+C_47.00,0420,0010,Total SREP leverage ratio requirement (TSLRR),0.03,dp457447
+C_47.00,0430,0010,TSLRR: to be made up of CET1 capital,0.0,dp457446
+C_47.00,0440,0010,Overall leverage ratio requirement (OLRR),0.03,dp457448
+C_47.00,0450,0010,Overall leverage ratio requirement (OLRR) and Pillar to Guidance (P2G) ratio,0.03,dp457451
+C_47.00,0460,0010,OLRR and P2G: to be made up of CET1 capital,0.0,dp457449
+C_47.00,0470,0010,OLRR and P2G: to be made up of Tier 1 capital,0.03,dp457450

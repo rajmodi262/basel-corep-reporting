@@ -9,6 +9,7 @@ from corep.books import connect, run_sql
 @pytest.fixture(scope="module")
 def con():
     c = connect()
+    run_sql(c, "05_collateral.sql")
     run_sql(c, "10_credit_risk.sql")
     return c
 
@@ -47,8 +48,9 @@ def test_mortgage_loan_splitting(con):
 
 
 def test_mortgage_without_valuation_falls_back_to_retail(con):
-    # UT-05 data gap DQ-03: no property value -> not "secured by mortgage" -> retail 75%
-    row = con.execute("SELECT exposure_class, risk_weight FROM credit_rwa WHERE exposure_id='EXP-MTG-00014'").fetchone()
+    # UT-05 data gap DQ-03: no usable property value -> not "secured by mortgage" -> retail 75%
+    # (EXP-MTG-00960 only has a 2021 valuation, older than 3 years - see CR-001)
+    row = con.execute("SELECT exposure_class, risk_weight FROM credit_rwa WHERE exposure_id='EXP-MTG-00960'").fetchone()
     assert row == ("retail", 0.75)
 
 

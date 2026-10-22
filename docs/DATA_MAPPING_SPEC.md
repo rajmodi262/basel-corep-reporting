@@ -11,6 +11,7 @@ tables in `config/`, so a mapping change is a reviewed data change, not a code c
 | `data/exposures.csv` | Exposure (3,155 rows) | C 02.00 credit risk rows |
 | `data/off_balance.csv` | Commitment (515 rows) | C 02.00 (via CCF), C 47.00 r0150-r0180 |
 | `data/capital_instruments.csv` | Instrument (4) | C 01.00 r0551 (AT1), r0771 (T2) |
+| `data/property_valuations_2025Q4.csv` | Valuation (6), from the collateral system (CR-001) | Property value for loan-splitting, if ≤ 3 years old (`sql/05_collateral.sql`) |
 | `data/pl_history.csv` | Year × P&L item (2023-2025) | C 02.00 r0590 operational risk |
 | `config/srep.yaml` | Supervisory parameters | C 03.00 r0130-r0210, C 47.00 r0410-r0470 |
 

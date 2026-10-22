@@ -1,9 +1,11 @@
 rule_id,severity,rule,hits,examples
 DQ-01,BLOCK,Exposure id unique,0,
 DQ-02,WARN,"Counterparty type present (drives the exposure class, Art 112)",4,EXP-COR-0037 EXP-COR-0112 EXP-COR-0268 EXP-COR-0391
-DQ-03,WARN,"Property value present for mortgages (needed for loan-splitting, Art 124-125)",6,EXP-MTG-00014 EXP-MTG-00233 EXP-MTG-00501 EXP-MTG-00742 EXP-MTG-00960 EXP-MTG-01111
+DQ-03,WARN,"Property value present for mortgages (needed for loan-splitting, Art 124-125)",1,EXP-MTG-00960
 DQ-04,BLOCK,Specific provision between 0 and the gross amount (Art 111(1)),0,
 DQ-05,BLOCK,Credit quality step is 1-6 or blank (Art 136 mapping),0,
 DQ-06,BLOCK,Every exposure books to a GL account in the trial balance,0,
 DQ-07,BLOCK,Every off-balance product has a CCF in the decision table (Annex I),0,
 DQ-08,WARN,Defaulted exposures carry a specific provision (IFRS 9 stage 3),0,
+DQ-09,WARN,Property valuation no older than 3 years at the reference date (Art 208(3)) - else not used,1,EXP-MTG-00960
+DQ-10,BLOCK,Every valuation in the collateral feed belongs to a known mortgage,0,

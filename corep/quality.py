@@ -16,7 +16,7 @@ RULES = [
     ("DQ-02", "WARN", "Counterparty type present (drives the exposure class, Art 112)",
      "SELECT exposure_id FROM exposures WHERE coalesce(counterparty_type, '') = ''"),
     ("DQ-03", "WARN", "Property value present for mortgages (needed for loan-splitting, Art 124-125)",
-     "SELECT exposure_id FROM exposures WHERE product = 'residential_mortgage' AND property_value IS NULL"),
+     "SELECT exposure_id FROM exposures_enriched WHERE product = 'residential_mortgage' AND property_value IS NULL"),
     ("DQ-04", "BLOCK", "Specific provision between 0 and the gross amount (Art 111(1))",
      "SELECT exposure_id FROM exposures WHERE specific_provision < 0 OR specific_provision > gross_amount"),
     ("DQ-05", "BLOCK", "Credit quality step is 1-6 or blank (Art 136 mapping)",
@@ -27,6 +27,11 @@ RULES = [
      "SELECT commitment_id FROM off_balance WHERE product NOT IN (SELECT product FROM dt_ccf)"),
     ("DQ-08", "WARN", "Defaulted exposures carry a specific provision (IFRS 9 stage 3)",
      "SELECT exposure_id FROM exposures WHERE default_flag = 1 AND specific_provision = 0"),
+    ("DQ-09", "WARN", "Property valuation no older than 3 years at the reference date (Art 208(3)) - else not used",
+     "SELECT exposure_id FROM stale_valuations"),
+    ("DQ-10", "BLOCK", "Every valuation in the collateral feed belongs to a known mortgage",
+     "SELECT exposure_id FROM property_valuations WHERE exposure_id NOT IN "
+     "(SELECT exposure_id FROM exposures WHERE product = 'residential_mortgage')"),
 ]
 
 
