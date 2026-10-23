@@ -8,7 +8,7 @@ const fmt = (v, d = 1) => v.toLocaleString("en-GB", { minimumFractionDigits: d, 
 const pct = v => fmt(v * 100, 2) + "%";
 const $ = s => document.querySelector(s);
 
-fetch("data.json?v=4").then(r => r.json()).then(D => {
+fetch("data.json?v=5").then(r => r.json()).then(D => {
   const scenes = { hero: hero(D), tower: tower(D), loans: loans(D), swaps: swaps(D), wall: wall(D), changes: changes(D), real: real(D) };
   // play each scene once when it comes into view
   const seen = new Set();
@@ -159,7 +159,7 @@ function loans(D) {
 /* ---------------------------------------------------------------- derivatives waterfall */
 function swaps(D) {
   const W = D.waterfall, svg = d3.select("#water-svg");
-  const x = d3.scaleLog([10, 12000], [230, 620]);
+  const x = d3.scaleLog([10, 12000], [230, 585]);
   const yy = i => 20 + i * 64;
   svg.append("g").attr("class", "axis").attr("transform", `translate(0,${yy(W.length) - 10})`)
     .call(d3.axisBottom(x).tickValues([10, 100, 1000, 10000]).tickFormat(v => "€" + d3.format(",")(v) + "m"));
