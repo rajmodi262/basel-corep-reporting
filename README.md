@@ -54,6 +54,10 @@ Every break is explained in **[REAL_DATA.md](docs/REAL_DATA.md)**. Run: `python 
 
 ---
 
+## See it
+
+`site/` is a one-page visual story of the project: the balance sheet turning into the filing, the capital stack with a live buffer slider, 3,155 loans by risk weight, the SA-CCR waterfall, a "break the report" wall of the 453 EBA rules, both change requests, and the 120 real banks. Every number comes from `site/data.json`, exported from the pipeline by `scripts/export_site_data.py`. Open it locally with `python -m http.server --directory site`. Add `?film` to the URL for a self-playing version used to record the walkthrough.
+
 ## How it works
 
 ```
