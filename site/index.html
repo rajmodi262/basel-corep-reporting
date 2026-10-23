@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ledger to Regulator</title>
+<meta name="description" content="A Basel III COREP reporting pipeline: a bank's books become an EBA filing, checked against the EBA's own validation rules, and the same rules run on 120 real EU banks.">
+<meta property="og:title" content="Ledger to Regulator: Basel III COREP reporting">
+<meta property="og:description" content="€6.3bn of balance sheet becomes one regulatory filing. 453 of 453 EBA rules pass. Then the rules run on 120 real EU banks.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700;900&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=4">
+</head>
+<body>
+<a class="skip" href="#tower">Skip the opening</a>
+
+<header class="bar">
+  <span class="brand">Ledger to Regulator</span>
+  <nav aria-label="Scenes">
+    <a href="#hero">Filing</a><a href="#tower">Capital</a><a href="#loans">Loans</a><a href="#swaps">Derivatives</a><a href="#wall">Rules</a><a href="#changes">Changes</a><a href="#real">Real banks</a>
+  </nav>
+  <a class="repo" href="https://github.com/rajmodi262/basel-corep-reporting">Source on GitHub</a>
+</header>
+
+<main>
+  <!-- Hero: the balance sheet turns into COREP cells -->
+  <section id="hero" class="scene hero">
+    <div class="hero-head">
+      <h1 class="blur-type" aria-label="€6.3bn in. One filing out.">
+        <span class="line" data-text="€6.3bn in.">€6.3bn in.</span>
+        <span class="line" data-text="One filing out.">One filing out.</span>
+      </h1>
+      <p class="lede">A Basel III COREP pipeline. A bank's general ledger becomes the EBA's own templates, and every number is checked against the EBA's validation rules before it leaves.</p>
+    </div>
+    <div class="hero-stage">
+      <figure class="ledger" aria-label="Balance sheet, EUR millions">
+        <figcaption>Balance sheet, € m</figcaption>
+        <div class="t-account">
+          <ul id="assets"></ul>
+          <ul id="liabilities"></ul>
+        </div>
+        <p class="ledger-total">Total <span id="total"></span></p>
+      </figure>
+      <div class="arrowway" aria-hidden="true"></div>
+      <figure class="corep" aria-label="COREP cells">
+        <figcaption>Filed to the supervisor</figcaption>
+        <ol id="cells"></ol>
+      </figure>
+    </div>
+    <div class="stamp" id="hero-stamp" aria-live="polite"><span id="rules-passed"></span> of <span id="rules-total"></span> EBA rules passed</div>
+    <p class="note">Demo Bank AG is synthetic, because real bank books are confidential. The regulation, templates and validation rules are real.</p>
+  </section>
+
+  <!-- Capital tower -->
+  <section id="tower" class="scene">
+    <div class="copy">
+      <h2>Capital against what the supervisor asks for</h2>
+      <p>On the left, the bank's own funds. On the right, the requirements stacked on top of each other: Pillar 1, the bank's own Pillar 2 add-on, the buffers, and guidance. Move the countercyclical buffer and watch the headroom.</p>
+      <label class="slider">Countercyclical buffer <output id="ccyb-out">1.00%</output>
+        <input id="ccyb" type="range" min="0" max="2.5" step="0.25" value="1">
+      </label>
+      <p class="readout">CET1 left after every requirement: <strong id="surplus"></strong></p>
+    </div>
+    <svg id="tower-svg" viewBox="0 0 640 520" role="img" aria-label="Capital versus requirements"></svg>
+  </section>
+
+  <!-- Every loan as a dot -->
+  <section id="loans" class="scene">
+    <div class="copy">
+      <h2>3,155 loans, each weighed for risk</h2>
+      <p>Every dot is an exposure, darker the riskier. A German government bond weighs 0%, an unrated company 100%, a loan in default up to 150%.</p>
+      <div class="toggle" role="group" aria-label="Arrange loans">
+        <button data-mode="weight" aria-pressed="true">By risk weight</button>
+        <button data-mode="class" aria-pressed="false">By exposure class</button>
+      </div>
+      <div class="split" id="split"></div>
+    </div>
+    <svg id="dots-svg" viewBox="0 0 720 540" role="img" aria-label="Exposures by risk weight"></svg>
+  </section>
+
+  <!-- Derivatives waterfall -->
+  <section id="swaps" class="scene">
+    <div class="copy">
+      <h2>Why €1.96bn of swaps counts as €47m</h2>
+      <p>A swap exchanges interest, not the principal. SA-CCR turns the notional into what the bank could actually lose. Step through it.</p>
+      <button id="step" class="primary">Next step</button>
+      <p class="step-text" id="step-text" aria-live="polite"></p>
+    </div>
+    <svg id="water-svg" viewBox="0 0 640 420" role="img" aria-label="From notional to exposure value"></svg>
+  </section>
+
+  <!-- Validation wall -->
+  <section id="wall" class="scene wall-scene">
+    <div class="copy">
+      <h2>Break the report</h2>
+      <p>Each tile is one EBA validation rule the filing passes. Change a single number the way a careless spreadsheet would, and see which rules catch it.</p>
+      <div class="scenarios" id="scenarios"></div>
+      <button id="reset" class="ghost">Restore the filing</button>
+      <ul class="failed" id="failed" aria-live="polite"></ul>
+    </div>
+    <div class="tiles" id="tiles" role="img" aria-label="EBA validation rules"></div>
+  </section>
+
+  <!-- Change control -->
+  <section id="changes" class="scene">
+    <div class="copy">
+      <h2>Predicted before it was built</h2>
+      <p>Two changes went through like tickets. Before writing any code, the regulation said which cells must move. Afterwards, every cell was compared with the previous filing.</p>
+      <div class="toggle" role="group" aria-label="Change request">
+        <button data-cr="0" aria-pressed="true">CR-001</button>
+        <button data-cr="1" aria-pressed="false">CR-002</button>
+      </div>
+    </div>
+    <div class="cr" id="cr"></div>
+  </section>
+
+  <!-- Real banks -->
+  <section id="real" class="scene">
+    <div class="copy">
+      <h2>Then the same rules, on 120 real banks</h2>
+      <p>The EBA publishes figures from banks' own COREP filings. Placed back into their cells, they went through the same rules: <strong id="real-checks"></strong> checks, <strong id="real-breaks"></strong> breaks. Each break was explained.</p>
+      <div class="finding" id="finding" aria-live="polite"><p>Select a marked bank.</p></div>
+    </div>
+    <svg id="banks-svg" viewBox="0 0 640 420" role="img" aria-label="CET1 ratio of 120 EU banks, June 2025"></svg>
+  </section>
+
+  <footer class="scene end">
+    <h2 class="blur-type small"><span class="line" data-text="Built to learn the job.">Built to learn the job.</span></h2>
+    <p>Raj Modi. Final-year B.Tech, MIT-WPU Pune.</p>
+    <ul class="links">
+      <li><a href="https://github.com/rajmodi262/basel-corep-reporting">Source and tests</a></li>
+      <li><a href="https://github.com/rajmodi262/basel-corep-reporting/blob/main/docs/REGULATION_NOTES.md">The regulation in plain English</a></li>
+      <li><a href="https://github.com/rajmodi262/basel-corep-reporting/blob/main/docs/REAL_DATA.md">Real-bank findings</a></li>
+      <li><a href="https://github.com/rajmodi262/basel-corep-reporting/tree/main/out">The xBRL-CSV filing</a></li>
+    </ul>
+    <p class="note">EBA taxonomy and Transparency Exercise data © European Banking Authority, reproduced in part with acknowledgement.</p>
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="app.js?v=4"></script>
+</body>
+</html>
